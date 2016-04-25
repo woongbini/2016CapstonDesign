@@ -1,28 +1,8 @@
-== README
+== 2016 CapstonDesign
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+*1091055 김웅빈(gamebook1004@gmail.com) 1091007 김이준(ybc864@naver.com)
 
-Things you may want to cover:
+*개발환경 : Windows 7 ,
+*개발언어 : Ruby on Rails, MySQL, Apache2 Tomcat,
+*개발서버 : Amazon Web Service Linux Server
 
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
-
-
-Please feel free to use a different markup language if you do not plan to run
-<tt>rake doc:app</tt>.
