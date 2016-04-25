@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+	<!-- dog/cat/petOwner 를 빈으로 설정하는 작업이 먼저이다. 
+			방법은 1. 소스상에서 editing을 통해 할수 있고
+				  2. beans태그를 사용해 에디터로 할수 있다. -->
+	
+	<bean id="dog" class="kr.ac.hansung.spring.di.Dog">
+		<!-- DI -->
+		<property name="myName" value="jindokgae"></property>
+	</bean>
+	
+	<bean id="cat" class="kr.ac.hansung.spring.di.Cat">
+		<property name="myName" value="gonyange"></property>
+	</bean>
+	
+	<bean id="petOwner" class="kr.ac.hansung.spring.di.PetOwner">
+		<constructor-arg ref="cat"></constructor-arg>
+	</bean>
+</beans>
+
