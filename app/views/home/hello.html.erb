@@ -1,1 +1,351 @@
-<h1> <%=@name %> </h1>
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+	
+	<!-- 뮤직플레이어  SCM Music Player http://scmplayer.net -->
+<script type="text/javascript" src="http://scmplayer.net/script.js" 
+data-config="{'skin':'skins/black/skin.css','volume':50,'autoplay':true,'shuffle':true,'repeat':1,'placement':'bottom','showplaylist':false,'playlist':[{'title':'%uB9B0-My Destiny(%uBCC4%uC5D0%uC11C %uC628 %uADF8%uB300OST) ','url':'https://youtu.be/tVXrTp7_YAw'},{'title':'%uC2F8%uC774-DADDY','url':'https://youtu.be/FrG4TEcSuRg'},{'title':'BIGBANG-%uBC45%uBC45%uBC45 (BANG BANG BANG)','url':'https://youtu.be/2ips2mM7Zqw'},{'title':'%uB2E4%uBE44%uCE58-%uD3B8%uC9C0','url':'https://youtu.be/DKz6IjaMhpI'},{'title':'%uBC31%uC9C0%uC601-%uC78A%uC9C0 %uB9D0%uC544%uC694','url':'https://youtu.be/me1LSCY99ZE'},{'title':'%uC774%uC120%uD76C-%uC778%uC5F0','url':'https://youtu.be/kUJv343NHsU'},{'title':'%uBC15%uD6A8%uC2E0-%uB208%uC758 %uAF43','url':'https://youtu.be/sr3JaQ3h7YA'}]}" ></script>
+<!-- SCM Music Player script end -->
+	
+		<meta http-equiv="content-type" content="text/html; charset=euc-kr" >
+		<meta charset="utf-8">
+		<title>Blog Template</title>
+
+		<meta name="generator" content="Bootply" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+		<link href="css/bootstrap.min.css" rel="stylesheet">
+		<link href="//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.min.css" rel="stylesheet">
+		
+				<!-- 합쳐지고 최소화된 최신 CSS -->
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
+		
+		<!-- 부가적인 테마 -->
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap-theme.min.css">
+		
+		<!-- 합쳐지고 최소화된 최신 자바스크립트 -->
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
+		
+		<!--  	 <embed align="left" src="music.mp3" loop="true" autostart="true" hidden="true" width="0" height="0"></embed>-
+배경음악 <a href="javascript:document.embeds[0].play()">| Play</a> | <a href="javascript:document.embeds[0].stop()">Stop</a> |-->
+		
+		
+		
+		<!--[if lt IE 9]>
+			<script src="//html5shim.googlecode.com/svn/trunk/html5.js"></script>
+		<![endif]-->
+		<link href="css/styles.css" rel="stylesheet">
+		<script language="JavaScript" src="script.js">
+		</script>
+	</head>
+	<body>
+
+
+<header class="navbar navbar-default navbar-fixed-top" role="banner">
+  <div class="container">
+    <div class="navbar-header">
+      <button class="navbar-toggle" type="button" data-toggle="collapse" data-target=".navbar-collapse">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a href="main.jsp" class="navbar-brand">Home</a>
+    </div>
+    <nav class="collapse navbar-collapse" role="navigation">
+    <ul class="nav navbar-nav">
+        <li>
+          <a href="test.jsp">게시판</a>
+        </li>
+        <li>
+          <a href="Post.jsp">Post.jsp</a>
+        </li>
+        <li>
+         <a href="Post2.jsp">Post2.jsp</a>
+        </li>
+      </ul>
+      <ul class="nav navbar-right navbar-nav">
+        <li class="dropdown">
+        
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="glyphicon glyphicon-search"></i></a>
+          <ul class="dropdown-menu" style="padding:12px;">
+            <form class="form-inline">
+            	<div class="input-group">
+                  <input type="text" class="form-control" placeholder="Search for...">
+                  <span class="input-group-btn">
+                    <button class="btn btn-default" type="button">Go!</button>
+                  </span>
+            	</div>
+            </form>
+          </ul>
+        </li>
+      </ul>
+    </nav>
+  </div>
+</header>
+<!--
+<div id="masthead">  
+  <div class="container">
+    <div class="row">
+      <div class="col-md-7">
+        <h1>Blog
+          <p class="lead">Catchy Subtitle Here</p>
+        </h1>
+      </div>
+      <div class="col-md-5">
+        <div class="well well-lg"> 
+          <div class="row">
+            <div class="col-sm-12">
+            <%
+            # if(mem_id != null){
+			%>
+	
+		<p>제한된 기능을 사용 할 수가 있습니다.
+		<p>
+			<a href="Logout.jsp">로그아웃</a>
+		
+				<table>
+					<form name="login" method="post" action="LoginProc.jsp">
+						<tr>
+							<td align="center" colspan="2"><h4>로그인</h4></td>
+						</tr>
+						<tr>
+							<td>아 이 디</td>
+							<td><input type="text" name="mem_id"></td>
+						</tr>
+						<tr>
+							<td>비밀번호</td>
+							<td><input type="password" name="mem_passwd"></td>
+						</tr>
+						<tr>
+							<td colspan="2">
+								<div align="right">
+									<input type="button" value="로그인" onclick="loginCheck()">
+									&nbsp;<input type="button" value="회원가입"
+										onclick="memberReg()">
+								</div>
+							</td>
+						</tr>
+					</form>
+				</table>
+		
+			</div>
+          </div>
+        </div>
+      </div>
+    </div> 
+  </div>
+  
+ 
+</div>
+
+-->
+
+
+<div class="carousel-wrapper ng-scope" ng-if="banners.length">
+<slick class ="carousel ng-isolate-scope slick-initialized slick-slider" arrow="true" dots="true"
+autoplay="true" autoplayspeed="2000" currnet-index="index" adaptiveheight="true"
+slides-to-show="1" slides-to-scroll="1" style="overflow: hidden;">
+ <div class="slick-list draggable" tabindex="0">
+     <div class="slick-track" style="opacity: 1; width: 2240px; transform: translate3d(-320px, 0px, 0px);">
+        ::before
+        <div class="banner-item-wrapper ng-scope slick-slide slick-cloned" ng-repeat="banner in banners" data-slick-index="-1" style="width: 320px;">
+             <div class="banner-item" ng-click="linkToBannerUrl(banner)" ng-style="{'background-image': 'url(' + cloudinaryUrl(banner.images[0].url) + ')'}" role="button" tabindex="0" style="background-image: url(&quot;http://i.imgur.com/YQEYTt8.jpg&quot;);">ta-slick-index="0" style="width: 320px;">
+                 <div class="banner-item" ng-click="linkToBannerUrl(banner)" ng-style="{'background-image': 'url(' + cloudinaryUrl(banner.images[0].url) + ')'}" role="button" tabindex="0" style="background-image: url(&quot;http://res.cloudinary.com/frientrip/image/upload/w_1920%2Cf_auto%2Cfl_lossy%2Cq_80/nb_balaceyourlife&quot;);">
+                 </div>
+             </div>
+                 <div class="banner-item-wrapper ng-scope slick-slide" ng-repeat="banner in banners" data-slick-index="1" style="width: 320px;">
+                     <div class="banner-item" ng-click="linkToBannerUrl(banner)" ng-style="{'background-image': 'url(' + cloudinaryUrl(banner.images[0].url) + ')'}" role="button" tabindex="0" style="background-image: url(&quot;http://res.cloudinary.com/frientrip/image/upload/w_1920%2Cf_auto%2Cfl_lossy%2Cq_80/GroupDiscount_banner&quot;);">
+                    </div>
+                </div>
+                    <div class="banner-item-wrapper ng-scope slick-slide" ng-repeat="banner in banners" data-slick-index="2" style="width: 320px;">
+                        <div class="banner-item" ng-click="linkToBannerUrl(banner)" ng-style="{'background-image': 'url(' + cloudinaryUrl(banner.images[0].url) + ')'}" role="button" tabindex="0" style="background-image: url(&quot;http://res.cloudinary.com/frientrip/image/upload/w_1920%2Cf_auto%2Cfl_lossy%2Cq_80/%ED%99%88%ED%8E%98%EC%9D%B4%EC%A7%80%20%EB%B0%B0%EB%84%88&quot;);">
+                        </div>
+                    </div>
+                        <div class="banner-item-wrapper ng-scope slick-slide" ng-repeat="banner in banners" data-slick-index="3" style="width: 320px;">
+                            <div class="banner-item" ng-click="linkToBannerUrl(banner)" ng-style="{'background-image': 'url(' + cloudinaryUrl(banner.images[0].url) + ')'}" role="button" tabindex="0" style="background-image: url(&quot;http://res.cloudinary.com/frientrip/image/upload/w_1920%2Cf_auto%2Cfl_lossy%2Cq_80/banner&quot;);">                                
+                            </div>
+                        </div>
+                            <div class="banner-item-wrapper ng-scope slick-slide" ng-repeat="banner in banners" data-slick-index="4" style="width: 320px;">
+                                <div class="banner-item" ng-click="linkToBannerUrl(banner)" ng-style="{'background-image': 'url(' + cloudinaryUrl(banner.images[0].url) + ')'}" role="button" tabindex="0" style="background-image: url(&quot;http://res.cloudinary.com/frientrip/image/upload/w_1920%2Cf_auto%2Cfl_lossy%2Cq_80/beahost&quot;);">
+                                </div>
+                            </div>
+                                <div class="banner-item-wrapper ng-scope slick-slide slick-cloned" ng-repeat="banner in banners" data-slick-index="5" style="width: 320px;">
+                                    <div class="banner-item" ng-click="linkToBannerUrl(banner)" ng-style="{'background-image': 'url(' + cloudinaryUrl(banner.images[0].url) + ')'}" role="button" tabindex="0" style="background-image: url(&quot;http://res.cloudinary.com/frientrip/image/upload/w_1920%2Cf_auto%2Cfl_lossy%2Cq_80/nb_balaceyourlife&quot;);">
+                                    </div>
+                                </div>
+                                ::after
+            </div>
+</div>   
+
+    
+    
+    
+</div>
+
+
+
+
+
+<div class="container">
+  <div class="row">
+    
+    <div class="col-md-12"> 
+      
+      <div class="panel">
+        <div class="panel-body">
+        
+          
+          <!--/stories-->
+		  <div class="row">    
+            <br>
+            <div class="col-md-2 col-sm-3 text-center">
+              <a class="story-img" href="#"><img src="//placehold.it/100" style="width:100px;height:100px" class="img-circle"></a>
+            </div>
+            <div class="col-md-10 col-sm-9">
+              <h3>Post Entry Title</h3>
+              <div class="row">
+                <div class="col-xs-9">
+                  <p>한글좀 나오게해봐sit amet, consectetur adipiscing elit. Duis pharetra varius quam sit amet vulputate. 
+                  Quisque mauris augue, molestie tincidunt condimentum vitae, gravida a libero. Aenean sit amet felis 
+                  dolor, in sagittis nisi. Sed ac orci quis tortor imperdiet venenatis. Duis elementum auctor accumsan. 
+                  Aliquam in felis sit amet augue.</p>
+                  <p class="lead"><button class="btn btn-default">Read More</button></p>
+                  <p class="pull-right"><span class="label label-default">keyword</span> <span class="label label-default">tag</span> <span class="label label-default">post</span></p>
+                  <ul class="list-inline"><li><a href="#">2 Days Ago</a></li><li><a href="#"><i class="glyphicon glyphicon-comment"></i> 4 Comments</a></li><li><a href="#"><i class="glyphicon glyphicon-share"></i> 34 Shares</a></li></ul>
+                  </div>
+                <div class="col-xs-3"></div>
+              </div>
+              <br><br>
+            </div>
+          </div>
+          <hr>
+                  
+		  <div class="row">    
+            <br>
+            <div class="col-md-2 col-sm-3 text-center">
+              <a class="story-img" href="#"><img src="//placehold.it/100" style="width:100px;height:100px" class="img-circle"></a>
+            </div>
+            <div class="col-md-10 col-sm-9">
+              <h3>Story Title Here</h3>
+              <div class="row">
+                <div class="col-xs-9">
+                  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis pharetra varius quam sit amet vulputate. 
+                  Quisque mauris augue, molestie tincidunt condimentum vitae, gravida a libero. Aenean sit amet felis 
+                  dolor, in sagittis nisi. Sed ac orci quis tortor imperdiet venenatis. Duis elementum auctor accumsan. 
+                  Aliquam in felis sit amet augue.</p>
+                  <p class="lead"><button class="btn btn-default">Read More</button></p>
+                  <p class="pull-right"><span class="label label-default">keyword</span> <span class="label label-default">tag</span> <span class="label label-default">post</span></p>
+                  <ul class="list-inline"><li><a href="#">3 Days Ago</a></li><li><a href="#"><i class="glyphicon glyphicon-comment"></i> 1 Comments</a></li><li><a href="#"><i class="glyphicon glyphicon-share"></i> 34 Shares</a></li></ul>
+                  </div>
+                <div class="col-xs-3"></div>
+              </div>
+              <br><br>
+            </div>
+          </div>
+          <hr>
+
+          <div class="row">    
+            <br>
+            <div class="col-md-2 col-sm-3 text-center">
+              <a class="story-img" href="#"><img src="//placehold.it/100" style="width:100px;height:100px" class="img-circle"></a>
+            </div>
+            <div class="col-md-10 col-sm-9">
+              <h3>Post Heading Here</h3>
+              <div class="row">
+                <div class="col-xs-9">
+                  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis pharetra varius quam sit amet vulputate. 
+                  Quisque mauris augue, molestie tincidunt condimentum vitae, gravida a libero. Aenean sit amet felis 
+                  dolor, in sagittis nisi. Sed ac orci quis tortor imperdiet venenatis. Duis elementum auctor accumsan. 
+                  Aliquam in felis sit amet augue.</p>
+                  <p class="lead"><button class="btn btn-default">Read More</button></p>
+                  <p class="pull-right"><span class="label label-default">keyword</span> <span class="label label-default">tag</span> <span class="label label-default">post</span></p>
+                  <ul class="list-inline"><li><a href="#">5 Days Ago</a></li><li><a href="#"><i class="glyphicon glyphicon-comment"></i> 0 Comments</a></li><li><a href="#"><i class="glyphicon glyphicon-share"></i> 45 Shares</a></li></ul>
+                  </div>
+                <div class="col-xs-3"></div>
+              </div>
+              <br><br>
+            </div>
+          </div>
+          <hr>
+          
+          <div class="row">    
+            <br>
+            <div class="col-md-2 col-sm-3 text-center">
+              <a class="story-img" href="#"><img src="//placehold.it/100" style="width:100px;height:100px" class="img-circle"></a>
+            </div>
+            <div class="col-md-10 col-sm-9">
+              <h3>Another Entry Title</h3>
+              <div class="row">
+                <div class="col-xs-9">
+                  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis pharetra varius quam sit amet vulputate. 
+                  Quisque mauris augue, molestie tincidunt condimentum vitae, gravida a libero. Aenean sit amet felis 
+                  dolor, in sagittis nisi. Sed ac orci quis tortor imperdiet venenatis. Duis elementum auctor accumsan. 
+                  Aliquam in felis sit amet augue.</p>
+                  <p class="lead"><button class="btn btn-default">Read More</button></p>
+                  <p class="pull-right"><span class="label label-default">keyword</span> <span class="label label-default">tag</span> <span class="label label-default">post</span></p>
+                  <ul class="list-inline"><li><a href="#">1 Week Ago</a></li><li><a href="#"><i class="glyphicon glyphicon-comment"></i> 4 Comments</a></li><li><a href="#"><i class="glyphicon glyphicon-share"></i> 34 Shares</a></li></ul>
+                  </div>
+                <div class="col-xs-3"></div>
+              </div>
+              <br><br>
+            </div>
+          </div>
+          <hr>
+          <!--/stories-->
+          
+          
+          <a href="/" class="btn btn-primary pull-right btnNext">More <i class="glyphicon glyphicon-chevron-right"></i></a>
+        
+          
+        </div>
+      </div>
+                                                                                       
+	                                                
+                                                      
+   	</div><!--/col-12-->
+  </div>
+</div>
+                                                
+                                                                                
+<hr>
+
+<div class="container" id="footer">
+  <div class="row">
+    <div class="col col-sm-12">
+      
+      <h1>Follow Us</h1>
+      <div class="btn-group">
+       <a class="btn btn-twitter btn-lg" href="https://www.twitter.com/"><i class="icon-twitter icon-large"></i> Twitter</a>
+	   <a class="btn btn-facebook btn-lg" href="https://www.facebook.com/"><i class="icon-facebook icon-large"></i> Facebook</a>
+	   <a class="btn btn-google-plus btn-lg" href="#"><i class="icon-google-plus icon-large"></i> Google+</a>
+      </div>
+      
+    </div>
+  </div>
+</div>
+
+<hr>
+
+<footer>
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-6">
+        <ul class="list-inline">
+          <li><i class="icon-facebook icon-2x"></i></li>
+          <li><i class="icon-twitter icon-2x"></i></li>
+          <li><i class="icon-google-plus icon-2x"></i></li>
+          <li><i class="icon-pinterest icon-2x"></i></li>
+        </ul>
+        
+      </div>
+      <div class="col-sm-6">
+          <p class="pull-right">Built with <i class="icon-heart-empty"></i> at <a href="http://www.bootply.com">Bootply</a></p>      
+      </div>
+    </div>
+  </div>
+</footer>
+	<!-- script references -->
+		<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.2/jquery.min.js"></script>
+		<script src="js/bootstrap.min.js"></script>
+	</body>
+</html>
