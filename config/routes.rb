@@ -1,4 +1,6 @@
 Testapp::Application.routes.draw do
+  get "mainpage/mainpage"
+  get "mainpage/addmemberpage"
   get "chat/index"
   get "chat/new"
   # The priority is based upon order of creation: first created -> highest priority.
