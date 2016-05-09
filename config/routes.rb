@@ -1,9 +1,10 @@
 Testapp::Application.routes.draw do
-  get "addmember/creatmember"
+  get "addmember/addmember"
   get "mainpage/mainpage"
   get "mainpage/addmemberpage"
   get "chat/index"
   get "chat/new"
+	post "addmember/add_process"
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
