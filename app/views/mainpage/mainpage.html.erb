@@ -32,16 +32,29 @@
       <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
     <![endif]-->
 
+	<--!login popup JS-->
+	
+	<script type=text/javascript>
+	function function()
+	{
+		
+	}
+	</script>
+
+
+
+
 </head>
 
 <body>
-	
+<!--	
 <div class="row">
-    <div class="col-xs-12 col-sm-6 col-md-8">.col-xs-12 .col-sm-6 .col-md-8</div>
-  <div class="col-xs-6 col-md-4">.col-xs-6 .col-md-4</div>
+    <div class="col-xs-12 col-sm-6 col-md-8"></div>
+  <div class="col-xs-6 col-md-4"></div>
 </div>
-	<nav class="navbar navbar-default navbar-fixed-top">
-		<div class="container-fluid"style="">
+-->
+	<nav class="navbar navbar-default navbar-fixed-top" style="background-color:rgba(82,82,82,0);">
+		<div class="container-fluid">
 		    <div class="navbar-header">
 		  <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
               <!--  <span class="sr-only">Toggle navigation</span>-->
@@ -61,7 +74,8 @@
 					<li class="active"><a href="#">Voluntal 만들기</a></li>
 				</ul>
 			<ul class="nav navbar-nav navbar-right">
-			    <li><a href="/addmember/addmember"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
+			    <li><a href="#" onClick="window.open('/addmember/addmember','_blank','toolbar=no,location=no,directories=no,status=no,menubar=no,scrollbars=no,resizeable=no,width=400,height=400,top=10,left=10')" >
+			    	<span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
 			    <li><a href="#"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
 			    
 			    <!--
@@ -83,7 +97,7 @@
 
 
 	<!-- Carousel ================================================== -->
-	<div id="myCarousel" class="carousel slide" data-ride="carousel" data-interval="2000">
+	<div id="myCarousel" class="carousel slide" data-ride="carousel" data-interval="2500" data-pause="false">
 		<!-- Indicators -->
 		<ol class="carousel-indicators">
 			<li data-target="#myCarousel" data-slide-to="0" class="active"></li>
@@ -146,7 +160,7 @@
 			<!-- Wrap the rest of the page in another container to center all the content. -->
 			<div class="container marketing">
 				<!-- Three columns of text below the carousel -->
-				<div class="row">
+				<div class="row"  style="background-size: 100% 100%;">
 					<div class="col-lg-4"style="width: 150px  height: 150px; background:url('http://i.imgur.com/94Gukbz.jpg')" >
 						<img class="img-circle"src="http://i.imgur.com/UH0DXux.jpg"alt="Generic placeholder image"width="140" height="140">
 							<font color="white" face="맑은고딕">
