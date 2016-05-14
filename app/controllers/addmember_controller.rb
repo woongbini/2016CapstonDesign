@@ -1,6 +1,6 @@
 class AddmemberController < ApplicationController
   def add_process
-		u = Users.new
+		u = User.new
 		u.email = params[:email]
 		u.password = params[:password]
 		u.phone = params[:phone]
