@@ -8,7 +8,7 @@ class CreatePosts < ActiveRecord::Migration
       t.string :category
       t.string :place
       t.text :content
-
+ 
       t.timestamps
     end
   end
