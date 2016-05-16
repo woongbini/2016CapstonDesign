@@ -1,6 +1,6 @@
 Testapp::Application.routes.draw do
   get "addmember/addmember" 
-  root "mainpage/mainpage"
+  root "mainpage#mainpage"
   get "mainpage/addmemberpage"
   get "chat/index"
   get "chat/new"
