@@ -5,7 +5,8 @@ class AddmemberController < ApplicationController
 		u.password = params[:password]
 		u.phone = params[:phone]
 		if u.save
-			redirect_to "/mainpage/mainpage"
+			 redirect_to "/mainpage/mainpage"
+		   
 		else
 			flash[:alert] = p.errors[:content][0]
 			redirect_to "back"

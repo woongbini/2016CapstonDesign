@@ -1,10 +1,15 @@
 Testapp::Application.routes.draw do
+  get 'login' => 'session#new'
+  post 'login' => 'session#create'
+  delete 'logout' => 'sessions#destroy'
+  
   get "addmember/addmember"
   get "mainpage/mainpage"
   get "mainpage/addmemberpage"
   get "chat/index"
   get "chat/new"
 	post "addmember/add_process"
+	post "mainpage/addmemberpage"
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
