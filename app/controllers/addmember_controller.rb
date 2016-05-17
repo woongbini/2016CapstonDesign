@@ -10,6 +10,11 @@ class AddmemberController < ApplicationController
 		else
 			flash[:alert] = p.errors[:content][0]
 			redirect_to "back"
-		end
+	end
+	end
+ 
+  def voluntalinfo
+  	redirect_to "/mainpage/mainpage"
   end
+
 end
