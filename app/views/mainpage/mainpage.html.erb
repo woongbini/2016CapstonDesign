@@ -9,6 +9,8 @@
 	<meta name="author" content="">
 	<link rel="icon" href="../../favicon.ico">
 	<title>Voluntal :: main</title>
+	<!-- YJ CSS file-->
+	<link rel="stylesheet" href="stylesheets/voluntal.css">
 	<!-- Bootstrap core JavaScript start-->
 		<!--<link href="assets/stylesheet/bootstrap.css" type="text/css" rel="stylesheet">-->
 		<script src="http://code.jquery.com/jquery-1.12.0.min.js"></script>
@@ -48,7 +50,7 @@
 <!--Vouluntal 네비게이션 바 end -->
 
 <!-- Voluntal 캐러셀 start-->
-	<div class="carousel slide" data-ride="carousel" data-interval="2000" >
+	<div class="carousel slide" data-ride="carousel" data-interval="" >
 		<!-- Indicators start -->
 		<ol class="carousel-indicators">
 			<li data-target="#myCarousel" data-slide-to="0" class="active"></li>
@@ -59,12 +61,13 @@
 		<!--Wrapper for slides start -->
 		<div class="carousel-inner" role="listbox" align="center" id="section1">
 			<div class="item active">
-				<img class="first-slide" src="http://i.imgur.com/YQEYTt8.jpg" alt="First slide" border="3px" width="" height="" align="center">
+				<img class="first-slide" src="http://i.imgur.com/2NCfnAV.jpg?1" alt="First slide" border="3px" width="" height="" align="center">
 				<div class="container">
 					<div class="carousel-caption">
-						<h1>날아라 슈퍼보드!</h1>
+					<!--<h1>날아라 슈퍼보드!</h1>
 						<p>우리도 할 수 있습니다. <code>file://</code> 지금 당장 시작하세요.</p>
 						<p><a class="btn btn-primary" href="#" role="button">회원가입</a></p>
+					-->
 					</div>
 				</div>
 			</div>
@@ -265,41 +268,68 @@
 <hr class="featurette-divider" id="section4" ><br>
 <div class="container">
     <div class="container" align="center">
+    				<%= image_tag('Voluntal-logo2.png')%>
         <h2>Voluntal 만들기</h2>
-        <h4>Voluntal과 함께 시작하시겠습니까?</h4>
+        <h3>Voluntal과 함께 시작하시겠습니까?</h3>
     </div>
 </div>
 <br><hr class="featurette-divider" >
 
 <!-- Voluntal 만들기 start -->
-	<div class="container">
-		스크롤<br>
-		스크롤<br>
-		스크롤<br>
-		스크롤<br>
-		스크롤<br>
-		스크롤<br>
-		스크롤<br>
-		스크롤<br>
-		스크롤<br>
-		스크롤<br>
-		스크롤<br>
-		스크롤<br>
-		스크롤<br>
-		스크롤<br>
-		스크롤<br>
-		스크롤<br>
-		스크롤<br>
-		스크롤<br>
-		스크롤<br>
-		스크롤<br>
-		스크롤<br>
-		스크롤<br>
-		스크롤<br>
-		스크롤<br>
+	<div class="CreateVoluntal" align="center"><br>
+		<p><h3>당신의 재능을 다른사람들에게 공유하고 싶나요?<br>
+		봉사활동자를 모집하고 싶은신가요?</h3></p>
+		<h3>Voluntal은 당신에게 조금더 쉽게 다가설수있도록 도와주고 있습니다</h3><br><br>
+		<!-- Indicates caution should be taken with this action -->
+			<div class="howbox">
+				<p>어떤식으로 진행되나요?</p>
+			</div>
+		<br><br>
+			<div class="voluntalflow">
+					
+					<p>
+					1. Voluntal 만들기를 클릭하여 Host 와 Voluntal 정보를 입력한다.
+					</p>
+					
+					<br>
+					
+					<p>
+					2. Voluntal 운영자가 Voluntal을 개설한다.
+					</p>
+					
+					<br>
+					
+					<p>
+					3. Guest들의 질문에 대답해주며 Activity 준비한다.
+					</p>
+					
+					<br>
+					
+					<p>
+					4. Activity 활동 전날 Guest들의 명단을 받는다.
+					</p>
+					
+					<br>
+
+					<p>
+					5. Guest들과 함께 즐거운 Activity 활동을 진행한다.
+					</p>
+					
+					<br>
+					
+					<p>
+					6. Guest들의 피드백을 받고 더 좋은 Voluntal을 개설한다.
+					</p>
+			</div>
+				<%= image_tag('Activity.JPG')%><br>
+				<br>
+			<div class="howbox">	
+				<p>준비가 되셨나요?</p>
+		</div><br>
+		
 		<div align="center">
 			<a href="/voluntal/register" ><button class="btn btn-lg btn-danger">Voluntal 만들기</button></a>
-		</div>
+		</div><br>
 	</div>
 
 <!-- Voluntal 만들기 end -->
