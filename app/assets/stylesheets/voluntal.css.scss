@@ -1,22 +1,124 @@
+.basicfont{
+ font-family: '맑은 고딕', 'Malgun Gothic', verdana;
+ font-size : 3rem;
+ font-weight : 1px;
+ color : #CFE9D3v;
+ 
+}
 .CreateVoluntal{
-    background-color : #E3E3E3;
-    font-family:맑은고딕;
+    background-color : #FFFFFF;
+    font-family: '맑은 고딕', 'Malgun Gothic', verdana;
+    img{max-width:100%;}
 }
 
 .howbox{
     background-color : #FF7648;
     font-size : 25px;
-    width:351px;
+    width:300px;
     height:40px;
     padding:px;
-    border-radius :20px;
+    border-radius :10px;
 }
 
 .voluntalflow{
-    background-color : #FF7648;
-    color : white;
+ //background-color : #FF7648;
+    color : #FF7648;
     font-size : 20px;
-
-    width : 1077px;
-    height : 400px;
+    img{max-width:100%;}
 }
+
+.logoimage{
+    width:190px;
+    height:50px;
+    background-image:url(Voluntal-logo2.png);
+    background-position:center;
+    background-size:cover;
+    img{max-width:100%;}
+}
+
+.headbox{
+    width:1663px;
+    height:50px;
+    font-family: '맑은 고딕', 'Malgun Gothic', verdana;
+    color : #FF7648;
+    font-size : 14px;
+    font-weight : bold;
+    background-color:#FFFFFF;
+}
+
+.middletoolbar{
+   width:1170px;
+   height:92px;
+   background-color:#FF7648;
+   border-radius :10px;
+    max-width:100%;
+    max-height:100%;
+    img{max-width:100%;}
+}
+
+.imagebox{
+    width:320px;
+    height:180px;
+}
+.elementimagesize{
+    width:320px;
+    height:180px;
+    
+    //background-position:center;
+    background-size:cover;
+    img{max-width:100%;}
+}
+.elementimagesize:nth-child(1){
+    
+}
+.elementimagesize:nth-child(2){
+    
+}
+.smallimage{
+ //    background-image:url(test.jpg);
+ height:150px;
+ width:150px;
+ background-size: cover;
+ display: block;
+ border-radius: 100px;
+ -webkit-border-radius: 100px;
+ -moz-border-radius: 100px;
+     img{max-width:100%;}
+}
+
+.firstslide{
+    background-position: center;
+    background-size: cover;
+    background-image:url(springblooms.jpg);
+    width:1663px;
+    height:650px;
+        max-width:100%;
+    max-height:100%;
+    img{max-width:100%;}
+}
+
+.slide:nth-child(1){
+    background-image:url(springblooms.jpg);
+}
+
+.secondslide{
+    background-image:url(youngcouplewide.jpg);
+    background-position: center;
+    background-size: cover;
+    width:1663px;
+    height:650px;
+    max-width:100%;
+    max-height:100%;
+}
+
+.thirdslide{
+    background-image:url(skate.jpg);
+    background-position: center;
+    background-size: cover;
+    width:1663px;
+    height:650px;
+    max-width:100%;
+    max-height:100%;
+    img{max-width:100%;}    
+}
+
