@@ -60,20 +60,116 @@
     width:320px;
     height:180px;
 }
-.elementimagesize{
+
+
+.volunteerelement1{
     width:320px;
     height:180px;
-    
     //background-position:center;
     background-size:cover;
     img{max-width:100%;}
+      background-image:url("http://res.cloudinary.com/dszrkgsd0/image/upload/v1463639055/_black_hnfq0v.jpg");
 }
-.elementimagesize:nth-child(1){
-    
+
+.volunteerelement2{
+    width:320px;
+    height:180px;
+    //background-position:center;
+    background-size:cover;
+    img{max-width:100%;}
+      background-image:url("http://res.cloudinary.com/dszrkgsd0/image/upload/v1463639055/_mento_ge6v1s.jpg");
 }
-.elementimagesize:nth-child(2){
-    
+
+.volunteerelement3{
+    width:320px;
+    height:180px;
+    //background-position:center;
+    background-size:cover;
+    img{max-width:100%;}
+      background-image:url("http://res.cloudinary.com/dszrkgsd0/image/upload/v1463639055/_faint_ohdqfi.jpg");
 }
+
+.volunteerelement4{
+    width:320px;
+    height:180px;
+    //background-position:center;
+    background-size:cover;
+    img{max-width:100%;}
+      background-image:url("http://res.cloudinary.com/dszrkgsd0/image/upload/v1463639055/_volunteer_zmzwnz.jpg");
+}
+
+.volunteerelement5{
+    width:320px;
+    height:180px;
+    //background-position:center;
+    background-size:cover;
+    img{max-width:100%;}
+      background-image:url("http://res.cloudinary.com/dszrkgsd0/image/upload/v1463639055/_foot_czovl9.jpg");
+}
+
+.volunteerelement6{
+    width:320px;
+    height:180px;
+    //background-position:center;
+    background-size:cover;
+    img{max-width:100%;}
+      background-image:url("http://res.cloudinary.com/dszrkgsd0/image/upload/v1463639055/_food_uernux.jpg");
+}
+
+
+.talentelement1{
+    width:320px;
+    height:180px;
+    //background-position:center;
+    background-size:cover;
+    img{max-width:100%;}
+      background-image:url("http://res.cloudinary.com/dszrkgsd0/image/upload/v1463639002/_flower_kv0ktz.jpg");
+}
+
+.talentelement2{
+    width:320px;
+    height:180px;
+    //background-position:center;
+    background-size:cover;
+    img{max-width:100%;}    
+    background-image:url("http://res.cloudinary.com/dszrkgsd0/image/upload/v1463637233/skate_ce5oln.jpg");
+}
+
+.talentelement3{
+    width:320px;
+    height:180px;
+    //background-position:center;
+    background-size:cover;
+    img{max-width:100%;}
+    background-image:url("http://res.cloudinary.com/dszrkgsd0/image/upload/v1463639002/_gitar_ekvhik.jpg");
+}
+
+.talentelement4{
+    width:320px;
+    height:180px;
+    //background-position:center;
+    background-size:cover;
+    img{max-width:100%;}
+      background-image:url("http://res.cloudinary.com/dszrkgsd0/image/upload/v1463639003/_swim_zhtgcn.jpg");
+}
+.talentelement5{
+    width:320px;
+    height:180px;
+    //background-position:center;
+    background-size:cover;
+    img{max-width:100%; }
+    background-image:url("http://res.cloudinary.com/dszrkgsd0/image/upload/v1463639002/_earth_g48aq4.jpg");
+}
+.talentelement6{
+    width:320px;
+    height:180px;
+    //background-position:center;
+    background-size:cover;
+    img{max-width:100%;}
+    background-image:url("http://res.cloudinary.com/dszrkgsd0/image/upload/v1463639002/_bracelet_j8gomz.jpg");
+}
+
+
 .smallimage{
  //    background-image:url(test.jpg);
  height:150px;
@@ -89,7 +185,8 @@
 .firstslide{
     background-position: center;
     background-size: cover;
-    background-image:url(springblooms.jpg);
+  //  background-image:url(springblooms.jpg);
+  background-image:url("http://res.cloudinary.com/dszrkgsd0/image/upload/v1463637231/springblooms_xol4vi.jpg");
     width:1663px;
     height:650px;
         max-width:100%;
@@ -97,12 +194,8 @@
     img{max-width:100%;}
 }
 
-.slide:nth-child(1){
-    background-image:url(springblooms.jpg);
-}
-
 .secondslide{
-    background-image:url(youngcouplewide.jpg);
+    background-image:url("http://res.cloudinary.com/dszrkgsd0/image/upload/v1463637231/youngcouplewide_awq4fk.jpg");
     background-position: center;
     background-size: cover;
     width:1663px;
@@ -112,7 +205,7 @@
 }
 
 .thirdslide{
-    background-image:url(skate.jpg);
+    background-image:url("http://res.cloudinary.com/dszrkgsd0/image/upload/v1463637233/skate_ce5oln.jpg");
     background-position: center;
     background-size: cover;
     width:1663px;

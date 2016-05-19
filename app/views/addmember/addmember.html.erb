@@ -1,141 +1,116 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ko">
 <head>
-	<meta charset="utf-8">
-	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
-	<meta name="description" content="">
-	<meta name="author" content="">
-	<link rel="icon" href="../../favicon.ico">
-	<title>Voluntal :: main</title>
-	<!-- Bootstrap core JavaScript start-->
-		<link href="assets/stylesheet/bootstrap.css" type="text/css" rel="stylesheet">
-		<script src="http://code.jquery.com/jquery-1.12.0.min.js"></script>
-		<link rel="stylesheet"	href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
-	<!-- Bootstrap core JavaScript end-->
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+<meta name="description" content="">
+<meta name="author" content="">
+<link rel="icon" href="../../favicon.ico">
+<title>Voluntal :: main</title>
+<!-- YJ CSS file-->
+<link rel="stylesheet" href="stylesheets/voluntal.css">
+<!-- Bootstrap core JavaScript start-->
+<!--<link href="assets/stylesheet/bootstrap.css" type="text/css" rel="stylesheet">-->
+<script src="http://code.jquery.com/jquery-1.12.0.min.js"></script>
+<link rel="stylesheet"
+	href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
+<link rel="stylesheet"
+	href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap-theme.min.css">
+<script
+	src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
+<!-- Bootstrap core JavaScript end-->
 </head>
-<body>
-<!--Vouluntal 네비게이션 바 start -->
+
+<body data-spy="scroll" data-target=".navbar" data-offset="50">
+	<!--Vouluntal 네비게이션 바 start -->
 	<nav class="navbar navbar-default navbar-fixed-top">
 		<div class="container-fluid" style="">
-		    <div class="navbar-header">
-			    <a href="/"><img src="http://i.imgur.com/XqSDoFN.png" alt="logo" class="img-rounded"></a>
-			    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
-              		<span class="sr-only">Toggle navigation</span>
-	                <span class="icon-bar"></span>
-	                <span class="icon-bar"></span>
-	                <span class="icon-bar"></span>
-		        </button>
+			<div class="navbar-header">
+				<!--<a href="/"><img src="http://i.imgur.com/XqSDoFN.png" width="190px" height="50px" alt="logo" class="img-rounded"></a>-->
+				<a href="/"><div class="logoimage"></div></a>
+				<button type="button" class="navbar-toggle" data-toggle="collapse"
+					data-target="#myNavbar">
+					<span class="sr-only">Toggle navigation</span> <span
+						class="icon-bar"></span> <span class="icon-bar"></span> <span
+						class="icon-bar"></span>
+				</button>
 			</div>
-			<div class="navbar-collapse collapse" id="myNavbar" style="" >
+			<div class="navbar-collapse collapse" id="myNavbar" style="">
 				<ul class="nav navbar-nav navbar-left">
-					<li><a href="/intro/intro"><strong>Voluntal이란?</strong></a></li>
-					<li><a href="#myCarousel" class="scroll"><strong>Volunteer</strong></a></li>
-					<li><a href="#testing1" class="scroll"><strong>Talent</strong></a></li>
-					<li class="active"><a href="#"><strong>Voluntal 만들기</strong></a></li>
+					<li class="active"><a href="#section1" class="scroll"><strong>Voluntal이란?</strong></a></li>
+					<li><a href="#section2" class="scroll"><strong>Volunteer</strong></a></li>
+					<li><a href="#section3" class="scroll"><strong>Talent</strong></a></li>
+					<li><a href="#section4" class="scroll"><strong>Voluntal
+								만들기</strong></a></li>
 				</ul>
 				<ul class="nav navbar-nav navbar-right">
-				    <li><a href="/addmember/addmember"><span class="glyphicon glyphicon-user"></span><strong> Sign Up</strong> </a></li>
-				    <li><a href="/login/login"><span class="glyphicon glyphicon-log-in"></span><strong>  Login</strong></a></li>
+					<li><a href="/addmember/addmember"><span
+							class="glyphicon glyphicon-user"></span><strong> Sign Up</strong>
+					</a></li>
+					<li><a href="/login/login"><span
+							class="glyphicon glyphicon-log-in"></span><strong> Login</strong></a></li>
 				</ul>
 			</div>
-    	</div>
+		</div>
 	</nav>
-<!--Vouluntal 네비게이션 바 end -->
 
 
 
-<div>
-<br>
-<br>
-<br>
-<blockquote>	<h3> 회원 가입 </h3>
-<form action="/addmember/add_process" method="post">
-Email : <input type="text" name="email"> <p>
-Password : <input type="password" name="password"> <p>
-Phone : <input type="text" name="phone" placeholder="  -를 빼고 입력하세요"><p>
-<input type="submit" value="회원가입">
-
-</blockquote>
-</form>
-
-
-</div>
+	<div>
+		<br> <br> <br>
+		<blockquote>
+			<h3>회원 가입</h3>
+			<form action="/addmember/add_process" method="post">
+				Email : <input type="text" name="email">
+				<p>
+					Password : <input type="password" name="password">
+				<p>
+					Phone : <input type="text" name="phone" placeholder="  -를 빼고 입력하세요">
+				<p>
+					<input type="submit" value="회원가입">
+		</blockquote>
+		</form>
 
 
-<div class="container" id="footer">
-<div class="row">
-<div class="col col-sm-12">
-
-<h1>Follow Us</h1>
-<div class="btn-group">
-<a class="btn btn-twitter btn-lg" href="https://www.twitter.com/"><i
-class="icon-twitter icon-large"></i> Twitter</a> <a
-class="btn btn-facebook btn-lg" href="https://www.facebook.com/"><i
-class="icon-facebook icon-large"></i> Facebook</a> <a
-class="btn btn-google-plus btn-lg" href="#"><i
-class="icon-google-plus icon-large"></i> Google+</a>
-</div>
-
-</div>
-</div>
-</div> <!-- container end-->
-
-<footer>
-<div class="container">i
-<div class="row">
-<div class="col-sm-6">
-<ul class="list-inline">
-<li><i class="img/bitnami.png"></i></li>
-<li><i class="icon-twitter icon-2x"></i></li>
-<li><i class="icon-google-plus icon-2x"></i></li>
-<li><i class="icon-pinterest icon-2x"></i></li>
-</ul>
-</div>
-<div class="col-sm-6">
-<p class="pull-right">
-Built with <i class="icon-heart-empty"></i> at <a
-href="http://www.bootply.com">Bootply</a>
-</p>
-</div>
-</div>
-</div>
-</footer>
+	</div>
 
 
+	<!-- Voulutal 푸터 start -->
+	<footer class="footer">
+		<div class="container">
+			<div class="col-md-10">
+				<p class="text-muted">&copy; WB. and YJ. All rights reserved.</p>
+			</div>
+			<div class="col-md-2">
+				<p>
+					<a href="http://facebook.com/woongbini">WB<span
+						class="social social-facebook"></span></a> <a
+						href="https://goo.gl/BFzCQY">YJ<span
+						class="social social-facebook"></span></a>
+				</p>
+			</div>
+		</div>
+	</footer>
+	<!-- Voulutal 푸터 end -->
 
-<!-- Placed at the end of the document so the pages load faster -->
-<script
-src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
-<script src="../../dist/js/bootstrap.min.js"></script>
-<!-- Just to make our placeholder images work. Don't actually copy the next line! -->
-<script src="../../assets/js/vendor/holder.js"></script>
-<!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
-<script src="../../assets/js/ie10-viewport-bug-workaround.js"></script>
-<!--jquery스크롤 coding-->
-<script>
-jQuery(document).ready(function($) {
-	$(".scroll").click(function(event){
-			event.preventDefault();
-			$('html,body').animate({scrollTop:$(this.hash).offset().top}, 500);
+
+	<!--<script	src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+				<script src="../../dist/js/bootstrap.min.js"></script>
+				<script src="../../assets/js/vendor/holder.js"></script>-->
+
+	<!-- jquery스크롤 coding start -->
+	<script>
+		jQuery(document).ready(function($) {
+			$(".scroll").click(function(event) {
+				event.preventDefault();
+				$('html,body').animate({
+					scrollTop : $(this.hash).offset().top
+				}, 500);
 			});
-	});
-</script>
-
-<!-- FOOTER -->
-<footer>
-<p class="pull-right">
-<a href="#myCarousel" class="scroll">Back to top</a>
-</p>
-<p>
-&copy; 2015 YJ company, Inc. &middot; <a href="">Presents</a>
-&middot; <a href="#">Terms</a>
-</p>
-</footer>
-
-</div>
-</nav>
+		});
+	</script>
+	<!-- jquery스크롤 coding end -->
 </body>
 </html>
-
