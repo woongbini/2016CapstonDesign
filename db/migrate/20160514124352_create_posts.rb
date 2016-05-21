@@ -8,8 +8,8 @@ class CreatePosts < ActiveRecord::Migration
       t.integer :num_people #사람수
       t.text :host_info     #호스트 정보
       t.text :vol_info      #볼룬탈 정보(소개)
-      t.datetime :start_time #시작 일정
-      t.datetime :end_time   #끝나는 일정
+      t.string :start_time  #시작 일정
+      t.string :end_time    #끝나는 일정
       t.string :place       #장소
  
       t.timestamps

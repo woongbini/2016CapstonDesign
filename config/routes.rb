@@ -1,6 +1,7 @@
 Testapp::Application.routes.draw do
-  root "mainpage#mainpage"
-  get "voluntal/register"
+  root "mainpage#mainpage"          #mainpage 보여줌
+  get "voluntal/register"           #Voluntal 등록 창으로 넘어감
+  post "voluntal/register_process"  #voluntal 등록 처리
   get "voluntal/create_complete"
   get "voluntal/edit"
   get "voluntal/edit_complete"
