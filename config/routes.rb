@@ -5,16 +5,16 @@ Testapp::Application.routes.draw do
   get "voluntal/show/:id" =>'voluntal#show' #단일 게시글 보기 처리
   get "users/signup"                        #회원가입 페이지로 이동
   post "users/signup_complete"              #회원가입 처리
-  get "users/login"
-  get "users/login_complete"
-  get "users/logout_complete"
+  get "users/login"                         #로그인 페이지로 이동
+  post "users/login_complete"               #로그인 처리
+  get "users/logout_complete"               #로그아웃 처리
+  get "users/mypage"                        #내 페이지 보기
+  
   get "voluntal/create_complete"
   get "voluntal/edit"
   get "voluntal/edit_complete"
   get "voluntal/delete_complete"
-  get "addmember/addmember" 
   get "mainpage/addmemberpage"
-  post "addmember/add_process"
   get  "intro/intro" 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

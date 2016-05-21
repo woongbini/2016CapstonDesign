@@ -1,2 +1,8 @@
 <h1>Users#login</h1>
-<p>Find me in app/views/users/login.html.erb</p>
+
+
+<form action="/users/login_complete" method="post">
+  <p>이메일: <input type="text" name="email"></p>
+  <p>비밀번호: <input type="password" name="password"></p>
+  <input type="submit" value="로그인">
+</form>
