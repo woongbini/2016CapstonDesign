@@ -3,6 +3,11 @@ Testapp::Application.routes.draw do
   get "voluntal/register"                   #Voluntal 등록 창으로 넘어감
   post "voluntal/register_process"          #voluntal 등록 처리
   get "voluntal/show/:id" =>'voluntal#show' #단일 게시글 보기 처리
+  get "users/signup"                        #회원가입 페이지로 이동
+  post "users/signup_complete"              #회원가입 처리
+  get "users/login"
+  get "users/login_complete"
+  get "users/logout_complete"
   get "voluntal/create_complete"
   get "voluntal/edit"
   get "voluntal/edit_complete"
