@@ -1,14 +1,21 @@
 class AddmemberController < ApplicationController
   def add_process
-		# u = User.new
-		# u.email = params[:email]
-		# u.password = params[:password]
-		# u.phone = params[:phone]
-		# if u.save
-		# 	redirect_to "/mainpage/mainpage"
-		# else
-		# 	flash[:alert] = p.errors[:content][0]
-		# 	redirect_to "back"
-		# end
+	user = User.new
+	user.email = params[:email]
+	if params[:password] == params[:re_password]
+		user.password = params[:password]
+		user.phone = params[:phone]
+		user.nickname = params[:nickname]
+		
+		if user.save
+			flash[:alert] = "노예게약 ㅊㅊ"
+			redirect_to "/"
+		else flash[:alert] = user.errors.values.flatten.join(' ')
+			redirect_to :back
+		end
+	else
+		flash[:alert] = "비번 틀림"
+		redirect_to :back
+	end
   end
 end

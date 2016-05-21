@@ -1,5 +1,7 @@
 class VoluntalController < ApplicationController
   def register
+    post = Post.new
+    
   end
 
   def create_complete
