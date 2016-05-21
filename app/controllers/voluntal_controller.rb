@@ -18,7 +18,7 @@ class VoluntalController < ApplicationController
     post.place = params[:place]
     if post.save
       flash[:alert] = "게시글이 저장되었습니다. "
-      redirect_to "/"
+      redirect_to "/voluntal/show/#{post.id}"
     else
       flash[:alert] = post.errors.values.flatten.join(' ')
       redirect_to :back

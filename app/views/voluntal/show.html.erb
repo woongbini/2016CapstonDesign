@@ -41,18 +41,19 @@
 			</div>
 			<div class="navbar-collapse collapse" id="myNavbar" style="">
 				<ul class="nav navbar-nav navbar-left">
-					<li class="active"><a href="#section1" class="scroll"><strong>Voluntal이란?</strong></a></li>
+					<!--<li class="active"><a href="#section1" class="scroll"><strong>Voluntal이란?</strong></a></li>
 					<li><a href="#section2" class="scroll"><strong>Volunteer</strong></a></li>
 					<li><a href="#section3" class="scroll"><strong>Talent</strong></a></li>
-					<li><a href="#section4" class="scroll"><strong>Voluntal
-								만들기</strong></a></li>
+					<li><a href="#section4" class="scroll"><strong>Voluntal만들기</strong></a></li>-->
 				</ul>
 				<ul class="nav navbar-nav navbar-right">
-					<li><a href="/addmember/addmember"><span
-							class="glyphicon glyphicon-user"></span><strong> Sign Up</strong>
-					</a></li>
-					<li><a href="/login/login"><span
-							class="glyphicon glyphicon-log-in"></span><strong> Login</strong></a></li>
+					<% if session[:user_id].nil? %>
+						<li><a href="/users/signup"><span class="glyphicon glyphicon-user"></span> <strong>Sign Up </strong></a></li>
+						<li><a href="/users/login"><span class="glyphicon glyphicon-log-in"></span> <strong>Login </strong></a></li>
+					<% else %>
+						<li><a href="/users/mypage"><span class="glyphicon glyphicon-user"></span> <strong>My Page</strong></a></li>
+						<li><a href="/users/logout_complete"><span class="glyphicon glyphicon-log-out"></span> <strong>Log Out</strong></a></li>
+					<% end %>
 				</ul>
 			</div>
 		</div>
@@ -64,7 +65,7 @@
      <div style="border : 1px solid #ffffff">
           <h2>제목 : <%= @posts.title %></h4>
           <h3>분류 : <%= @posts.category %></h3>
-          <h4>호스트 : <%= @posts.user_id %></h4>
+          <h4>호스트 : <%= @posts.user.nickname %></h4>
           <p>호스트 정보 : <%= @posts.host_info %></p>
           <h5>사람수 : <%= @posts.num_people %></h4>
           <p>볼룬탈  정보 : <%= @posts.vol_info %></p>
