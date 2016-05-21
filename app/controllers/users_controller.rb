@@ -1,4 +1,6 @@
 class UsersController < ApplicationController
+  before_action :login_check
+  
   def signup
   end
 
@@ -47,5 +49,10 @@ class UsersController < ApplicationController
   end
   
   def mypage
+    #if session[:user_id].nil?
+    #  
+    #else
+    #  @user_info = User.find_by_id(session[:user_id])    #session ID를 가져와서 그 사람 정보를 줌
+    #end
   end
 end

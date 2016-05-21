@@ -1,28 +1,30 @@
 <!DOCTYPE html>
 <html lang="ko">
 <head>
-<meta charset="utf-8">
-<meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
-<meta name="description" content="">
-<meta name="author" content="">
-<link rel="icon" href="../../favicon.ico">
-<title>Voluntal :: main</title>
-<!-- YJ CSS file-->
-<link rel="stylesheet" href="stylesheets/voluntal.css">
-<!-- Bootstrap core JavaScript start-->
-<!--<link href="assets/stylesheet/bootstrap.css" type="text/css" rel="stylesheet">-->
-<script src="http://code.jquery.com/jquery-1.12.0.min.js"></script>
-<link rel="stylesheet"
-	href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
-<link rel="stylesheet"
-	href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap-theme.min.css">
-<script
-	src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
-<!-- Bootstrap core JavaScript end-->
-</head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+	<meta name="description" content="">
+	<meta name="author" content="">
+	<link rel="icon" href="../../favicon.ico">
+	<title>title </title>
+	<!-- YJ CSS file-->
+		<link rel="stylesheet" href="stylesheets/voluntal.css">
+	<!-- Bootstrap core JavaScript start-->
+		<!--<link href="assets/stylesheet/bootstrap.css" type="text/css" rel="stylesheet">-->
+		<script src="http://code.jquery.com/jquery-1.12.0.min.js"></script>
+		<link rel="stylesheet"	href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
+		<link rel="stylesheet"	href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap-theme.min.css">
+		<script	src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
+	<!-- Bootstrap core JavaScript end-->
+	
+	<style type="text/css">
 
+		
+	</style>
+	
+</head>
 <body>
 <!--Vouluntal 네비게이션 바 start -->
 	<nav class="navbar navbar-default navbar-fixed-top">
@@ -39,18 +41,19 @@
 			</div>
 			<div class="navbar-collapse collapse" id="myNavbar" style="">
 				<ul class="nav navbar-nav navbar-left">
-					<li class="active"><a href="#section1" class="scroll"><strong>Voluntal이란?</strong></a></li>
+					<!--<li class="active"><a href="#section1" class="scroll"><strong>Voluntal이란?</strong></a></li>
 					<li><a href="#section2" class="scroll"><strong>Volunteer</strong></a></li>
 					<li><a href="#section3" class="scroll"><strong>Talent</strong></a></li>
-					<li><a href="#section4" class="scroll"><strong>Voluntal
-								만들기</strong></a></li>
+					<li><a href="#section4" class="scroll"><strong>Voluntal만들기</strong></a></li>-->
 				</ul>
 				<ul class="nav navbar-nav navbar-right">
-					<li><a href="/users/signup"><span
-							class="glyphicon glyphicon-user"></span><strong> Sign Up</strong>
-					</a></li>
-					<li><a href="/users/login"><span
-							class="glyphicon glyphicon-log-in"></span><strong> Login</strong></a></li>
+					<% if session[:user_id].nil? %>
+						<li><a href="/users/signup"><span class="glyphicon glyphicon-user"></span> <strong>Sign Up </strong></a></li>
+						<li><a href="/users/login"><span class="glyphicon glyphicon-log-in"></span> <strong>Login </strong></a></li>
+					<% else %>
+						<li><a href="/users/mypage"><span class="glyphicon glyphicon-user"></span> <strong>My Page</strong></a></li>
+						<li><a href="/users/logout_complete"><span class="glyphicon glyphicon-log-out"></span> <strong>Log Out</strong></a></li>
+					<% end %>
 				</ul>
 			</div>
 		</div>

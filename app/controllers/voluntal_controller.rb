@@ -1,10 +1,12 @@
 class VoluntalController < ApplicationController
+  before_action :login_check
+   
   def register
   end
   
   def register_process
     post = Post.new
-    post.user_id = 1
+    post.user_id = session[:user_id]
     post.is_host = true
     post.title = params[:title]
     post.category = params[:category]
