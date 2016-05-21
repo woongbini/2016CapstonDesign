@@ -4,4 +4,8 @@ class MainpageController < ApplicationController
 
   def addmemberpage
   end
+  
+  def page_title
+    "main"
+  end
 end
