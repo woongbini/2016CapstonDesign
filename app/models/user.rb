@@ -8,4 +8,6 @@ class User < ActiveRecord::Base
    validates :nickname, :presence => { :message => "아이디를 반드시 입력하셔야 합니다." }
    validates :phone, :uniqueness => {:message => "이미 있는 전화번호 입니다."}
    validates :phone, :presence => { :message => "전화번호를 반드시 입력하셔야 합니다." }
+   
+   mount_uploader :profile_pic, ImageUploader
 end
