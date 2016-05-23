@@ -55,7 +55,7 @@ class UsersController < ApplicationController
       
     else
       @user_info = User.find_by_id(session[:user_id])    #session ID를 가져와서 그 사람 정보를 줌
-      @user_regi = User.where(session[:user_id])          #session ID를 가져와서 그 사람의 모든 정보를 줌
+      @user_regi = User.where(session[:user_id])         #session ID를 가져와서 그 사람의 모든 정보를 줌
     end
   end
 end

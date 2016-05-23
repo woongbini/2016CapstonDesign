@@ -73,5 +73,21 @@
           <p>정료 일정 : <%= @posts.end_time %></p>
           <p>장소 : <%= @posts.place %></p>
      </div>
+     
+     <div>
+     	<h2>참여하기 만들기</h2>
+		<form action="/voluntal/join_process" method="post" class="form-horizontal">
+			<input type="hidden" name="title" value="<%= @posts.title %>">
+			<input type="hidden" name="po_id" value="<%= @posts.po_id %>">
+			<input type="hidden" name="category" value="<%= @posts.category %>">
+			<input type="hidden" name="num_people" value="<%= @posts.num_people %>">
+			<input type="hidden" name="host_info" value="<%= @posts.host_info %>">
+			<input type="hidden" name="vol_info" value="<%= @posts.vol_info %>">
+			<input type="hidden" name="start_time" value="<%= @posts.start_time %>">
+			<input type="hidden" name="end_time" value="<%= @posts.end_time %>">
+			<input type="hidden" name="place" value="<%= @posts.place %>">
+			<button type="submit" class="btn btn-primary">참여하기</button>
+		</form>
+     </div>
 
 </body>

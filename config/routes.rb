@@ -9,6 +9,7 @@ Testapp::Application.routes.draw do
   post "users/login_complete"               #로그인 처리
   get "users/logout_complete"               #로그아웃 처리
   get "users/mypage"                        #내 페이지 보기
+  post "voluntal/join_process"              #Voluntal에 참여하기 처리
   
   get "voluntal/create_complete"
   get "voluntal/edit"

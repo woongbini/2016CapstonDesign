@@ -28,6 +28,7 @@ ActiveRecord::Schema.define(version: 20160523065150) do
   end
 
   create_table "posts", force: true do |t|
+    t.integer  "po_id"
     t.integer  "user_id"
     t.boolean  "is_host"
     t.string   "title"
