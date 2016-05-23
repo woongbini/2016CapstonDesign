@@ -62,6 +62,9 @@
 <br><br><br>
 <!-- 개인정보 보여주기 start-->
 	<div class="content-profile">
+		<div>
+			<p><img src="<%= @user_info.profile_pic_url(:thumb) %>"></p>
+		</div>
 		<div class="clearfix">
 			<h2><span id="nickname" class="form-inline"><%= @user_info.nickname %></span><a href="#" onclick="return changeNickname()" class="btn btn-pink">변경하기</a></h2>
 		</div>

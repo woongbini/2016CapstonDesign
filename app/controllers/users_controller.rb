@@ -11,11 +11,13 @@ class UsersController < ApplicationController
       user.password = params[:password]
       user.phone = params[:phone]
       user.nickname = params[:nickname]
+      user.profile_pic = params[:profile_pic]
       
       if user.save
         flash[:alert] = "노예게약 ㅊㅊ"
         redirect_to "/"
-      else flash[:alert] = user.errors.values.flatten.join(' ')
+      else 
+        flash[:alert] = user.errors.values.flatten.join(' ')
         redirect_to :back
       end
     else

@@ -65,7 +65,7 @@
 <!-- 회원가입 기능 start -->
 	<div class="container">
 		<h3>회원 가입</h3>
-		<form action="/users/signup_complete" method="post">
+		<form action="/users/signup_complete" method="post" enctype="multipart/form-data">
 			<div>
 				Email : <input type="text" name="email">	
 			</div>
@@ -80,6 +80,9 @@
 			</div>
 			<div>
 				Nickname : <input type="text" name="nickname" placeholder="닉네임을 입력하세요">
+			</div>
+			<div>
+				<input type="hidden" name="profile_pic" value="nil.jpg">
 			</div>
 			<div>
 				<input type="submit" value="회원가입">
