@@ -66,7 +66,7 @@
 			<p><img src="<%= @user_info.profile_pic_url(:thumb) %>"></p>
 		</div>
 		<div class="clearfix">
-			<h2><span id="nickname" class="form-inline"><%= @user_info.nickname %></span><a href="#" onclick="return changeNickname()" class="btn btn-pink">변경하기</a></h2>
+			<h2><span id="nickname" class="form-inline"><%= @user_info.nickname %></span><a href="/users/edit" onclick="return changeNickname()" class="btn btn-pink">변경하기</a></h2>
 		</div>
 		<div class="area-contact">
 			<h3>연락 정보<sup style="color: #fd6a70; cursor: pointer" title="튜터와 튜티 간 연결을 위해 올바른 연락처가 필요합니다">*</sup></h3>
@@ -75,7 +75,7 @@
 					<label>등록 된 전화번호</label>
 				</div>
 				<div class="col-md-9 contact-value">
-					<%= @user_info.phone %><a href="javascript:void(0)" id="btn-register-phone" class="btn btn-pink">변경하기</a>
+					<%= @user_info.phone %>
 				</div>
 			</div>
 			<div class="row">
@@ -107,7 +107,9 @@
 					<label>호스트 한 Voluntal</label>
 				</div>
 				<div class="col-md-9 contact-value">
-					힝 아직 못함
+					<% @posts_host.reverse.each do |post| %>
+						<a href="/voluntal/show/<%= post.id %>"><%= post.title %></a>
+					<% end %>
 				</div>
 			</div>
 			<div class="row">
@@ -115,7 +117,9 @@
 					<label>참여한 Voluntal</label>
 				</div>
 				<div class="col-md-9 contact-value">
-					힝 아직두 못함
+					<% @posts_vol.reverse.each do |post| %>
+						<a href="/voluntal/show/<%= post.id %>"><%= post.title %></a>
+					<% end %>
 				</div>
 			</div>
 		</div>

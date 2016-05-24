@@ -38,29 +38,31 @@ class VoluntalController < ApplicationController
   end
   
   def join_process
-    if( Post.select("user_id").where(session[:user_id]) != session[:user_id] )
-      post = Post.new
-      post.po_id = params[:po_id]
-      post.user_id = session[:user_id]
-      post.is_host = false
-      post.title = params[:title]
-      post.category = params[:category]
-      post.num_people = params[:num_people]
-      post.host_info = params[:host_info]
-      post.vol_info = params[:vol_info]
-      post.start_time = params[:start_time]
-      post.end_time = params[:end_time]
-      post.place = params[:place]
-      if post.save
-        flash[:alert] = "참여되었습니다 "
-        redirect_to "/voluntal/show/#{post.id}"
+    if( Post.select("is_host").where(session[:user_id]) == false )
+      if ( Post.select("user_id").where(session[:user_id]) == session[:user_id] )
+        post = Post.new
+        post.po_id = params[:po_id]
+        post.user_id = session[:user_id]
+        post.is_host = false
+        post.title = params[:title]
+        post.category = params[:category]
+        post.num_people = params[:num_people]
+        post.host_info = params[:host_info]
+        post.vol_info = params[:vol_info]
+        post.start_time = params[:start_time]
+        post.end_time = params[:end_time]
+        post.place = params[:place]
+        if post.save
+          flash[:alert] = "참여되었습니다 "
+          redirect_to "/voluntal/show/#{post.id}"
+        else
+          flash[:alert] = post.errors.values.flatten.join(' ')
+          redirect_to :back
+        end
       else
-        flash[:alert] = post.errors.values.flatten.join(' ')
-        redirect_to :back
+        flash[:alert] = "이미 참여했었습니다 "
+        redirect_to "/"
       end
-    else
-      flash[:alert] = "이미 참여했었습니다 "
-      redirect_to "/users/mypage"
     end
   end
   
