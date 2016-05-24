@@ -141,15 +141,16 @@
 				<div class="row">
 				<!-- 포스트 반복하여 처리 -->
 				<% @posts_vol.reverse.each do |post| %>
+			
 					<div class="col-md-4">
 						<a href="/voluntal/show/<%= post.id %>">
 							<div class="volunteerelement1">
 							</div> 
 							<img class="img-circle"
-								src="http://res.cloudinary.com/dszrkgsd0/image/upload/v1463631272/KakaoTalk_20160502_171244207_us8m5g.jpg"
+								src="<%= post.user.profile_pic_url(:thumb) %>"
 								alt="Generic placeholder image" width="100" height="100">
 							<h3><%= post.category %></h3>
-							<h4><%= post.title %></h4>
+							<h4><%= post.user.nickname %></h4>
 
 						</a>
 					</div>
