@@ -1,6 +1,7 @@
 class CreatePosts < ActiveRecord::Migration
   def change
     create_table :posts do |t|
+      t.integer :po_id      #구분하기 위한 ID
       t.integer :user_id    #유저ID(FK)
       t.boolean :is_host    #HOST구분
       t.string :title       #제목

@@ -30,7 +30,7 @@
 <!-- 회원가입 기능 start -->
 	<div class="container">
 		<h3>회원 가입</h3>
-		<form action="/users/signup_complete" method="post">
+		<form action="/users/signup_complete" method="post" enctype="multipart/form-data">
 			<div>
 				Email : <input type="text" name="email">	
 			</div>
@@ -47,9 +47,51 @@
 				Nickname : <input type="text" name="nickname" placeholder="닉네임을 입력하세요">
 			</div>
 			<div>
+				<input type="file" name="profile_pic">
+			</div>
+			<div>
 				<input type="submit" value="회원가입">
 			</div>
 	</div>
 <!-- 회원가입 기능 end -->
+<<<<<<< HEAD
+=======
+
+<!-- Voulutal 푸터 start -->
+	<footer class="footer">
+		<div class="container">
+			<div class="col-md-10">
+				<p class="text-muted">&copy; WB. and YJ. All rights reserved.</p>
+			</div>
+			<div class="col-md-2">
+				<p>
+					<a href="http://facebook.com/woongbini">WB<span
+						class="social social-facebook"></span></a> <a
+						href="https://goo.gl/BFzCQY">YJ<span
+						class="social social-facebook"></span></a>
+				</p>
+			</div>
+		</div>
+	</footer>
+<!-- Voulutal 푸터 end -->
+
+
+	<!--<script	src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+				<script src="../../dist/js/bootstrap.min.js"></script>
+				<script src="../../assets/js/vendor/holder.js"></script>-->
+
+<!-- jquery스크롤 coding start -->
+	<script>
+		jQuery(document).ready(function($) {
+			$(".scroll").click(function(event) {
+				event.preventDefault();
+				$('html,body').animate({
+					scrollTop : $(this.hash).offset().top
+				}, 500);
+			});
+		});
+	</script>
+<!-- jquery스크롤 coding end -->
+>>>>>>> refs/remotes/origin/master
 </body>
 </html>
