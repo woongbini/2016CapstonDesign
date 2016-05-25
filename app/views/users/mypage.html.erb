@@ -63,66 +63,32 @@
 <br><br><br>
 
 <!-- 개인정보 보여주기 start-->
-	<div class="content-profile">
-		<div>
-			<p><img src="<%= @user_info.profile_pic_url(:thumb) %>"></p>
-		</div>
-		<div class="clearfix">
-			<h2><span id="nickname" class="form-inline"><%= @user_info.nickname %></span><a href="/users/edit" class="btn btn-primary btn-sm">변경하기</a></h2>
-		</div>
-		<div class="area-contact">
-			<h3>연락 정보<sup style="color: #fd6a70; cursor: pointer" title="튜터와 튜티 간 연결을 위해 올바른 연락처가 필요합니다">*</sup></h3>
-			<div class="row">
-				<div class="col-md-3">
-					<label>등록 된 전화번호</label>
+	<div class="container">
+		<div class="row">
+			<div class="col-md-3" >
+				<div>
+					<img src="<%= @user_info.profile_pic_url(:thumb) %>">
+					<h3><%= @user_info.nickname %></h3>
+					<a href="/users/edit" class="btn btn-primary btn-sm">변경하기</a>
 				</div>
-				<div class="col-md-9 contact-value">
-					<%= @user_info.phone %>
-				</div>
-			</div>
-			<div class="row">
-				<div class="col-md-3">
-					<label>등록 된 이메일</label>
-				</div>
-				<div class="col-md-9 contact-value">
-					<%= @user_info.email %>
+				<div>
+					<p>프로필</p>
+					<p>호스트 한 Voluntal</p>
+						<% @posts_host.reverse.each do |post| %>
+							<a href="/voluntal/show/<%= post.id %>"><%= post.title %></a>
+						<% end %>
+					<p>참여한 Voluntal</p>
+						<% @posts_vol.reverse.each do |post| %>
+							<a href="/voluntal/show/<%= post.id %>"><%= post.title %></a>
+						<% end %>
 				</div>
 			</div>
-			<div class="row">
-				<div class="col-md-3">
-					<label>가입한 날짜</label>
-				</div>
-				<div class="col-md-9 contact-value">
-					<%= @user_info.created_at %>	            	
-				</div>
-			</div>
-			<div class="row">
-				<div class="col-md-3">
-					<label>계정 정보</label>
-				</div>
-				<div class="col-md-9 contact-value">
-					페이스북 로그인 사용중(아직 미구현)
-				</div>
-			</div>
-			<div class="row">
-				<div class="col-md-3">
-					<label>호스트 한 Voluntal</label>
-				</div>
-				<div class="col-md-9 contact-value">
-					<% @posts_host.reverse.each do |post| %>
-						<a href="/voluntal/show/<%= post.id %>"><%= post.title %></a>
-					<% end %>
-				</div>
-			</div>
-			<div class="row">
-				<div class="col-md-3">
-					<label>참여한 Voluntal</label>
-				</div>
-				<div class="col-md-9 contact-value">
-					<% @posts_vol.reverse.each do |post| %>
-						<a href="/voluntal/show/<%= post.id %>"><%= post.title %></a>
-					<% end %>
-				</div>
+			
+			<div class="col-md-9">
+				<h4>연락정보</h4> <%= @user_info.phone %>
+				<h4>등록된 이메일</h4> <%= @user_info.email %>
+				<h4>가입한 날짜</h4> <%= @user_info.created_at %>
+				<h4>계정 정보</h4> 아직 미구성
 			</div>
 		</div>
 	</div>
