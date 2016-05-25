@@ -10,13 +10,13 @@
 	<link rel="icon" href="../../favicon.ico">
 	<title>Voluntal :: main</title>
 	<!-- YJ CSS file-->
-  		<link rel="stylesheet" href="stylesheets/voluntal.css">
+			<link rel="stylesheet" href="stylesheets/voluntal.css">
 	<!-- Bootstrap core JavaScript start-->
-  		<!--<link href="assets/stylesheet/bootstrap.css" type="text/css" rel="stylesheet">-->
-  		<script src="http://code.jquery.com/jquery-1.12.0.min.js"></script>
-  		<link rel="stylesheet"	href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
-  		<link rel="stylesheet"	href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap-theme.min.css">
-  		<script	src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
+			<!--<link href="assets/stylesheet/bootstrap.css" type="text/css" rel="stylesheet">-->
+			<script src="http://code.jquery.com/jquery-1.12.0.min.js"></script>
+			<link rel="stylesheet"	href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
+			<link rel="stylesheet"	href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap-theme.min.css">
+			<script	src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
 	<!-- Bootstrap core JavaScript end-->
 </head>
 <body>
@@ -55,173 +55,212 @@
 <!--Vouluntal 네비게이션 바 end -->
 
 <!-- Voluntal 만들기 start -->
-  <div class="container">
-    <hr><hr><h2 align="center">등록해보세요!</h2>
-  </div>
-  <hr class="featurette-divider">
-  <form action="/voluntal/register_process" method="post" class="form-horizontal">
-    <fieldset>
-      <!--제목-->
-      <div class="form-group">
-        <label for="inputEmail" class="col-md-3 control-label">제목</label>
-        <div class="col-md-8">
-          <input type="text" class="form-control" name="title" placeholder="title">
-        </div>
-        <div class="col-md-1">
-        </div>
-      </div>
-      
-      <!--카테고리 (구분)-->
-      <div class="form-group">
-        <label class="col-md-3 control-label">구분</label>
-        <div class="col-md-4 radio">
-            <label>
-              <input type="radio" name="category" value="Voluntal" checked="">Voluntal</label>
-        </div>
-        <div class="col-md-4 radio">
-            <label>
-              <input type="radio" name="category" value="Talent">Talent</label>
-        </div>
-        <div class="col-md-1">
-        </div>
-      </div>
-      
-      <!--사람수 -->
-      <div class="form-group">
-        <label for="select" class="col-md-3 control-label">인원</label>
-        <div class="col-md-8">
-          <select class="form-control" name="num_people">
-            <option value="1">1</option>
-            <option value="2">2</option>
-            <option value="3">3</option>
-            <option value="4">4</option>
-            <option value="5">5</option>
-          </select>
-        </div>
-        <div class="col-md-1">
-        </div>
-      </div>
-      
-      <!--호스트 정보-->
-      <div class="form-group">
-        <label for="host_info" class="col-md-3 control-label">정보</label>
-        <div class="col-md-8">
-          <textarea type="text" class="form-control" name="host_info" placeholder="정보 입력하세요"></textarea>
-        </div>
-        <div class="col-md-1">
-        </div>
-      </div>
-      
-      <!-- 볼룬탈 정보-->
-      <div class="form-group">
-        <label for="host_info" class="col-md-3 control-label">소개</label>
-        <div class="col-md-8">
-          <textarea type="text" class="form-control" name="vol_info" placeholder="Voluntal을 소개하는글을 입력하세요"></textarea>
-        </div>
-        <div class="col-md-1">
-        </div>
-      </div>    
-      
-      <!--일정-->
-      <div class-"form-group">
-        <label for="host_info" class="col-md-3 control-label">일정</label>
-        <div class="col-md-8">
-          <div class="col-md-4">
-            <input type="date" class="form-control" name="start_time">
-          </div>
-          <div class="col-md-4">
-            <input type="date" class="form-control" name="end_time">
-          </div>
-        </div>
-        <div class="col-md-1">
-        </div>
-      </div>
-      
-      <!--장소-->
-       <div class="form-group">
-        <label for="inputEmail" class="col-md-3 control-label">장소</label>
-        <div class="col-md-8">
-          <input type="text" class="form-control" name="place" placeholder="장소">
-        </div>
-        <div class="col-md-1">
-        </div>
-      </div>
-      
-      
-      <div class="form-group">
-        <div class="col-md-10 col-md-offset-2">
-          <button type="reset" class="btn btn-default">Cancel</button>
-          <button type="submit" class="btn btn-primary">Submit</button>
-        </div>
-      </div>
-    </fieldset>
-  </form>
+	<div class="container">
+		<hr><hr><h2 align="center">등록해보세요!</h2>
+	</div>
+	<hr class="featurette-divider">
+	<form action="/voluntal/register_process" method="post" class="form-horizontal" enctype="multipart/form-data">
+		<fieldset>
+			<!--제목-->
+			<div class="form-group">
+				<label for="inputEmail" class="col-md-3 control-label">제목</label>
+				<div class="col-md-8">
+					<input type="text" class="form-control" name="title" placeholder="title">
+				</div>
+				<div class="col-md-1">
+				</div>
+			</div>
+			
+			<!--카테고리 (구분)-->
+			<div class="form-group">
+				<label class="col-md-3 control-label">구분</label>
+				<div class="col-md-4 radio">
+						<label>
+							<input type="radio" name="category" value="Voluntal" checked="">Voluntal</label>
+				</div>
+				<div class="col-md-4 radio">
+						<label>
+							<input type="radio" name="category" value="Talent">Talent</label>
+				</div>
+				<div class="col-md-1">
+				</div>
+			</div>
+			
+			<!--사람수 -->
+			<div class="form-group">
+				<label for="select" class="col-md-3 control-label">인원</label>
+				<div class="col-md-8">
+					<select class="form-control" name="num_people">
+						<option value="1">1</option>
+						<option value="2">2</option>
+						<option value="3">3</option>
+						<option value="4">4</option>
+						<option value="5">5</option>
+					</select>
+				</div>
+				<div class="col-md-1">
+				</div>
+			</div>
+			
+			<!--호스트 정보-->
+			<div class="form-group">
+				<label for="host_info" class="col-md-3 control-label">정보</label>
+				<div class="col-md-8">
+					<textarea type="text" class="form-control" name="host_info" placeholder="정보 입력하세요"></textarea>
+				</div>
+				<div class="col-md-1">
+				</div>
+			</div>
+			
+			<!-- 볼룬탈 정보-->
+			<div class="form-group">
+				<label for="host_info" class="col-md-3 control-label">소개</label>
+				<div class="col-md-8">
+					<textarea type="text" class="form-control" name="vol_info" placeholder="Voluntal을 소개하는글을 입력하세요"></textarea>
+				</div>
+				<div class="col-md-1">
+				</div>
+			</div>    
+			
+			<!--일정-->
+			<div class-"form-group">
+				<label for="host_info" class="col-md-3 control-label">일정</label>
+				<div class="col-md-8">
+					<div class="col-md-4">
+						<input type="date" class="form-control" name="start_time">
+					</div>
+					<div class="col-md-4">
+						<input type="date" class="form-control" name="end_time">
+					</div>
+				</div>
+				<div class="col-md-1">
+				</div>
+			</div>
+			
+			<!--장소-->
+			 <div class="form-group">
+				<label for="inputEmail" class="col-md-3 control-label">장소</label>
+				<div class="col-md-8">
+					<input type="text" class="form-control" name="place" placeholder="장소">
+				</div>
+				<div class="col-md-1">
+				</div>
+			</div>
+			
+			<!--커버 사진-->
+			<div class="form-group">
+				<label for="inputEmail" class="col-md-3 control-label">커버 사진</label>
+				<div class="col-md-8">
+					<input type="file" class="form-control" name="cover_pic" placeholder="장소">
+				</div>
+				<div class="col-md-1">
+				</div>
+			</div>
+			
+			<!--사진1-->
+			<div class="form-group">
+				<label for="inputEmail" class="col-md-3 control-label">사진1</label>
+				<div class="col-md-8">
+					<input type="file" class="form-control" name="pic1" placeholder="장소">
+				</div>
+				<div class="col-md-1">
+				</div>
+			</div>
+			
+			<!--사진2-->
+			<div class="form-group">
+				<label for="inputEmail" class="col-md-3 control-label">사진2</label>
+				<div class="col-md-8">
+					<input type="file" class="form-control" name="pic2" placeholder="장소">
+				</div>
+				<div class="col-md-1">
+				</div>
+			</div>
+			
+			<!--사진3-->
+			<div class="form-group">
+				<label for="inputEmail" class="col-md-3 control-label">사진3</label>
+				<div class="col-md-8">
+					<input type="file" class="form-control" name="pic3" placeholder="장소">
+				</div>
+				<div class="col-md-1">
+				</div>
+			</div>
+			
+			<div class="form-group">
+				<div class="col-md-10 col-md-offset-2">
+					<button type="reset" class="btn btn-default">Cancel</button>
+					<button type="submit" class="btn btn-primary">Submit</button>
+				</div>
+			</div>
+		</fieldset>
+	</form>
 <!-- create coluntal end -->
 
 </body>
 <!-- 
 <div class="form-group">
-        <label for="inputPassword" class="col-lg-2 control-label">Password</label>
-        <div class="col-lg-10">
-          <input type="password" class="form-control" id="inputPassword" placeholder="Password">
-          <div class="checkbox">
-            <label>
-              <input type="checkbox"> Checkbox
-            </label>
-          </div>
-        </div>
-      </div>
-      
-      <div class="form-group">
-        <label for="textArea" class="col-lg-2 control-label">Textarea</label>
-        <div class="col-lg-10">
-          <textarea class="form-control" rows="3" id="textArea"></textarea>
-          <span class="help-block">A longer block of help text that breaks onto a new line and may extend beyond one line.</span>
-        </div>
-      </div>
-      
-      <div class="form-group">
-        <label class="col-lg-2 control-label">Radios</label>
-        <div class="col-lg-10">
-          <div class="radio">
-            <label>
-              <input type="radio" name="optionsRadios" id="optionsRadios1" value="option1" checked="">
-              Option one is this
-            </label>
-          </div>
-          <div class="radio">
-            <label>
-              <input type="radio" name="optionsRadios" id="optionsRadios2" value="option2">
-              Option two can be something else
-            </label>
-          </div>
-        </div>
-      </div>
-      
-      <div class="form-group">
-        <label for="select" class="col-lg-2 control-label">Selects</label>
-        <div class="col-lg-10">
-          <select class="form-control" id="select">
-            <option>1</option>
-            <option>2</option>
-            <option>3</option>
-            <option>4</option>
-            <option>5</option>
-          </select>
-          <br>
-          <select multiple="" class="form-control">
-            <option>1</option>
-            <option>2</option>
-            <option>3</option>
-            <option>4</option>
-            <option>5</option>
-          </select>
-        </div>
-      </div>
-      <div class="form-group">
-        <div class="col-lg-10 col-lg-offset-2">
-          <button type="reset" class="btn btn-default">Cancel</button>
-          <button type="submit" class="btn btn-primary">Submit</button>
-        </div>
-      </div>
+				<label for="inputPassword" class="col-lg-2 control-label">Password</label>
+				<div class="col-lg-10">
+					<input type="password" class="form-control" id="inputPassword" placeholder="Password">
+					<div class="checkbox">
+						<label>
+							<input type="checkbox"> Checkbox
+						</label>
+					</div>
+				</div>
+			</div>
+			
+			<div class="form-group">
+				<label for="textArea" class="col-lg-2 control-label">Textarea</label>
+				<div class="col-lg-10">
+					<textarea class="form-control" rows="3" id="textArea"></textarea>
+					<span class="help-block">A longer block of help text that breaks onto a new line and may extend beyond one line.</span>
+				</div>
+			</div>
+			
+			<div class="form-group">
+				<label class="col-lg-2 control-label">Radios</label>
+				<div class="col-lg-10">
+					<div class="radio">
+						<label>
+							<input type="radio" name="optionsRadios" id="optionsRadios1" value="option1" checked="">
+							Option one is this
+						</label>
+					</div>
+					<div class="radio">
+						<label>
+							<input type="radio" name="optionsRadios" id="optionsRadios2" value="option2">
+							Option two can be something else
+						</label>
+					</div>
+				</div>
+			</div>
+			
+			<div class="form-group">
+				<label for="select" class="col-lg-2 control-label">Selects</label>
+				<div class="col-lg-10">
+					<select class="form-control" id="select">
+						<option>1</option>
+						<option>2</option>
+						<option>3</option>
+						<option>4</option>
+						<option>5</option>
+					</select>
+					<br>
+					<select multiple="" class="form-control">
+						<option>1</option>
+						<option>2</option>
+						<option>3</option>
+						<option>4</option>
+						<option>5</option>
+					</select>
+				</div>
+			</div>
+			<div class="form-group">
+				<div class="col-lg-10 col-lg-offset-2">
+					<button type="reset" class="btn btn-default">Cancel</button>
+					<button type="submit" class="btn btn-primary">Submit</button>
+				</div>
+			</div>
 -->

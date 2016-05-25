@@ -17,6 +17,17 @@ class VoluntalController < ApplicationController
 		post.start_time = params[:start_time]
 		post.end_time = params[:end_time]
 		post.place = params[:place]
+		post.cover_pic = params[:cover_pic]
+		if ( params[:pic1] != nil )
+			post.pic1 = params[:pic1]
+		end
+		if ( params[:pic2] != nil )
+			post.pic2 = params[:pic2]
+		end
+		if ( params[:pic3] != nil )
+			post.pic3 = params[:pic3]
+		end
+			
 		if post.save
 			po1 = Post.last
 			po2 = Post.last

@@ -62,6 +62,9 @@
 
 <!-- 게시글 정보 보여주기-->
 <br><br><br>
+	<div>
+		<img src="<%= @posts.cover_pic_url(:main) %>">
+	</div>
      <div style="border : 1px solid #ffffff">
           <h2>제목 : <%= @posts.title %></h4>
           <h3>분류 : <%= @posts.category %></h3>

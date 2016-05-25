@@ -144,7 +144,8 @@
 			
 					<div class="col-md-4">
 						<a href="/voluntal/show/<%= post.id %>">
-							<div class="volunteerelement1">
+							<div>
+								<img src="<%= post.cover_pic_url(:main) %>">
 							</div> 
 							<img class="img-circle"
 								src="<%= post.user.profile_pic_url(:thumb) %>"
@@ -182,7 +183,8 @@
 					<% @posts_tal.reverse.each do |post| %>
 						<div class="col-md-4">
 							<a href="/voluntal/show/<%= post.id %>">
-								<div class="volunteerelement1">
+								<div>
+									<img src="<%= post.cover_pic_url(:main) %>">
 								</div> 
 								<img class="img-circle"	src="<%= post.user.profile_pic_url(:thumb) %>" alt="Generic placeholder image" width="100" height="100">
 								<h3><%= post.category %></h3>
