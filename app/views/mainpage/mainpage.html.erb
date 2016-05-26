@@ -126,7 +126,7 @@
 	<div class="container">
 		<div class="middletoolbar container" align="center">
 			<h2>Voluntal</h2>
-			<h4>당신의 따뜻한 마음을 다른사람들과 함께 해보세요.</h4>
+			<h4>따뜻한 마음을 나누고 싶으신가요?</h4>
 		</div>
 	</div>
 	<br><hr class="featurette-divider">
@@ -147,17 +147,17 @@
 						<a href="/voluntal/show/<%= post.id %>">
 							<div>
 								<img src="<%= post.cover_pic_url(:main) %>">
-							</div> 
+							</div> <br>
 							<div class="row">
 								<div class="col-xs-4">
 									<img class="img-circle" src="<%= post.user.profile_pic_url(:thumb) %>"alt="Generic placeholder image" width="100" height="100">
+								</div></a>
+								<div class="col-xs-8 ">
+									<h3><%= post.title %></h3>
+									<h5><%= post.start_time %><br><%= post.place %></h5>
 								</div>
-								<div class="col-xs-8">
-									<h3><%= post.category %></h3>
-									<h4><%= post.user.nickname %></h4>
-								</div>
-							</div>
-						</a>
+							</div><br>
+						
 					</div>
 				<% end %>
 				<!-- 포스트 반복하여 처리 -->
@@ -187,19 +187,19 @@
 					<% @posts_tal.reverse.each do |post| %>
 						<div class="col-md-4">
 							<a href="/voluntal/show/<%= post.id %>">
-								<div>
+								<div class="contentmiddlefont">
 									<img src="<%= post.cover_pic_url(:main) %>">
-								</div> 
+								</div> <br>
 								<div class="row">
 									<div class="col-xs-4">
 										<img class="img-circle"	src="<%= post.user.profile_pic_url(:thumb) %>" alt="Generic placeholder image" width="100" height="100">
-									</div>	
+									</div></a>	
 									<div class="col-xs-8">
-										<h3><%= post.category %></h3>
-										<h4><%= post.title %></h4>
+									<h3><%= post.title %></h3>
+									<h5><%= post.start_time %><br><%= post.place %></h5>
 									</div>
-								</div>
-							</a>
+								</div><br>
+							
 						</div>
 					<% end %>
 				<!-- 포스트 반복하여 처리 -->

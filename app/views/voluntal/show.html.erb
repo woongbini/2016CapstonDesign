@@ -107,8 +107,8 @@
 					</div>
 				
 				</div>
-				<div class="col-sm-5 col-sm-offset-1">
-				<div id="map" style=" border-radius :10px; width:300px;height:250px;"></div>
+				<div class="col-sm-5 ">
+				<div class="map" id="map" style=" border-radius :10px; width:500px;height:350px;"></div>
 <script type="text/javascript" src="//apis.daum.net/maps/maps3.js?apikey=7eecbd6046d2525ebc71a64b0ec26da4&libraries=services"></script>
 <script>
 // 마커를 클릭하면 장소명을 표출할 인포윈도우 입니다
@@ -169,9 +169,18 @@ function displayMarker(place) {
 				</div>
 				<div>
 					<form action="/voluntal/join_process" method="post" class="form-horizontal">
-					<button type="submit" class="btn btn-primary">참여하기</button>
+					<button type="submit" class="btn btn-block btn-lg submit_button">참여하기</button>
 					</form>
-				</div>
+					</div><br>
+					<div class ="row">
+						<div class ="col-xs-6">
+							<button type="submit" class="question_facebook btn-block btn-lg">공유하기</button>
+						</div>
+						<div class ="col-xs-6">
+							<button type="submit" class="question_button btn-block btn-lg">Wish List</button>
+						</div>
+					</div>
+				
 				</div>	
 			</div>
 			<br>
@@ -192,7 +201,7 @@ function displayMarker(place) {
     			
     		</div>
     		
-    		<div class="col-md-5 col-md-offset-1">
+    		<div class="col-md-5">
     			<div>
     				<div class="tag">
     	  <p>호스트 정보 : <%= @posts.host_info %></p>
@@ -210,16 +219,17 @@ function displayMarker(place) {
      	
      	<div style="row">
      		<div class="col-md-12">
-     			<div>
-     				<p><h3>Voluntal 문의 </h3><br>	
-       			</div>
-       			<div>
-       				<textarea id="content_question" placeholder="궁굼하신 점을 Host에게 물어보세요.">
-       					
-       				</textarea>
+     			<div class="col-md-5">
+     				<div>
+     					<h3>Voluntal 문의 </h3><br>	
+       				</div>
+       				<div>
+
+       					<textarea class="content_question" placeholder="궁굼하신 점을 Host에게 물어보세요" style></textarea>
        				
-       			</div>
-     			
+       					<button class="question_button" onclick=";"style>작성완료</button>
+       				</div>
+     			</div>
      			
      		</div>
      		

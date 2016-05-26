@@ -26,70 +26,49 @@
 	
 </head>
 <body>
-
+	
+	<a href="/"><div class="logoimage"></div></a>
 <!-- 회원가입 기능 start -->
-	<div class="container">
-		<h3>회원 가입</h3>
-		<form action="/users/signup_complete" method="post" enctype="multipart/form-data">
-			<div>
-				Email : <input type="text" name="email">	
-			</div>
-			<div>
-				Password : <input type="password" name="password">
-			</div>
-			<div>
-				Password Confirm : <input type="password" name="re_password">
-			</div>
-			<div>
-				Phone : <input type="text" name="phone" placeholder="  -를 빼고 입력하세요">
-			</div>
-			<div>
-				Nickname : <input type="text" name="nickname" placeholder="닉네임을 입력하세요">
-			</div>
-			<div>
-				<input type="file" name="profile_pic">
-			</div>
-			<div>
-				<input type="submit" value="회원가입">
-			</div>
-	</div>
-<!-- 회원가입 기능 end -->
 
 
-<!-- Voulutal 푸터 start -->
-	<footer class="footer">
-		<div class="container">
-			<div class="col-md-10">
-				<p class="text-muted">&copy; WB. and YJ. All rights reserved.</p>
-			</div>
-			<div class="col-md-2">
-				<p>
-					<a href="http://facebook.com/woongbini">WB<span
-						class="social social-facebook"></span></a> <a
-						href="https://goo.gl/BFzCQY">YJ<span
-						class="social social-facebook"></span></a>
-				</p>
+
+
+
+	<div>
+		<div>
+			<div class="container row">
+				<center>
+					<div class="col-md-12">
+						<div class="col-md-4 signup_box">
+							<h3>회원 가입</h3>
+							<form action="/users/signup_complete" method="post" enctype="multipart/form-data">
+								<div>
+									Email : <input type="text" name="email">	
+								</div>
+								<div>
+									Password : <input type="password" name="password">
+								</div>
+								<div>
+									Password Confirm : <input type="password" name="re_password">
+								</div>
+								<div>
+									Phone : <input type="text" name="phone" placeholder="  -를 빼고 입력하세요">
+								</div>
+								<div>
+									Nickname : <input type="text" name="nickname" placeholder="닉네임을 입력하세요">
+								</div>
+								<div>
+									<input type="file" name="profile_pic">
+								</div>
+								<div>
+									<input type="submit" value="회원가입">
+									</div>
+									
+							</div>		
+					</div>
+				</center>
 			</div>
 		</div>
-	</footer>
-<!-- Voulutal 푸터 end -->
-
-
-	<!--<script	src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
-				<script src="../../dist/js/bootstrap.min.js"></script>
-				<script src="../../assets/js/vendor/holder.js"></script>-->
-
-<!-- jquery스크롤 coding start -->
-	<script>
-		jQuery(document).ready(function($) {
-			$(".scroll").click(function(event) {
-				event.preventDefault();
-				$('html,body').animate({
-					scrollTop : $(this.hash).offset().top
-				}, 500);
-			});
-		});
-	</script>
-<!-- jquery스크롤 coding end -->
-</body>
+	</div>
+<!-- 회원가입 기능 end -->
 </html>
