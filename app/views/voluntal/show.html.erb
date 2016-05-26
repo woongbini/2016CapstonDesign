@@ -68,7 +68,7 @@
 
 	<div class="CreateVoluntal" "col-md-4" align="center">
 		<div class="contentheadfont"><%= @posts.title %></div><br>
-		<div class="contentmiddlefont"><%= @posts.user.nickname %>/<%= @posts.host_info %>/
+		<div class="contentmiddlefont">_<%= @posts.user.nickname %>_/<%= @posts.vol_info %>
 		<p class="star_rating">
 			<a href="#" class="on">★</a>
 			<a href="#" class="on">★</a>
@@ -91,12 +91,16 @@
 				<div class="col-sm-6">
 					<div class ="row">
 						<div class ="col-xs-4">
-							<img class="img-circle" src="<%= @posts.cover_pic_url(:main) %>">
-							<div>
+							<img class="img-circle" src="<%= @posts.user.profile_pic_url(:thumb) %>">
+							<div style='text-align:center'>
 							<h4><%= @posts.user.nickname %></h4>	
 							</div>
 						</div>
-						<div class ="col-xs-4">
+						<div class ="col-xs-8">
+							<p><h3>호스트 정보 </h3>
+    						<p><h4><%= @posts.host_info %></h4></p>
+						</div>
+						<div class ="col-xs-12">
 							<p><h3>호스트 정보 </h3>
     						<p><h4><%= @posts.host_info %></h4></p>
 						</div>
@@ -173,7 +177,7 @@ function displayMarker(place) {
 			<br>
 <hr width="100%" style="border: solid 1px #FF7648;">
     	<div style="row">
-    		<div class="col-md-6">
+    		<div class="col-md-12">
     			<div>
 
     				<p><h3>볼룬탈  정보 </h3><br>
@@ -183,10 +187,11 @@ function displayMarker(place) {
     				<p><h4><%= @posts.start_time %></h4></p>
     				<p><h3>종료 일정 </h3><br>
     				<p><h4><%= @posts.end_time %></h4></p>
-    	
+    	<hr width="100%" style="border: solid 1px #FF7648;">
     			</div>
     			
     		</div>
+    		
     		<div class="col-md-5 col-md-offset-1">
     			<div>
     				<div class="tag">
@@ -199,7 +204,30 @@ function displayMarker(place) {
     				</div>
     			</div>
     		</div>
+    		
+ 	
      	</div>
+     	
+     	<div style="row">
+     		<div class="col-md-12">
+     			<div>
+     				<p><h3>Voluntal 문의 </h3><br>	
+       			</div>
+       			<div>
+       				<textarea id="content_question" placeholder="궁굼하신 점을 Host에게 물어보세요.">
+       					
+       				</textarea>
+       				
+       			</div>
+     			
+     			
+     		</div>
+     		
+     		
+     		
+     	</div>
+     	
+     	
      </div>
      <div>
 </div>
