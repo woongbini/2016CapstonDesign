@@ -48,14 +48,14 @@
 				</ul>
 				<ul class="nav navbar-nav navbar-right">
 					<% if session[:user_id].nil? %>
-						
+						<!--
 						<li><a href="/users/signup" ><span class="glyphicon glyphicon-user"></span> <strong>Sign Up </strong></a></li>
 						<li><a href="/users/login" ><span class="glyphicon glyphicon-log-in"></span></span> <strong>Login </strong></a></li>
+						-->
 						
-						<!--로그인박스 수정중 
 						<li id="testclick1"><span class="glyphicon glyphicon-user"></span> <strong>Sign Up </strong></li>
 						<li id="testclick1"><span class="glyphicon glyphicon-log-in"></span></span> <strong>Login </strong></li>
-						-->
+					
 					<% else %>
 						<li><a href="/users/mypage"><span class="glyphicon glyphicon-user"></span> <strong>My Page</strong></a></li>
 						<li><a href="/users/logout_complete"><span class="glyphicon glyphicon-log-out"></span> <strong>Log Out</strong></a></li>
@@ -318,12 +318,12 @@
 		T$('testclick1').onclick = function() {
 			//if ( <%#if session[:user_id].nil %> ) {
 				$(document).ready(function() {
-					TINY.box.show('/users/register', 1, 640, 640, 0.5)
+					TINY.box.show("/users/register", 1, 640, 640, 0.5)
 
 				});
 			//} else {
 				$(document).ready(function() {
-					TINY.box.show('/users/login', 1, 642, 730, 0.5)
+					TINY.box.show("/users/login", 1, 642, 730, 0.5)
 				});
 		//	}
 		};
