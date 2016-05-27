@@ -45,6 +45,7 @@ class VoluntalController < ApplicationController
 	def show
 		@posts = Post.where("is_host = ?",  true).find(params[:id])
 		#@posts_vol = Post.where("category = ? AND is_host = ?", "Voluntal", true)
+		@cnt_posts = Post.where("is_host = ? AND po_id = ?", false, params[:id]).count
 	end
   
 	def join_process

@@ -62,8 +62,9 @@
 <!--Vouluntal 네비게이션 바 end -->
 
 <!-- 게시글 정보 보여주기-->
-
-	<div class ="firstslide">
+	<br><br>
+	<div>
+		<img src="<%= @posts.cover_pic_url(:show_vol) %>" width="100%">
 	</div>
 
 	<div class="CreateVoluntal" "col-md-4" align="center">
@@ -78,7 +79,7 @@
 		</p>
 		<hr width="50%" style="border: solid 1px #FF7648;">
 			<div class="graph_comm">
-    			<span class="txt_graph">신청수 : <span class="num_g">신청한사람숫자</span>/<%= @posts.num_people %></span>
+    			<span class="txt_graph">신청수 : <span class="num_g"><%= @cnt_posts %></span>/<%= @posts.num_people %></span>
 			</div>
 		</div>
 	</div>
