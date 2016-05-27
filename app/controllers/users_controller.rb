@@ -65,6 +65,30 @@ class UsersController < ApplicationController
 		end
 	end
 	
+	def joining
+		if session[:user_id].nil?     #session 값이 없다면 = 로그인 안헀다면
+			flash[:alert] = "로그인해야 합니다."
+			redirect_to "/users/login"
+		else
+			@user_info = User.find_by_id(session[:user_id])    #session ID를 가져와서 그 사람 정보를 줌
+			@user_regi = User.where(id:session[:user_id])         #session ID를 가져와서 그 사람의 모든 정보를 줌
+			@posts_host = Post.where("user_id = ? AND is_host = ?", session[:user_id], true)
+			@posts_vol = Post.where("user_id = ? AND is_host = ?", session[:user_id], false)
+		end
+	end
+	
+	def hosting
+		if session[:user_id].nil?     #session 값이 없다면 = 로그인 안헀다면
+			flash[:alert] = "로그인해야 합니다."
+			redirect_to "/users/login"
+		else
+			@user_info = User.find_by_id(session[:user_id])    #session ID를 가져와서 그 사람 정보를 줌
+			@user_regi = User.where(id:session[:user_id])         #session ID를 가져와서 그 사람의 모든 정보를 줌
+			@posts_host = Post.where("user_id = ? AND is_host = ?", session[:user_id], true)
+			@posts_vol = Post.where("user_id = ? AND is_host = ?", session[:user_id], false)
+		end
+	end
+	
 	def edit
 		@user_ed = User.find_by_id(session[:user_id])
 	end
@@ -91,5 +115,7 @@ class UsersController < ApplicationController
 			redirect_to :back
 		end
 	end
+	
+	
   
 end

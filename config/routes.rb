@@ -6,13 +6,14 @@ Testapp::Application.routes.draw do
 	get "users/signup"                        #회원가입 페이지로 이동
 	post "users/signup_complete"              #회원가입 처리
 	get "users/login"                         #로그인 페이지로 이동
-	get "users/log_in"                         #로그인 페이지로 이동
 	post "users/login_complete"               #로그인 처리
 	get "users/logout_complete"               #로그아웃 처리
 	get "users/mypage"                        #내 페이지 보기
 	post "voluntal/join_process"              #Voluntal에 참여하기 처리
 	get "users/edit"                          #개인정보 수정하기 창으로 넘어감
-	post "users/edit_complete"						#수정하기 완료처리
+	post "users/edit_complete"				  #수정하기 완료처리
+	get "users/joining"                        #참여한 Voluntal 보기
+	get "users/hosting"                        #호스트한 Voluntal 보기
 	
 	get "voluntal/create_complete"
 	get "voluntal/edit"
