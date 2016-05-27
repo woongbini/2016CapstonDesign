@@ -32,9 +32,6 @@ class UsersController < ApplicationController
 	def login
 	end
 	
-	def log_in
-	end
-	
 	def login_complete
 		user = User.where(email: params[:email])[0]
 		if user.nil?

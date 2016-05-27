@@ -12,9 +12,13 @@
 	padding:10px; 
 	margin: 10px 10px 10px 10px;
 	background:#fff url(images/preload.gif) no-repeat 50% 50%;
-	 border:5px solid rgba(0, 153, 255, 0.6);
-	  z-index:2000
-	  }
+	border:0px solid rgba(0, 153, 255, 0.6);
+	border-top-left-radius: 5px;
+	border-top-right-radius: 5px;
+	border-bottom-left-radius: 5px;
+	border-bottom-right-radius: 5px;
+	z-index:2000
+  }
 	  
 #tinymask {
 	position:absolute; 
@@ -24,7 +28,7 @@
 	left:0; 
 	height:100%; 
 	width:100%; 
-	background:#000;
+	background:#8c8c8c;
 	 z-index:1500
 	 }
 	 
