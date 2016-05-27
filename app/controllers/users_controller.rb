@@ -32,6 +32,9 @@ class UsersController < ApplicationController
 	def login
 	end
 	
+	def log_in
+	end
+	
 	def login_complete
 		user = User.where(email: params[:email])[0]
 		if user.nil?
@@ -43,7 +46,7 @@ class UsersController < ApplicationController
 		else
 			session[:user_id] = user.id
 			flash[:alert] = "성공적으로 로그인하였습니다."
-			redirect_to "/users/logincomplete"
+			redirect_to "/"
 		end
 	end
 	

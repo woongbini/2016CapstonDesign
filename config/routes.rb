@@ -6,6 +6,7 @@ Testapp::Application.routes.draw do
 	get "users/signup"                        #회원가입 페이지로 이동
 	post "users/signup_complete"              #회원가입 처리
 	get "users/login"                         #로그인 페이지로 이동
+	get "users/log_in"                         #로그인 페이지로 이동
 	post "users/login_complete"               #로그인 처리
 	get "users/logout_complete"               #로그아웃 처리
 	get "users/mypage"                        #내 페이지 보기

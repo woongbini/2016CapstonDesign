@@ -8,20 +8,18 @@
 	<meta name="description" content="">
 	<meta name="author" content="">
 	<link rel="icon" href="../../favicon.ico">
+	<link rel="shortcut icon" href="/favicon.ico">
 	<title><%= controller.page_title %></title>
 	<!-- YJ CSS file-->
 		<link rel="stylesheet" href="stylesheets/voluntal.css">
 		<link type="text/css" rel="stylesheet" href="stylesheets/colorbox.css"/>
         <script src="javascripts/colorbox.js"></script>		
         <script src="javascripts/jquery.colorbox.js"></script>
-<<<<<<< HEAD
         <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
 		<script src="http://code.jquery.com/jquery-latest.min.js"></script>
-=======
    	<!--WB CSS file -->
    		<link type="text/css" rel="stylesheet" href="stylesheets/style_lightbox.css"/>
    		<script type="text/javascript" src="javascripts/tinybox_lightbox.js"></script>
->>>>>>> 2abfe3c8261f25b60af05aaaee87ef0c6abede8c
 	<!-- Bootstrap core JavaScript start-->
 		<link href="stylesheet/bootstrap.css" type="text/css" rel="stylesheet">
 		<script src="http://code.jquery.com/jquery-1.12.0.min.js"></script>
@@ -29,15 +27,6 @@
 		<link rel="stylesheet"	href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap-theme.min.css">
 		<script	src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
 	<!-- Bootstrap core JavaScript end-->
-<<<<<<< HEAD
-	
-	<style type="text/css">
-
-		
-	</style>
-	<link rel="shortcut icon" href="/faviconico">
-=======
->>>>>>> 2abfe3c8261f25b60af05aaaee87ef0c6abede8c
 </head>
 
 <body data-spy="scroll" data-target=".navbar" data-offset="50">
@@ -62,14 +51,12 @@
 				</ul>
 				<ul class="nav navbar-nav navbar-right">
 					<% if session[:user_id].nil? %>
-						<!--
-						<li><a href="/users/signup" ><span class="glyphicon glyphicon-user"></span> <strong>Sign Up </strong></a></li>
-						<li><a href="/users/login" ><span class="glyphicon glyphicon-log-in"></span></span> <strong>Login </strong></a></li>
-						-->
-						
-						<li id="testclick1"><span class="glyphicon glyphicon-user"></span> <strong>Sign Up </strong></li>
-						<li id="testclick1"><span class="glyphicon glyphicon-log-in"></span></span> <strong>Login </strong></li>
-					
+						<li>
+							<a href="#signup" id="testclick1"><span class="glyphicon glyphicon-user"></span> <strong>Sign Up </strong></a>
+						</li>
+						<li>
+							<a href="#login"  id="testclick2"><span class="glyphicon glyphicon-log-in"></span> <strong>Login </strong></a>
+						</li>
 					<% else %>
 						<li><a href="/users/mypage"><span class="glyphicon glyphicon-user"></span> <strong>My Page</strong></a></li>
 						<li><a href="/users/logout_complete"><span class="glyphicon glyphicon-log-out"></span> <strong>Log Out</strong></a></li>
@@ -316,7 +303,7 @@
 				<script src="../../dist/js/bootstrap.min.js"></script>
 				<script src="../../assets/js/vendor/holder.js"></script>-->
 
-	<!-- jquery스크롤 coding start -->
+<!-- jquery스크롤 coding start -->
 	<script>
 		jQuery(document).ready(function($) {
 			$(".scroll").click(function(event) {
@@ -327,29 +314,28 @@
 			});
 		});
 	</script>
-	<!-- jquery스크롤 coding end -->
+<!-- jquery스크롤 coding end -->
 	
-<!-- 로그인박스 넣기 만드는중 -->
+<!-- 로그인박스 넣기 start -->
 	<script type="text/javascript">
 		T$('testclick1').onclick = function() {
-			//if ( <%#if session[:user_id].nil %> ) {
 				$(document).ready(function() {
-					TINY.box.show("/users/register", 1, 640, 640, 0.5)
-
+					TINY.box.show("/users/signup", 1, 600, 600, 0)
 				});
-			//} else {
+		};
+		
+		T$('testclick2').onclick = function() {
 				$(document).ready(function() {
-					TINY.box.show("/users/login", 1, 642, 730, 0.5)
+					TINY.box.show("/users/login", 1, 640, 640, 0.5)
 				});
-		//	}
 		};
 		
 		function showbox() {
-			TINY2.box.show('#', 1, 900, 600, 1);
-		}
+			TINY2.box.show('show_map.jsp', 1, 900, 600, 1);
+		};
 		
 	</script>
-<!-- 로그인박스 넣기 만드는중 -->	
+<!-- 로그인박스 넣기 end -->	
 	
 	
 </body>
