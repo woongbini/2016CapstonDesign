@@ -105,7 +105,13 @@
 					<h3>만든 Voluntal 목록</h3>
 				</div>
 				<div class="row">
-				
+					<% if @posts_host.nil? %>
+						<p>만든 Voluntal이 없습니다! 지금 만들어 주세요!</p>
+					<% else %>
+						<% @posts_host.reverse.each do |post| %>
+							<a href="/voluntal/show/<%= post.id %>"><%= post.title %></a>	<br>
+						<% end %>
+					<% end %>
 				</div>
 				<div class="row">
 				

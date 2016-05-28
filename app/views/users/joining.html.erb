@@ -106,7 +106,13 @@
 					<h3>참여한 Voluntal 목록</h3>
 				</div>
 				<div class="row">
-				
+					<% if @posts_vol.nil? %>
+						<p>참여한 Voluntal이 없습니다! 지금 참여해 주세요!</p>
+					<% else %>
+						<% @posts_vol.reverse.each do |post| %>
+							<a href="/voluntal/show/<%= post.id %>"><%= post.title %></a>	<br>
+						<% end %>
+					<% end %>
 				</div>
 				<div class="row">
 				
