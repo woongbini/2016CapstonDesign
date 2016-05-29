@@ -169,7 +169,16 @@ function displayMarker(place) {
 				</div>
 				<div>
 					<form action="/voluntal/join_process" method="post" class="form-horizontal">
-					<button type="submit" class="btn btn-block btn-lg submit_button">참여하기</button>
+						<input type="hidden" name="title" value="<%= @posts.title %>">
+			 			<input type="hidden" name="po_id" value="<%= @posts.po_id %>">
+			 			<input type="hidden" name="category" value="<%= @posts.category %>">
+			 			<input type="hidden" name="num_people" value="<%= @posts.num_people %>">
+			 			<input type="hidden" name="host_info" value="<%= @posts.host_info %>">
+			 			<input type="hidden" name="vol_info" value="<%= @posts.vol_info %>">
+			 			<input type="hidden" name="start_time" value="<%= @posts.start_time %>">
+			 			<input type="hidden" name="end_time" value="<%= @posts.end_time %>">
+			 			<input type="hidden" name="place" value="<%= @posts.place %>">
+						<button type="submit" class="btn btn-block btn-lg submit_button">참여하기</button>
 					</form>
 					</div><br>
 					<div class ="row">
