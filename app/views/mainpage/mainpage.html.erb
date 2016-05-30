@@ -24,6 +24,7 @@
 		<link rel="stylesheet"	href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
 		<link rel="stylesheet"	href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap-theme.min.css">
 		<script	src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
+		<link href="//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.min.css" rel="stylesheet">
 	<!-- Bootstrap core JavaScript end-->
 </head>
 
@@ -137,23 +138,23 @@
 				<div class="row">
 				<!-- 포스트 반복하여 처리 -->
 				<% @posts_vol.reverse.each do |post| %>
-					<div class="col-md-4">
-						<a href="/voluntal/show/<%= post.id %>">
-						<div>
-							<img src="<%= post.cover_pic_url(:main) %>">
-						</div> <br>
-						<div class="row">
-							<div class="col-md-4">
-								<img class="img-circle" src="<%= post.user.profile_pic_url(:thumb) %>"alt="Generic placeholder image" width="100" height="100">
-							</div>
-							<div class="col-md-8 ">
-								<h3><%= post.title %></h3>
-								<h5><%= post.start_time %><br><%= post.place %></h5>
-							</div>
-						</div><br>
-						</a>
-					</div>
-				<% end %>
+						<div class="col-md-4">
+							<a href="/voluntal/show/<%= post.id %>">
+								<div class="contentmiddlefont">
+									<img src="<%= post.cover_pic_url(:main) %>" >
+								</div> 
+								<div class="row">
+									<div class="col-md-4">
+										<img class="img-circle"	src="<%= post.user.profile_pic_url(:thumb) %>" alt="Generic placeholder image" width="100" height="100">
+									</div>
+									<div class="col-md-8">
+										<h3><%= post.title %></h3>
+										<h5><%= post.start_time %><br><%= post.place %></h5>
+									</div>
+								</div>
+							</a>
+						</div>
+					<% end %>
 				<!-- 포스트 반복하여 처리 -->
 				</div>
 			</div>
@@ -182,17 +183,18 @@
 						<div class="col-md-4">
 							<a href="/voluntal/show/<%= post.id %>">
 								<div class="contentmiddlefont">
-									<img src="<%= post.cover_pic_url(:main) %>">
+									<img src="<%= post.cover_pic_url(:main) %>" >
 								</div> <br>
 								<div class="row">
-									<div class="col-xs-4">
+									<div class="col-md-4">
 										<img class="img-circle"	src="<%= post.user.profile_pic_url(:thumb) %>" alt="Generic placeholder image" width="100" height="100">
-									</div></a>	
-									<div class="col-xs-8">
-									<h3><%= post.title %></h3>
-									<h5><%= post.start_time %><br><%= post.place %></h5>
+									</div>
+									<div class="col-md-8">
+										<h3><%= post.title %></h3>
+										<h5><%= post.start_time %><br><%= post.place %></h5>
 									</div>
 								</div><br>
+							</a>
 						</div>
 					<% end %>
 				<!-- 포스트 반복하여 처리 -->
@@ -247,19 +249,16 @@
 <!-- Voluntal 만들기 end -->
 
 <!-- Voulutal 푸터 start -->
-	<footer class="footer">
+	<footer class="footer" style="background-color:#FFAB80">
 		<div class="container">
-			<div class="col-md-10">
-				<p class="text-muted">&copy; WB. and YJ. All rights reserved.</p>
+			<br>
+			<div class="col-md-9">
+				<p class="text-muted">&copy; Voluntal and WB.YJ  All rights reserved.</p>
 			</div>
-			<div class="col-md-2">
-				<p>
-					<a href="http://facebook.com/woongbini">WB<span
-						class="social social-facebook"></span></a>
-				</p>
-				<p>
-					<a href="https://goo.gl/BFzCQY">YJ<span
-						class="social social-facebook"></span></a>
+			<div class="col-md-3">
+				<p class="text-muted">Join Us on      
+					<a href="http://facebook.com/woongbini">   WB's  <i class="icon-large icon-facebook"></i></a> / 
+					<a href="https://goo.gl/BFzCQY">  YJ's  <i class="icon-large icon-facebook"></i> </a>
 				</p>
 			</div>
 		</div>
@@ -271,7 +270,7 @@
 	<script src="../../dist/js/bootstrap.min.js"></script>
 	<script src="../../assets/js/vendor/holder.js"></script>
 	-->
-
+	
 <!-- jquery스크롤 coding start -->
 	<script>
 		jQuery(document).ready(function($) {
