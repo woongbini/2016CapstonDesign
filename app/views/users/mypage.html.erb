@@ -1,15 +1,13 @@
 <!DOCTYPE html>
 <html lang="ko">
 <head>
+	<title><% content_for :title, "Voluntal::마이페이지" %></title>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
 	<meta name="description" content="">
 	<meta name="author" content="">
-	<link rel="icon" href="../../favicon.ico">
-	<link rel="shortcut icon" href="/favicon.ico">
-	<title><% content_for :title, "Voluntal::마이페이지" %></title>
 	<!-- YJ CSS file-->
 		<link rel="stylesheet" href="stylesheets/voluntal.css">
 		<link type="text/css" rel="stylesheet" href="stylesheets/colorbox.css"/>
@@ -70,33 +68,28 @@
 			<div class="col-md-3">
 				<div class="sidebar">
 					<div class ="area-profile">
-					<p><img src="<%= @user_info.profile_pic_url(:thumb) %>" width="100px" class="img-circle"></p>
+						<p><img src="<%= @user_info.profile_pic_url(:thumb) %>" width="100px" class="img-circle"></p>
+					</div>
+					<div class="list-side-menu">
+						<h2><%= @user_info.nickname %></h2>
+					</div><br>
+					<a href="/users/mypage" >
+						<div class="list-side-menu" style="background-color:#ffab80">
+							<h4>프로필</h3>
+						</div>
+					</a>
+					<a href="/users/hosting">
+						<div class="list-side-menu">
+							<h4>Host Voluntal</h3>
+						</div>
+					</a>
+					<a href="/users/joining">
+						<div class="list-side-menu">
+							<h4>Guest Voluntal</h3>
+						</div>
+					</a>
 				</div>
-				<div class="list-side-menu">
-					<h2><%= @user_info.nickname %></h2>
-				</div><br>
-
-				<a href="/users/mypage" >
-					<div class="list-side-menu" style="background-color:#ffab80">
-						<h4>프로필</h3>
-					</div>
-				</a>
-				<a href="/users/hosting">
-					<div class="list-side-menu">
-						<h4>Host Voluntal</h3>
-					</div>
-				</a>
-				<a href="/users/joining">
-					<div class="list-side-menu">
-						<h4>Guest Voluntal</h3>
-					</div>
-				</a>
-			
 			</div>
-			</div>
-			
-
-			
 			<div class="col-md-9 sidebar2">
 				<div class="row">
 					<div class="col-md-4">
@@ -113,7 +106,7 @@
 				</div>
 				<div class="row">
 					<div class="col-md-3">
-						<label>등록 된 이메일</label>
+						<label><i class="icon-envelope"></i> 등록 된 이메일</label>
 					</div>
 					<div class="col-md-9 contact-value">
 						<%= @user_info.email %>
@@ -121,7 +114,7 @@
 				</div>
 				<div class="row">
 					<div class="col-md-3">
-						<label>등록 된 전화번호</label>
+						<label><i class="icon-phone"></i> 등록 된 전화번호</label>
 					</div>
 					<div class="col-md-9 contact-value">
 						<%= @user_info.phone %>
@@ -129,7 +122,7 @@
 				</div>
 				<div class="row">
 					<div class="col-md-3">
-						<label>가입한 날짜</label>
+						<label><i class="icon-calendar"></i> 가입한 날짜</label>
 					</div>
 					<div class="col-md-9 contact-value">
 						<%= @user_info.created_at %>
@@ -152,7 +145,6 @@
 		</div>
 	</div>
 	
-</div>
 
 <!-- 개인정보 보여주기 end-->	
 
