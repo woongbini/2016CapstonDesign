@@ -30,12 +30,12 @@
 .logoimage{
     width:190px;
     height:50px;
-      background-image:url(Voluntal-logo2.png);
+    background-image:url(Voluntal-logo2.png);
     background-position:center;
     background-size:cover;
     max-width:100%;
     max-height:100%;
-    img{max-width:100%;} 
+    /*img{max-width:100%;} */
 }
 
 .headbox{
@@ -372,7 +372,7 @@
 .graph_comm .txt_graph {font-family:tahoma;color:#666}
 .graph_comm .num_g {color:#d4443b}
 
-<<<<<<< HEAD
+
 /* 파일 필드 숨기기 */
 .filebox input[type="file"] {  
   position: absolute;
@@ -403,9 +403,8 @@
     color: #ffffff;
     background-color : #FF7648;
     border-color : #FF7648;
-    
 }
-=======
+
 
 .area-profile{
     padding : 14.5px;
@@ -464,7 +463,6 @@
     display: block;
     border-radius :10px;
     font-family: '맑은 고딕', 'Malgun Gothic', verdana;
-
     font-weight : 600;
     padding : 8px 0;
 }
@@ -486,4 +484,4 @@
  width:100%; 
  margin-left:0px; margin-bottom:-1px;
 }
->>>>>>> 0307bb5529bf25db426ca632c2bd231628adcc24
+

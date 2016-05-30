@@ -7,9 +7,4 @@ class MainpageController < ApplicationController
     @posts_tal = Post.where("category = ? AND is_host = ?", "Talent", true) #Post 테이블에 저장된 Talent 행들을 읽어들임
   end
 
-  def addmemberpage
-  end
-  
-  def page_title
-  end
 end
