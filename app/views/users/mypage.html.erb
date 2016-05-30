@@ -11,6 +11,12 @@
 	<title>title</title>
 	<!-- YJ CSS file-->
 		<link rel="stylesheet" href="stylesheets/voluntal.css">
+		
+	
+		
+		
+		
+		
 	<!-- Bootstrap core JavaScript start-->
 		<!--<link href="assets/stylesheet/bootstrap.css" type="text/css" rel="stylesheet">-->
 		<script src="http://code.jquery.com/jquery-1.12.0.min.js"></script>
@@ -66,45 +72,49 @@
 <!-- 개인정보 보여주기 start-->
 	<div class="container" >
 		<div class="row" >
-			<div class="col-md-3" style="background-color:#fff0e6">
-				<div align="center">
+			<div class="col-md-3">
+				<div class="sidebar">
+					<div class ="area-profile">
 					<p><img src="<%= @user_info.profile_pic_url(:thumb) %>" width="100px" class="img-circle"></p>
 				</div>
-				<div align="center">
+				<div class="list-side-menu">
 					<h2><%= @user_info.nickname %></h2>
 				</div><br>
-				<div align="center">
-					
-				</div>
+
 				<a href="/users/mypage" >
-					<div align="center" style="background-color:#ffb380">
+					<div class="list-side-menu" style="background-color:#ffab80">
 						<h4>프로필</h3>
 					</div>
 				</a>
 				<a href="/users/hosting">
-					<div align="center">
-						<h4>호스트 한 Voluntal필</h3>
+					<div class="list-side-menu">
+						<h4>Host Voluntal</h3>
 					</div>
 				</a>
 				<a href="/users/joining">
-					<div align="center">
-						<h4>참여한 Voluntal필</h3>
+					<div class="list-side-menu">
+						<h4>Guest Voluntal</h3>
 					</div>
 				</a>
 			
 			</div>
-			
-			<div class="col-md-1" style="border:1px solid">
-				빈칸이얌
 			</div>
 			
-			<div class="col-md-8" style="background-color:#fff0e6">
+
+			
+			<div class="col-md-9 sidebar2">
 				<div class="row">
-					<h1><%= @user_info.nickname %> 의 개인정보<a href="/users/edit" class="btn btn-primary btn-sm">변경하기</a></h1> 
-					
+					<div class="col-md-4">
+						<h1 style ="color : #FF7648"> <%= @user_info.nickname %> </h1> 
+					</div>
+					<div class="col-md-2 Modified_button">
+						<a href="/users/edit">개인정보 변경하기</a></h1> 
+					</div>
 				</div>
 				<div class="row">
+					<div class="col-md-3">				
 					<h3>연락 정보</h3>
+					</div>
 				</div>
 				<div class="row">
 					<div class="col-md-3">
@@ -131,7 +141,9 @@
 					</div>
 				</div>
 				<div class="row">
+					<div class="col-md-3">
 					<h3>계정 정보 </h3>
+					</div>
 				</div>
 				<div class="row">
 					<div class="col-md-3">
@@ -144,10 +156,13 @@
 			</div>
 		</div>
 	</div>
+	
+</div>
+
 <!-- 개인정보 보여주기 end-->	
 
 <!-- Voulutal 푸터 start -->
-	<footer class="footer" style="background-color:#FFAB80 ">
+	<footer class="footer2" style="background-color:#FFAB80 ">
 		<div class="container">
 			<br>
 			<div class="col-md-9">
