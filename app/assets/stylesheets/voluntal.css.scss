@@ -371,3 +371,63 @@
 
 .graph_comm .txt_graph {font-family:tahoma;color:#666}
 .graph_comm .num_g {color:#d4443b}
+
+
+.area-profile{
+    padding : 14.5px;
+}
+
+.sidebar{
+        margin-right: 44px;
+        margin-bottom: 30px;
+        padding: 16px;
+        text-align: center;
+        background:#FFFFFF;
+        max-width:100%;
+        max-height:100%;
+        img{max-width:100%;}
+        border-radius :10px;    
+}
+
+.sidebar2{
+    width : 900px;
+    height : 404px;
+    list-style : none;
+    overflow: hidden;
+    background:#FFFFFF;
+    max-width:100%;
+    max-height:100%;
+    img{max-width:100%;}
+    border-radius :10px;
+}
+
+.list-side-menu{
+    width : 168px;
+    height : auto;
+    list-style : none;
+    overflow: hidden;
+    max-width:100%;
+    max-height:100%;
+    img{max-width:100%;}
+    border-radius :5px;
+}
+
+
+.Modified_button{
+    margin : 20px;
+    text-align : center;
+    font-size:12px;
+
+    background : #FFB380;
+    width : 100px;
+    height : auto;
+    max-width:100%;
+    max-height:100%;
+    img{max-width:100%;}
+    display: block;
+    border-radius :10px;
+    font-family: '맑은 고딕', 'Malgun Gothic', verdana;
+
+    font-weight : 600;
+    padding : 8px 0;
+}
