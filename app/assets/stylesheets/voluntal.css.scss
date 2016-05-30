@@ -387,6 +387,7 @@
         max-height:100%;
         img{max-width:100%;}
         border-radius :10px;    
+        font-family: '맑은 고딕', 'Malgun Gothic', verdana;
 }
 
 .sidebar2{
@@ -399,6 +400,7 @@
     max-height:100%;
     img{max-width:100%;}
     border-radius :10px;
+    font-family: '맑은 고딕', 'Malgun Gothic', verdana;
 }
 
 .list-side-menu{
@@ -410,6 +412,7 @@
     max-height:100%;
     img{max-width:100%;}
     border-radius :5px;
+    font-family: '맑은 고딕', 'Malgun Gothic', verdana;
 }
 
 
@@ -430,4 +433,22 @@
 
     font-weight : 600;
     padding : 8px 0;
+}
+
+.footer{
+ overflow: hidden;
+ position: absolute;
+ height: 50px; 
+ width:100%; 
+ margin-left:0px; margin-bottom:-1px;
+}
+
+
+.footer2{
+ overflow: hidden;
+ position: absolute;
+ bottom: 0;
+ height: 50px; 
+ width:100%; 
+ margin-left:0px; margin-bottom:-1px;
 }
