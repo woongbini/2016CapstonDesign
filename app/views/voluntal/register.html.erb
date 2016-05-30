@@ -58,107 +58,136 @@
 <!--Vouluntal 네비게이션 바 end -->
 
 <!-- Voluntal 만들기 start -->
+	<br><br>
+	<div class="contentbackground">
+		<div class="contentinsidebackground container">
+			<div class="row">
+				<h2 align="center">Voluntal을 등록해보세요!</h2>
+			</div>
+			<hr width="100%" style="border: solid 1px #FF7648;">
+			<div class="row">
+				<div class="col-md-4">
+					<h3>기본정보 입력 (필수)</h3>
+				</div>
+				<div class="col-md-8"></div>
+			</div>
+			<form action="/voluntal/register_process" method="post" class="form-horizontal" enctype="multipart/form-data">
+				
+				<!-- 제목 -->
+				<div class="row">
+					<label class="col-md-2 control-label">Voluntal 제목</label>
+					<div class="col-md-10">
+						<input type="text" class="form-control" name="title" placeholder="이해하기 쉽게 간결하게 적어주세요!">
+					</div>
+				</div><br>
+				
+				<!--카테고리 (구분)-->
+				<div class="row">
+					<label class="col-md-2 control-label">Voluntal 형태</label>
+					<div class="col-md-5 radio">
+							<label><input type="radio" name="category" value="Voluntal" checked=""><strong>Volunteer</strong></label>
+					</div>
+					<div class="col-md-5 radio">
+							<label><input type="radio" name="category" value="Talent"><strong>Talent</strong></label>
+					</div>
+				</div><br>
+				
+				<!--사람수 -->
+				<div class="row">
+					<label for="select" class="col-md-2 control-label">Voluntal 인원</label>
+					<div class="col-md-10">
+						<select class="form-control" name="num_people">
+							<option value="1">1</option>
+							<option value="2">2</option>
+							<option value="3">3</option>
+							<option value="4">4</option>
+							<option value="5">5</option>
+						</select>
+					</div>
+				</div><br>
+				
+				<!--호스트 정보-->
+				<div class="row">
+					<label for="host_info" class="col-md-2 control-label">정보</label>
+					<div class="col-md-10">
+						<textarea type="text" class="form-control" name="host_info" placeholder="정보 입력하세요"></textarea>
+					</div>
+				</div><br>
+				
+				<!-- 볼룬탈 정보-->
+				<div class="row">
+					<label for="host_info" class="col-md-2 control-label">소개</label>
+					<div class="col-md-10">
+						<textarea type="text" class="form-control" name="vol_info" placeholder="Voluntal을 소개하는글을 입력하세요"></textarea>
+					</div>
+				</div><br>
+				
+				<!--일정-->
+				<div class-"row">
+					<label for="host_info" class="col-md-2 control-label">일정</label>
+					<div class="col-md-5">
+						<input type="date" class="form-control" name="start_time">
+					</div>
+					<div class="col-md-5">
+						<input type="date" class="form-control" name="end_time">
+					</div>
+				</div><br><br>
+				
+				<!--장소-->
+				 <div class="row">
+					<label for="inputEmail" class="col-md-2 control-label">장소</label>
+					<div class="col-md-10">
+						<input type="text" class="form-control" name="place" placeholder="장소">
+					</div>
+				</div><br>
+				
+				<!--커버 사진-->
+				<div class="row">
+					<div class="col-md-4">
+						<h3>커버 사진 업로드 (필수)</h3>
+					</div>
+					<div class="col-md-8"></div>
+				</div>
+				<div class="row">
+					<div class="col-md-8">
+						<p>커버 이미지로는 크기가 930x500이상인 고화질 사진이 필요합니다.<br>
+						튜터님의 수업을 가장 잘 보여줄 수 있는 사진으로 신중하게 선택 해 주세요!</p>
+					</div>
+					<div class="col-md-4">
+					
+					</div>
+				</div>
+				<div class="row">
+					<label for="inputEmail" class="col-md-2 control-label">커버 사진</label>
+					<div class="col-md-10">
+						<input type="file" class="form-control" name="cover_pic" placeholder="장소">
+					</div>
+				</div><br>
+				
+				
+				
+				<!--만들기 혹은 취소-->
+				<div class="row" align="center">
+					<button type="submit" class="btn btn-md submit_button"> 만들기 </button>
+					<a href="/" class="btn btn-md btn-default"> 취소 </a>
+				</div>
+			</form>
+		</div>
+	</div>
+			
+				
+		
+
 	<div class="container">
-		<hr><hr><h2 align="center">Voluntal 등록</h2>
+		<hr><hr>
 	</div>
 	<hr class="featurette-divider">
 	<form action="/voluntal/register_process" method="post" class="form-horizontal" enctype="multipart/form-data">
 		<fieldset>
-			<!--제목-->
-			<div class="form-group">
-				<label for="inputEmail" class="col-md-3 control-label">제목</label>
-				<div class="col-md-8">
-					<input type="text" class="form-control" name="title" placeholder="title">
-				</div>
-				<div class="col-md-1">
-				</div>
-			</div>
 			
-			<!--카테고리 (구분)-->
-			<div class="form-group">
-				<label class="col-md-3 control-label">구분</label>
-				<div class="col-md-4 radio">
-						<label>
-							<input type="radio" name="category" value="Voluntal" checked="">Voluntal</label>
-				</div>
-				<div class="col-md-4 radio">
-						<label>
-							<input type="radio" name="category" value="Talent">Talent</label>
-				</div>
-				<div class="col-md-1">
-				</div>
-			</div>
 			
-			<!--사람수 -->
-			<div class="form-group">
-				<label for="select" class="col-md-3 control-label">인원</label>
-				<div class="col-md-8">
-					<select class="form-control" name="num_people">
-						<option value="1">1</option>
-						<option value="2">2</option>
-						<option value="3">3</option>
-						<option value="4">4</option>
-						<option value="5">5</option>
-					</select>
-				</div>
-				<div class="col-md-1">
-				</div>
-			</div>
 			
-			<!--호스트 정보-->
-			<div class="form-group">
-				<label for="host_info" class="col-md-3 control-label">정보</label>
-				<div class="col-md-8">
-					<textarea type="text" class="form-control" name="host_info" placeholder="정보 입력하세요"></textarea>
-				</div>
-				<div class="col-md-1">
-				</div>
-			</div>
 			
-			<!-- 볼룬탈 정보-->
-			<div class="form-group">
-				<label for="host_info" class="col-md-3 control-label">소개</label>
-				<div class="col-md-8">
-					<textarea type="text" class="form-control" name="vol_info" placeholder="Voluntal을 소개하는글을 입력하세요"></textarea>
-				</div>
-				<div class="col-md-1">
-				</div>
-			</div>    
-			
-			<!--일정-->
-			<div class-"form-group">
-				<label for="host_info" class="col-md-3 control-label">일정</label>
-				<div class="col-md-8">
-					<div class="col-md-4">
-						<input type="date" class="form-control" name="start_time">
-					</div>
-					<div class="col-md-4">
-						<input type="date" class="form-control" name="end_time">
-					</div>
-				</div>
-				<div class="col-md-1">
-				</div>
-			</div>
-			
-			<!--장소-->
-			 <div class="form-group">
-				<label for="inputEmail" class="col-md-3 control-label">장소</label>
-				<div class="col-md-8">
-					<input type="text" class="form-control" name="place" placeholder="장소">
-				</div>
-				<div class="col-md-1">
-				</div>
-			</div>
-			
-			<!--커버 사진-->
-			<div class="form-group">
-				<label for="inputEmail" class="col-md-3 control-label">커버 사진</label>
-				<div class="col-md-8">
-					<input type="file" class="form-control" name="cover_pic" placeholder="장소">
-				</div>
-				<div class="col-md-1">
-				</div>
-			</div>
 			
 			<!--사진1-->
 			<div class="form-group">
@@ -190,12 +219,7 @@
 				</div>
 			</div>
 			
-			<div class="form-group">
-				<div class="col-md-10 col-md-offset-2">
-					<button type="reset" class="btn btn-default">Cancel</button>
-					<button type="submit" class="btn btn-primary">Submit</button>
-				</div>
-			</div>
+			
 		</fieldset>
 	</form>
 <!-- create coluntal end -->
