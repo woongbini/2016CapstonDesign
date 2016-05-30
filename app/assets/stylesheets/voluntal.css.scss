@@ -371,3 +371,36 @@
 
 .graph_comm .txt_graph {font-family:tahoma;color:#666}
 .graph_comm .num_g {color:#d4443b}
+
+/* 파일 필드 숨기기 */
+.filebox input[type="file"] {  
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip:rect(0,0,0,0);
+  border: 0;
+}
+
+.filebox label {
+  display: inline-block;
+  padding: .5em .75em;
+  color: #999;
+  font-size: inherit;
+  line-height: normal;
+  vertical-align: middle;
+  background-color: #fdfdfd;
+  cursor: pointer;
+  border: 1px solid #ebebeb;
+  border-bottom-color: #e2e2e2;
+  border-radius: .25em;
+}
+
+.filebox.bt-cover_pic label {
+    color: #ffffff;
+    background-color : #FF7648;
+    border-color : #FF7648;
+    
+}
