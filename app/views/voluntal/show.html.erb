@@ -95,7 +95,8 @@
 						</div>
 						<div class ="col-xs-12">
 							<p><h3>호스트 정보 </h3>
-    						<p><h4><%= @posts.host_info %></h4></p>
+    						<div class="well">
+    						<p><h4><%= @posts.host_info %></h4></p></div>
 						</div>
 					</div>
 				</div>
@@ -208,7 +209,9 @@
     		<div class="col-md-5">
     			<div>
     				<div class="tag">
-    	  <p>호스트 정보 : <%= @posts.host_info %></p>
+    					호스트 정보 :
+    					<div class="well"> <%= @posts.host_info %> </div>
+    	  <p></p>
           <h5>사람수 : <%= @posts.num_people %></h4>
           <p>볼룬탈  정보 : <%= @posts.vol_info %></p>
           <p>시작 일정 : <%= @posts.start_time %></p>
