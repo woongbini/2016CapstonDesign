@@ -27,7 +27,7 @@
 </head>
 
 <body data-spy="scroll" data-target=".navbar" data-offset="50">
-	<!--Vouluntal 네비게이션 바 start -->
+<!--Vouluntal 네비게이션 바 start -->
 	<nav class="navbar navbar-default navbar-fixed-top">
 		<div class="container-fluid" >
 			<div class="navbar-header">
@@ -59,7 +59,6 @@
 		</div>
 	</nav>
 <!--Vouluntal 네비게이션 바 end -->
-
 <!-- Voluntal 캐러셀 start-->
 	<div id="myCarousel" class="carousel slide" data-ride="carousel"
 		data-interval="2500" data-pause="false">
@@ -135,23 +134,23 @@
 				<div class="row">
 				<!-- 포스트 반복하여 처리 -->
 				<% @posts_vol.reverse.each do |post| %>
-						<div class="col-md-4">
-							<a href="/voluntal/show/<%= post.id %>">
-								<div class="contentmiddlefont">
-									<img src="<%= post.cover_pic_url(:main) %>" >
-								</div> 
-								<div class="row">
-									<div class="col-md-4">
-										<img class="img-circle"	src="<%= post.user.profile_pic_url(:thumb) %>" alt="Generic placeholder image" width="100" height="100">
-									</div>
-									<div class="col-md-8">
-										<h3><%= post.title %></h3>
-										<h5><%= post.start_time %><br><%= post.place %></h5>
-									</div>
+					<div class="col-md-4">
+						<a href="/voluntal/show/<%= post.id %>">
+							<div class="contentmiddlefont">
+								<img src="<%= post.cover_pic_url(:main) %>" >
+							</div> 
+							<div class="row">
+								<div class="col-md-4">
+									<img class="img-circle"	src="<%= post.user.profile_pic_url(:thumb) %>" alt="Generic placeholder image" width="100" height="100">
 								</div>
-							</a>
-						</div>
-					<% end %>
+								<div class="col-md-8">
+									<h3><%= post.title %></h3>
+									<h5><%= post.start_time %><br><%= post.place %></h5>
+								</div>
+							</div>
+						</a>
+					</div>
+				<% end %>
 				<!-- 포스트 반복하여 처리 -->
 				</div>
 			</div>
@@ -285,12 +284,12 @@
 	<script type="text/javascript">
 		T$('testclick1').onclick = function() {
 				$(document).ready(function() {
-					TINY.box.show("/users/signup", 1, 400, 500, 0.5)
+					TINY.box.show("/users/signup", 1, 400, 450, 0.5)
 				});
 		};
 		T$('testclick2').onclick = function() {
 				$(document).ready(function() {
-					TINY.box.show("/users/login", 1, 300, 350, 0.5)
+					TINY.box.show("/users/login", 1, 350, 320, 0.5)
 				});
 		};
 		function showbox() {
