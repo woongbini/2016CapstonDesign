@@ -3,8 +3,21 @@
  font-size : 3rem;
  font-weight : 1px;
  color : #CFE9D3v;
- 
 }
+.basicfont2{
+ font-family: '맑은 고딕', 'Malgun Gothic', verdana;
+ font-size : 14px;
+ font-weight : 1px;
+ color : #FF7648;
+ background-color:#FFFFFF;
+}
+
+.toolbarcolor{
+    color : #333;
+    
+}
+
+
 .CreateVoluntal{
     background-color : #FFFFFF;
     font-family: '맑은 고딕', 'Malgun Gothic', verdana;
@@ -425,7 +438,8 @@
 
 .sidebar2{
     width : 900px;
-    height : 404px;
+    height : auto;
+    padding: 16px;
     list-style : none;
     overflow: hidden;
     background:#FFFFFF;
@@ -437,7 +451,7 @@
 }
 
 .list-side-menu{
-    width : 168px;
+    text-align : center;
     height : auto;
     list-style : none;
     overflow: hidden;

@@ -64,7 +64,7 @@
 
 	<div class="CreateVoluntal" "col-md-4" align="center">
 		<div class="contentheadfont"><%= @posts.title %></div><br>
-		<div class="contentmiddlefont">_<%= @posts.user.nickname %>_/<%= @posts.vol_info %>
+		<div class="contentmiddlefont">_<%= @posts.user.nickname %>_
 		<p class="star_rating">
 			<a href="#" class="on">★</a>
 			<a href="#" class="on">★</a>
@@ -93,11 +93,7 @@
 					<div class="embed-responsive embed-responsive-16by9">
   					<iframe class="embed-responsive-item" src="https://www.youtube.com/embed/PXOOBQrqS5w"frameborder=”0″ allowfullscreen></iframe>
 						</div>
-						<div class ="col-xs-12">
-							<p><h3>호스트 정보 </h3>
-    						<div class="well">
-    						<p><h4><%= @posts.host_info %></h4></p></div>
-						</div>
+
 					</div>
 				</div>
 				<div class="col-sm-5 ">
@@ -193,32 +189,33 @@
     	<div style="row">
     		<div class="col-md-12">
     			<div>
-
-    				<p><h3>볼룬탈  정보 </h3><br>
-    				<img src="<%= @posts.cover_pic_url(:main) %>">
-    				<p><h4><%= @posts.vol_info %></h4></p>
+    				<div class ="col-xs-12">
+							<p><h3>호스트 정보 </h3>
+    						<pre><%= @posts.host_info %></pre>
+					</div>
+    			</div>
+    			
+    		</div>
+        	<hr width="100%" style="border: solid 1px #FF7648;">		
+ 	<div class="col-md-12">
+    			<div>
+    				<div class ="col-xs-12">
+							<p><h3>Voluntal 정보 </h3>
+					</div>
+    				<p>
+    				<p><img src="<%= @posts.cover_pic_url(:main) %>"></p>
+    				<p><img src="<%= @posts.pic1_url(:main) %>"></p>
+            	 	<p><img src="<%= @posts.pic2_url(:main) %>"></p>
+            		<p><img src="<%= @posts.pic3_url(:main) %>"></p>
+    				</p>
+    				<pre><%= @posts.vol_info %></pre>
     				<p><h3>시작 일정 </h3><br>
     				<p><h4><%= @posts.start_time %></h4></p>
     				<p><h3>종료 일정 </h3><br>
     				<p><h4><%= @posts.end_time %></h4></p>
-    	<hr width="100%" style="border: solid 1px #FF7648;">
+
     			</div>
     			
-    		</div>
-    		
-    		<div class="col-md-5">
-    			<div>
-    				<div class="tag">
-    					호스트 정보 :
-    					<div class="well"> <%= @posts.host_info %> </div>
-    	  <p></p>
-          <h5>사람수 : <%= @posts.num_people %></h4>
-          <p>볼룬탈  정보 : <%= @posts.vol_info %></p>
-          <p>시작 일정 : <%= @posts.start_time %></p>
-          <p>정료 일정 : <%= @posts.end_time %></p>
-          <p>장소 : <%= @posts.place %></p>
-    				</div>
-    			</div>
     		</div>
     		
  	
