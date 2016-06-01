@@ -19,8 +19,6 @@ Testapp::Application.routes.draw do
 	get "voluntal/edit"
 	get "voluntal/edit_complete"
 	get "voluntal/delete_complete"
-	get "mainpage/addmemberpage"
-	get  "intro/intro"
 	get "users/logincomplete"
 	# The priority is based upon order of creation: first created -> highest priority.
 	# See how all your routes lay out with "rake routes".

@@ -1,15 +1,14 @@
 <!DOCTYPE html>
 <html lang="ko">
 <head>
+	<title><% content_for :title, "Voluntal::메인" %></title>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
 	<meta name="description" content="">
 	<meta name="author" content="">
-	<link rel="icon" href="../../favicon.ico">
-	<link rel="shortcut icon" href="/favicon.ico">
-	<title><%= controller.page_title %>::Main</title>
+	
 	<!-- YJ CSS file-->
 		<link rel="stylesheet" href="stylesheets/voluntal.css">
 		<link type="text/css" rel="stylesheet" href="stylesheets/colorbox.css"/>
@@ -24,22 +23,22 @@
 		<link rel="stylesheet"	href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
 		<link rel="stylesheet"	href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap-theme.min.css">
 		<script	src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
+		<link href="//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.min.css" rel="stylesheet">
 	<!-- Bootstrap core JavaScript end-->
 </head>
 
 <body data-spy="scroll" data-target=".navbar" data-offset="50">
 	<!--Vouluntal 네비게이션 바 start -->
 	<nav class="navbar navbar-default navbar-fixed-top">
-		<div class="container-fluid" style="">
+		<div class="container-fluid" >
 			<div class="navbar-header">
-				<!--<a href="/"><img src="http://i.imgur.com/XqSDoFN.png" width="190px" height="50px" alt="logo" class="img-rounded"></a>-->
-				<a href="/"><div class=logoimage> </div></a>
-				<button type="button" class="navbar-toggle" data-toggle="collapse"data-target="#myNavbar">
+				<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
 					<span class="sr-only">Toggle navigation</span> 
 					<span class="icon-bar"></span> 
 					<span class="icon-bar"></span> 
 					<span class="icon-bar"></span>
 				</button>
+				<a href="/"><div class=logoimage></div></a>
 			</div>
 			<div class="navbar-collapse collapse" id="myNavbar" style="">
 				<ul class="nav navbar-nav navbar-left">
@@ -137,23 +136,23 @@
 				<div class="row">
 				<!-- 포스트 반복하여 처리 -->
 				<% @posts_vol.reverse.each do |post| %>
-					<div class="col-md-4">
-						<a href="/voluntal/show/<%= post.id %>">
-						<div>
-							<img src="<%= post.cover_pic_url(:main) %>">
-						</div> <br>
-						<div class="row">
-							<div class="col-md-4">
-								<img class="img-circle" src="<%= post.user.profile_pic_url(:thumb) %>"alt="Generic placeholder image" width="100" height="100">
-							</div>
-							<div class="col-md-8 ">
-								<h3><%= post.title %></h3>
-								<h5><%= post.start_time %><br><%= post.place %></h5>
-							</div>
-						</div><br>
-						</a>
-					</div>
-				<% end %>
+						<div class="col-md-4">
+							<a href="/voluntal/show/<%= post.id %>">
+								<div class="contentmiddlefont">
+									<img src="<%= post.cover_pic_url(:main) %>" >
+								</div> 
+								<div class="row">
+									<div class="col-md-4">
+										<img class="img-circle"	src="<%= post.user.profile_pic_url(:thumb) %>" alt="Generic placeholder image" width="100" height="100">
+									</div>
+									<div class="col-md-8">
+										<h3><%= post.title %></h3>
+										<h5><%= post.start_time %><br><%= post.place %></h5>
+									</div>
+								</div>
+							</a>
+						</div>
+					<% end %>
 				<!-- 포스트 반복하여 처리 -->
 				</div>
 			</div>
@@ -166,7 +165,7 @@
 	<div class="container">
 		<div class="middletoolbar container" align="center">
 			<h2>Talent</h2>
-			<h4>새로운 무언가를 가르치거나 배우고 싶으신가요?</h4>
+			<h4>무언가를 가르치거나 배우고 싶으신가요?</h4>
 		</div>
 	</div>
 	<br>
@@ -182,17 +181,18 @@
 						<div class="col-md-4">
 							<a href="/voluntal/show/<%= post.id %>">
 								<div class="contentmiddlefont">
-									<img src="<%= post.cover_pic_url(:main) %>">
+									<img src="<%= post.cover_pic_url(:main) %>" >
 								</div> <br>
 								<div class="row">
-									<div class="col-xs-4">
+									<div class="col-md-4">
 										<img class="img-circle"	src="<%= post.user.profile_pic_url(:thumb) %>" alt="Generic placeholder image" width="100" height="100">
-									</div></a>	
-									<div class="col-xs-8">
-									<h3><%= post.title %></h3>
-									<h5><%= post.start_time %><br><%= post.place %></h5>
+									</div>
+									<div class="col-md-8">
+										<h3><%= post.title %></h3>
+										<h5><%= post.start_time %><br><%= post.place %></h5>
 									</div>
 								</div><br>
+							</a>
 						</div>
 					<% end %>
 				<!-- 포스트 반복하여 처리 -->
@@ -225,7 +225,7 @@
 		</div>
 		<br>
 		<div class="voluntalflow" >
-			<p>1. Voluntal 만들기를 클릭하여 Host 와 Voluntal 정보를 입력한다.</p>
+			<p>1. Voluntal 만들기를 클릭하여 Voluntal 정보를 입력한다.</p>
 			<p>2. Voluntal 운영자가 Voluntal을 개설한다.</p>
 			<p>3. Guest들의 질문에 대답해주며 Activity 준비한다.</p>
 			<p>4. Activity 활동 전날 Guest들의 명단을 받는다.</p>
@@ -239,7 +239,7 @@
 		<br>
 		<div align="center">
 			<a href="/voluntal/register">
-				<button class="btn btn-lg submit_button">Voluntal 만들기</button>
+				<button class="btn btn-lg submit_button"><i class="icon-pencil"></i>  Voluntal 만들기</button>
 			</a>
 		</div>
 		<br>
@@ -247,19 +247,16 @@
 <!-- Voluntal 만들기 end -->
 
 <!-- Voulutal 푸터 start -->
-	<footer class="footer">
+	<footer class="footer" style="background-color:#FFAB80">
 		<div class="container">
-			<div class="col-md-10">
-				<p class="text-muted">&copy; WB. and YJ. All rights reserved.</p>
+			<br>
+			<div class="col-md-9">
+				<p class="text-muted">&copy; Voluntal and WB.YJ  All rights reserved.</p>
 			</div>
-			<div class="col-md-2">
-				<p>
-					<a href="http://facebook.com/woongbini">WB<span
-						class="social social-facebook"></span></a>
-				</p>
-				<p>
-					<a href="https://goo.gl/BFzCQY">YJ<span
-						class="social social-facebook"></span></a>
+			<div class="col-md-3">
+				<p class="text-muted">Join Us on      
+					<a href="http://facebook.com/woongbini">   WB's  <i class="icon-large icon-facebook"></i></a> / 
+					<a href="https://goo.gl/BFzCQY">  YJ's  <i class="icon-large icon-facebook"></i> </a>
 				</p>
 			</div>
 		</div>
@@ -271,7 +268,7 @@
 	<script src="../../dist/js/bootstrap.min.js"></script>
 	<script src="../../assets/js/vendor/holder.js"></script>
 	-->
-
+	
 <!-- jquery스크롤 coding start -->
 	<script>
 		jQuery(document).ready(function($) {

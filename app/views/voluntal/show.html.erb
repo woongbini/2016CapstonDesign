@@ -8,37 +8,32 @@
 	<meta name="description" content="">
 	<meta name="author" content="">
 	<link rel="icon" href="../../favicon.ico">
-	<title>샤싣</title>
+	<title><% content_for :title, "Voluntal::보기" %></title>
 	<!-- YJ CSS file-->
 		<link rel="stylesheet" href="stylesheets/voluntal.css">
 		 <script src="javascripts/colorbox.js"></script>
 	<!-- Bootstrap core JavaScript start-->
 		<!--<link href="assets/stylesheet/bootstrap.css" type="text/css" rel="stylesheet">-->
+		<link href="stylesheet/bootstrap.css" type="text/css" rel="stylesheet">
 		<script src="http://code.jquery.com/jquery-1.12.0.min.js"></script>
 		<link rel="stylesheet"	href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
 		<link rel="stylesheet"	href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap-theme.min.css">
 		<script	src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
+		<link href="//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.min.css" rel="stylesheet">
 	<!-- Bootstrap core JavaScript end-->
-	
-	<style type="text/css">
-
-		
-	</style>
-	
 </head>
 <body>
 <!--Vouluntal 네비게이션 바 start -->
 	<nav class="navbar navbar-default navbar-fixed-top">
 		<div class="container-fluid" style="">
 			<div class="navbar-header">
-				<!--<a href="/"><img src="http://i.imgur.com/XqSDoFN.png" width="190px" height="50px" alt="logo" class="img-rounded"></a>-->
-				<a href="/"><div class="logoimage"></div></a>
-				<button type="button" class="navbar-toggle" data-toggle="collapse"
-					data-target="#myNavbar">
-					<span class="sr-only">Toggle navigation</span> <span
-						class="icon-bar"></span> <span class="icon-bar"></span> <span
-						class="icon-bar"></span>
+				<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+					<span class="sr-only">Toggle navigation</span> 
+					<span	class="icon-bar"></span> 
+					<span class="icon-bar"></span> 
+					<span class="icon-bar"></span>
 				</button>
+				<a href="/"><div class="logoimage"></div></a>
 			</div>
 			<div class="navbar-collapse collapse" id="myNavbar" style="">
 				<ul class="nav navbar-nav navbar-left">
@@ -84,10 +79,8 @@
 		</div>
 	</div>
 	<br>
-	
 	<div class="contentbackground">
 		<div class="contentinsidebackground container">
-			
 			<div class="row">
 				<div class="col-sm-6">
 					<div class ="row">
@@ -105,65 +98,67 @@
     						<p><h4><%= @posts.host_info %></h4></p>
 						</div>
 					</div>
-				
 				</div>
 				<div class="col-sm-5 ">
 				<div class="map" id="map" style=" border-radius :10px; width:500px;height:350px;"></div>
-<script type="text/javascript" src="//apis.daum.net/maps/maps3.js?apikey=7eecbd6046d2525ebc71a64b0ec26da4&libraries=services"></script>
-<script>
-// 마커를 클릭하면 장소명을 표출할 인포윈도우 입니다
-var infowindow = new daum.maps.InfoWindow({zIndex:1});
-
-var mapContainer = document.getElementById('map'), // 지도를 표시할 div 
-    mapOption = {
-        center: new daum.maps.LatLng(37.566826, 126.9786567), // 지도의 중심좌표
-        level: 3 // 지도의 확대 레벨
-    };  
-
-// 지도를 생성합니다    
-var map = new daum.maps.Map(mapContainer, mapOption); 
-
-// 장소 검색 객체를 생성합니다
-var ps = new daum.maps.services.Places(); 
-
-// 키워드로 장소를 검색합니다
-ps.keywordSearch('<%= @posts.place %>', placesSearchCB); 
-
-// 키워드 검색 완료 시 호출되는 콜백함수 입니다
-function placesSearchCB (status, data, pagination) {
-    if (status === daum.maps.services.Status.OK) {
-
-        // 검색된 장소 위치를 기준으로 지도 범위를 재설정하기위해
-        // LatLngBounds 객체에 좌표를 추가합니다
-        var bounds = new daum.maps.LatLngBounds();
-
-        for (var i=0; i<data.places.length; i++) {
-            displayMarker(data.places[i]);    
-            bounds.extend(new daum.maps.LatLng(data.places[i].latitude, data.places[i].longitude));
-        }       
-
-        // 검색된 장소 위치를 기준으로 지도 범위를 재설정합니다
-        map.setBounds(bounds);
-    } 
-}
-
-// 지도에 마커를 표시하는 함수입니다
-function displayMarker(place) {
-    
-    // 마커를 생성하고 지도에 표시합니다
-    var marker = new daum.maps.Marker({
-        map: map,
-        position: new daum.maps.LatLng(place.latitude, place.longitude) 
-    });
-
-    // 마커에 클릭이벤트를 등록합니다
-    daum.maps.event.addListener(marker, 'click', function() {
-        // 마커를 클릭하면 장소명이 인포윈도우에 표출됩니다
-        infowindow.setContent('<div style="padding:5px;font-size:12px;">' + place.title + '</div>');
-        infowindow.open(map, marker);
-    });
-}
-</script>
+				
+<!--DAUM MAP API start -->
+	<script type="text/javascript" src="//apis.daum.net/maps/maps3.js?apikey=7eecbd6046d2525ebc71a64b0ec26da4&libraries=services"></script>
+	<script>
+		// 마커를 클릭하면 장소명을 표출할 인포윈도우 입니다
+		var infowindow = new daum.maps.InfoWindow({zIndex:1});
+		
+		var mapContainer = document.getElementById('map'), // 지도를 표시할 div 
+		    mapOption = {
+		        center: new daum.maps.LatLng(37.566826, 126.9786567), // 지도의 중심좌표
+		        level: 5 // 지도의 확대 레벨
+		    };  
+		
+		// 지도를 생성합니다    
+		var map = new daum.maps.Map(mapContainer, mapOption); 
+		
+		// 장소 검색 객체를 생성합니다
+		var ps = new daum.maps.services.Places(); 
+		
+		// 키워드로 장소를 검색합니다
+		ps.keywordSearch('<%= @posts.place %>', placesSearchCB); 
+		
+		// 키워드 검색 완료 시 호출되는 콜백함수 입니다
+		function placesSearchCB (status, data, pagination) {
+		    if (status === daum.maps.services.Status.OK) {
+		
+		        // 검색된 장소 위치를 기준으로 지도 범위를 재설정하기위해
+		        // LatLngBounds 객체에 좌표를 추가합니다
+		        var bounds = new daum.maps.LatLngBounds();
+		
+		        for (var i=0; i<data.places.length; i++) {
+		            displayMarker(data.places[i]);    
+		            bounds.extend(new daum.maps.LatLng(data.places[i].latitude, data.places[i].longitude));
+		        }       
+		
+		        // 검색된 장소 위치를 기준으로 지도 범위를 재설정합니다
+		        map.setBounds(bounds);
+		    } 
+		}
+		
+		// 지도에 마커를 표시하는 함수입니다
+		function displayMarker(place) {
+		    
+		    // 마커를 생성하고 지도에 표시합니다
+		    var marker = new daum.maps.Marker({
+		        map: map,
+		        position: new daum.maps.LatLng(place.latitude, place.longitude) 
+		    });
+		
+		    // 마커에 클릭이벤트를 등록합니다
+		    daum.maps.event.addListener(marker, 'click', function() {
+		        // 마커를 클릭하면 장소명이 인포윈도우에 표출됩니다
+		        infowindow.setContent('<div style="padding:5px;font-size:12px;">' + place.title + '</div>');
+		        infowindow.open(map, marker);
+		    });
+		}
+	</script>
+<!--DAUM MAP API end -->
 				<div>
 					<p><h3>장소 : <%= @posts.place %></h3></p>
 				</div>
@@ -180,15 +175,15 @@ function displayMarker(place) {
 			 			<input type="hidden" name="place" value="<%= @posts.place %>">
 						<button type="submit" class="btn btn-block btn-lg submit_button">참여하기</button>
 					</form>
-					</div><br>
-					<div class ="row">
-						<div class ="col-xs-6">
-							<button type="submit" class="question_facebook btn-block btn-lg">공유하기</button>
-						</div>
-						<div class ="col-xs-6">
-							<button type="submit" class="question_button btn-block btn-lg">Wish List</button>
-						</div>
+				</div><br>
+				<div class ="row">
+					<div class ="col-xs-6">
+						<button type="submit" class="question_facebook btn-block btn-lg">공유하기</button>
 					</div>
+					<div class ="col-xs-6">
+						<button type="submit" class="question_button btn-block btn-lg">Wish List</button>
+					</div>
+				</div>
 				
 				</div>	
 			</div>
@@ -248,8 +243,23 @@ function displayMarker(place) {
      	
      	
      </div>
-     <div>
 </div>
 
+<!-- Voulutal 푸터 start -->
+	<footer class="footer" style="background-color:#FFAB80">
+		<div class="container">
+			<br>
+			<div class="col-md-9">
+				<p class="text-muted">&copy; Voluntal and WB.YJ  All rights reserved.</p>
+			</div>
+			<div class="col-md-3">
+				<p class="text-muted">Join Us on      
+					<a href="http://facebook.com/woongbini">   WB's  <i class="icon-large icon-facebook"></i></a> / 
+					<a href="https://goo.gl/BFzCQY">  YJ's  <i class="icon-large icon-facebook"></i> </a>
+				</p>
+			</div>
+		</div>
+	</footer>
+<!-- Voulutal 푸터 end -->
 
 </body>

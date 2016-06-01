@@ -8,7 +8,7 @@
 	<meta name="description" content="">
 	<meta name="author" content="">
 	<link rel="icon" href="../../favicon.ico">
-	<title>title</title>
+	<title><% content_for :title, "Voluntal::만든" %></title>
 	<!-- YJ CSS file-->
 		<link rel="stylesheet" href="stylesheets/voluntal.css">
 	<!-- Bootstrap core JavaScript start-->
@@ -17,6 +17,7 @@
 		<link rel="stylesheet"	href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
 		<link rel="stylesheet"	href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap-theme.min.css">
 		<script	src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
+		<link href="//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.min.css" rel="stylesheet">
 	<!-- Bootstrap core JavaScript end-->
 	
 	<style type="text/css">
@@ -30,14 +31,13 @@
 	<nav class="navbar navbar-default navbar-fixed-top">
 		<div class="container-fluid" style="">
 			<div class="navbar-header">
-				<!--<a href="/"><img src="http://i.imgur.com/XqSDoFN.png" width="190px" height="50px" alt="logo" class="img-rounded"></a>-->
-				<a href="/"><div class="logoimage"></div></a>
-				<button type="button" class="navbar-toggle" data-toggle="collapse"
-					data-target="#myNavbar">
-					<span class="sr-only">Toggle navigation</span> <span
-						class="icon-bar"></span> <span class="icon-bar"></span> <span
-						class="icon-bar"></span>
+				<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+					<span class="sr-only">Toggle navigation</span> 
+					<span class="icon-bar"></span> 
+					<span class="icon-bar"></span> 
+					<span class="icon-bar"></span>
 				</button>
+				<a href="/"><div class="logoimage"></div></a>
 			</div>
 			<div class="navbar-collapse collapse" id="myNavbar" style="">
 				<ul class="nav navbar-nav navbar-left">
@@ -65,44 +65,44 @@
 <!-- 개인정보 보여주기 start-->
 	<div class="container" >
 		<div class="row" >
-			<div class="col-md-3" style="background-color:#fff0e6">
-				<div align="center">
+			<div class="col-md-3">
+				<div class="sidebar">
+					<div class ="area-profile">
 					<p><img src="<%= @user_info.profile_pic_url(:thumb) %>" width="100px" class="img-circle"></p>
 				</div>
-				<div align="center">
+				<div class="list-side-menu">
 					<h2><%= @user_info.nickname %></h2>
 				</div><br>
-				<div align="center">
-					
-				</div>
+
 				<a href="/users/mypage" >
-					<div align="center" >
+					<div class="list-side-menu" >
 						<h4>프로필</h3>
 					</div>
 				</a>
 				<a href="/users/hosting">
-					<div align="center" style="background-color:#ffb380">
-						<h4>호스트 한 Voluntal필</h3>
+					<div class="list-side-menu" style="background-color:#ffb380">
+						<h4>Host Voluntal</h3>
 					</div>
 				</a>
 				<a href="/users/joining">
-					<div align="center">
-						<h4>참여한 Voluntal필</h3>
+					<div class="list-side-menu">
+						<h4>Guest Voluntal</h3>
 					</div>
 				</a>
 			
 			</div>
-			
-			<div class="col-md-1" style="border:1px solid">
-				빈칸이얌
 			</div>
-			<div class="col-md-8" style="background-color:#fff0e6">
+
+			<div class="col-md-9 sidebar2">
 				<div class="row">
-					<h1><%= @user_info.nickname %> 가 만든 Voluntal
-					
+					<div class="col-md-12">
+						<h1 style ="color : #FF7648"> <%= @user_info.nickname %> 의 Host Voluntal </h1> 
+					</div>
 				</div>
 				<div class="row">
-					<h3>만든 Voluntal 목록</h3>
+					<div class="col-md-8">	
+					<h4>만든 Voluntal 목록</h4>
+					</div>
 				</div>
 				<div class="row">
 					<% if @posts_host.nil? %>
@@ -124,4 +124,22 @@
 	</div>
 <!-- 개인정보 보여주기 end-->	
 
+
+<!-- Voulutal 푸터 start -->
+	<footer class="footer" style="background-color:#FFAB80">
+		<div class="container">
+			<br>
+			<div class="col-md-9">
+				<p class="text-muted">&copy; Voluntal and WB.YJ  All rights reserved.</p>
+			</div>
+			<div class="col-md-3">
+				<p class="text-muted">Join Us on      
+					<a href="http://facebook.com/woongbini">   WB's  <i class="icon-large icon-facebook"></i></a> / 
+					<a href="https://goo.gl/BFzCQY">  YJ's  <i class="icon-large icon-facebook"></i> </a>
+				</p>
+			</div>
+		</div>
+	</footer>
+<!-- Voulutal 푸터 end -->
+	
 </body>

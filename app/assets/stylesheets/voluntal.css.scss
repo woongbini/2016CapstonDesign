@@ -30,12 +30,12 @@
 .logoimage{
     width:190px;
     height:50px;
-      background-image:url(Voluntal-logo2.png);
+    background-image:url(Voluntal-logo2.png);
     background-position:center;
     background-size:cover;
     max-width:100%;
     max-height:100%;
-    img{max-width:100%;} 
+    /*img{max-width:100%;} */
 }
 
 .headbox{
@@ -371,3 +371,117 @@
 
 .graph_comm .txt_graph {font-family:tahoma;color:#666}
 .graph_comm .num_g {color:#d4443b}
+
+
+/* 파일 필드 숨기기 */
+.filebox input[type="file"] {  
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip:rect(0,0,0,0);
+  border: 0;
+}
+
+.filebox label {
+  display: inline-block;
+  padding: .5em .75em;
+  color: #999;
+  font-size: inherit;
+  line-height: normal;
+  vertical-align: middle;
+  background-color: #fdfdfd;
+  cursor: pointer;
+  border: 1px solid #ebebeb;
+  border-bottom-color: #e2e2e2;
+  border-radius: .25em;
+}
+
+.filebox.bt-cover_pic label {
+    color: #ffffff;
+    background-color : #FF7648;
+    border-color : #FF7648;
+}
+
+
+.area-profile{
+    padding : 14.5px;
+}
+
+.sidebar{
+        margin-right: 44px;
+        margin-bottom: 30px;
+        padding: 16px;
+        text-align: center;
+        background:#FFFFFF;
+        max-width:100%;
+        max-height:100%;
+        img{max-width:100%;}
+        border-radius :10px;    
+        font-family: '맑은 고딕', 'Malgun Gothic', verdana;
+}
+
+.sidebar2{
+    width : 900px;
+    height : 404px;
+    list-style : none;
+    overflow: hidden;
+    background:#FFFFFF;
+    max-width:100%;
+    max-height:100%;
+    img{max-width:100%;}
+    border-radius :10px;
+    font-family: '맑은 고딕', 'Malgun Gothic', verdana;
+}
+
+.list-side-menu{
+    width : 168px;
+    height : auto;
+    list-style : none;
+    overflow: hidden;
+    max-width:100%;
+    max-height:100%;
+    img{max-width:100%;}
+    border-radius :5px;
+    font-family: '맑은 고딕', 'Malgun Gothic', verdana;
+}
+
+
+.Modified_button{
+    margin : 20px;
+    text-align : center;
+    font-size:12px;
+
+    background : #FFB380;
+    width : 100px;
+    height : auto;
+    max-width:100%;
+    max-height:100%;
+    img{max-width:100%;}
+    display: block;
+    border-radius :10px;
+    font-family: '맑은 고딕', 'Malgun Gothic', verdana;
+    font-weight : 600;
+    padding : 8px 0;
+}
+
+.footer{
+ overflow: hidden;
+ position: absolute;
+ height: 50px; 
+ width:100%; 
+ margin-left:0px; margin-bottom:-1px;
+}
+
+
+.footer2{
+ overflow: hidden;
+ position: absolute;
+ bottom: 0;
+ height: 50px; 
+ width:100%; 
+ margin-left:0px; margin-bottom:-1px;
+}
+

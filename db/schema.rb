@@ -28,11 +28,17 @@ ActiveRecord::Schema.define(version: 20160525031058) do
   end
 
   create_table "posts", force: true do |t|
+    t.integer  "po_id"
     t.integer  "user_id"
+    t.boolean  "is_host"
     t.string   "title"
     t.string   "category"
+    t.integer  "num_people"
+    t.text     "host_info"
+    t.text     "vol_info"
+    t.string   "start_time"
+    t.string   "end_time"
     t.string   "place"
-    t.text     "content"
     t.datetime "created_at"
     t.datetime "updated_at"
     t.string   "cover_pic"

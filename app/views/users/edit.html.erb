@@ -8,15 +8,22 @@
 	<meta name="description" content="">
 	<meta name="author" content="">
 	<link rel="icon" href="../../favicon.ico">
-	<title>title </title>
+	<title>title</title>
 	<!-- YJ CSS file-->
 		<link rel="stylesheet" href="stylesheets/voluntal.css">
+		
+	
+		
+		
+		
+		
 	<!-- Bootstrap core JavaScript start-->
 		<!--<link href="assets/stylesheet/bootstrap.css" type="text/css" rel="stylesheet">-->
 		<script src="http://code.jquery.com/jquery-1.12.0.min.js"></script>
 		<link rel="stylesheet"	href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
 		<link rel="stylesheet"	href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap-theme.min.css">
 		<script	src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
+		<link href="//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.min.css" rel="stylesheet">
 	<!-- Bootstrap core JavaScript end-->
 	
 	<style type="text/css">
@@ -25,23 +32,22 @@
 	</style>
 	
 </head>
-<body>
+<body style="background-color:#ffb380">
 <!--Vouluntal 네비게이션 바 start -->
 	<nav class="navbar navbar-default navbar-fixed-top">
 		<div class="container-fluid" style="">
 			<div class="navbar-header">
-				<!--<a href="/"><img src="http://i.imgur.com/XqSDoFN.png" width="190px" height="50px" alt="logo" class="img-rounded"></a>-->
-				<a href="/"><div class="logoimage"></div></a>
-				<button type="button" class="navbar-toggle" data-toggle="collapse"
-					data-target="#myNavbar">
-					<span class="sr-only">Toggle navigation</span> <span
-						class="icon-bar"></span> <span class="icon-bar"></span> <span
-						class="icon-bar"></span>
+				<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+					<span class="sr-only">Toggle navigation</span> 
+					<span class="icon-bar"></span> 
+					<span class="icon-bar"></span> 
+					<span class="icon-bar"></span>
 				</button>
+				<a href="/"><div class=logoimage></div></a>
 			</div>
 			<div class="navbar-collapse collapse" id="myNavbar" style="">
 				<ul class="nav navbar-nav navbar-left">
-					<!--<li class="active"><a href="#section1" class="scroll"><strong>Voluntal이란?</strong></a></li>
+				    	<!--<li class="active"><a href="#section1" class="scroll"><strong>Voluntal이란?</strong></a></li>
 					<li><a href="#section2" class="scroll"><strong>Volunteer</strong></a></li>
 					<li><a href="#section3" class="scroll"><strong>Talent</strong></a></li>
 					<li><a href="#section4" class="scroll"><strong>Voluntal만들기</strong></a></li>-->
@@ -60,70 +66,61 @@
 	</nav>
 <!--Vouluntal 네비게이션 바 end -->
 
-<br> <br> <br>
+<br><br><br><br>
 
-<!-- 회원가입 기능 start -->
-	<div class="container">
-		<h3>회원정보 수정</h3>
-		<form action="/users/edit_complete" method="post" enctype="multipart/form-data">
-			<div>
-				Email : <input type="text" name="email" placeholder="<%= @user_ed.email %>">	
+<!-- 개인정보 보여주기 start-->
+	<div class="container" >
+		<div class="row" >
+			<div class="col-md-9 sidebar2">
+				<div class="row">
+					<div class="col-md-12">
+						<h1 style ="color : #FF7648">회원정보 수정</h1> 
+					</div>
+				</div>
+					<form action="/users/edit_complete" method="post" enctype="multipart/form-data">
+			<div class="form-group">
+				<p> Email : <input type="text" name="email" placeholder="<%= @user_ed.email %>">	</p>
 			</div>
-			<div>
-				Password : <input type="password" name="password">
+			<div class="form-group">
+				<p> Password : <input type="password" name="password"></p>
 			</div>
-			<div>
-				Password Confirm : <input type="password" name="re_password">
+			<div class="form-group">
+				<p> Password Confirm : <input type="password" name="re_password"></p>
 			</div>
-			<div>
-				Phone : <input type="text" name="phone" placeholder="<%= @user_ed.phone %>">
+			<div class="form-group">
+				<p> Phone : <input type="text" name="phone" placeholder="<%= @user_ed.phone %>"></p>
 			</div>
-			<div>
-				Nickname : <input type="text" name="nickname" placeholder="<%= @user_ed.nickname %>">
+			<div class="form-group">
+				<p> Nickname : <input type="text" name="nickname" placeholder="<%= @user_ed.nickname %>"></p>
 			</div>
+				<div class="form-group">
+					<label class="control-label" for="inputSmall">Profile Photo</label>
+					<input type="file" class="btn btn-default" name="profile_pic" placeholder="Profile Photo" class="form-control input-sm">
+				</div>
 			<div>
-				<input type="file" name="profile_pic" placeholder="<%= @user_ed.profile_pic_url(:thumb) %>">
+				<input type="submit" value="수정하기" class="Modified_button">
 			</div>
-			<div>
-				<input type="submit" value="수정하기" class="btn btn-danger btn-md">
+
 			</div>
+		</div>
 	</div>
-<!-- 회원가입 기능 end -->
+<!-- 개인정보 보여주기 end-->	
 
 <!-- Voulutal 푸터 start -->
-	<footer class="footer">
+	<footer class="footer2" style="background-color:#FFAB80 ">
 		<div class="container">
-			<div class="col-md-10">
-				<p class="text-muted">&copy; WB. and YJ. All rights reserved.</p>
+			<br>
+			<div class="col-md-9">
+				<p class="text-muted">&copy; Voluntal and WB.YJ  All rights reserved.</p>
 			</div>
-			<div class="col-md-2">
-				<p>
-					<a href="http://facebook.com/woongbini">WB<span
-						class="social social-facebook"></span></a> <a
-						href="https://goo.gl/BFzCQY">YJ<span
-						class="social social-facebook"></span></a>
+			<div class="col-md-3">
+				<p class="text-muted">Join Us on      
+					<a href="http://facebook.com/woongbini">   WB's  <i class="icon-large icon-facebook"></i></a> / 
+					<a href="https://goo.gl/BFzCQY">  YJ's  <i class="icon-large icon-facebook"></i> </a>
 				</p>
 			</div>
 		</div>
 	</footer>
 <!-- Voulutal 푸터 end -->
 
-
-	<!--<script	src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
-				<script src="../../dist/js/bootstrap.min.js"></script>
-				<script src="../../assets/js/vendor/holder.js"></script>-->
-
-<!-- jquery스크롤 coding start -->
-	<script>
-		jQuery(document).ready(function($) {
-			$(".scroll").click(function(event) {
-				event.preventDefault();
-				$('html,body').animate({
-					scrollTop : $(this.hash).offset().top
-				}, 500);
-			});
-		});
-	</script>
-<!-- jquery스크롤 coding end -->
 </body>
-</html>

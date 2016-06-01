@@ -8,15 +8,17 @@
 	<meta name="description" content="">
 	<meta name="author" content="">
 	<link rel="icon" href="../../favicon.ico">
-	<title>Voluntal :: main</title>
+	<title><% content_for :title, "Voluntal::등록하기" %></title>
 	<!-- YJ CSS file-->
 			<link rel="stylesheet" href="stylesheets/voluntal.css">
 	<!-- Bootstrap core JavaScript start-->
 			<!--<link href="assets/stylesheet/bootstrap.css" type="text/css" rel="stylesheet">-->
-			<script src="http://code.jquery.com/jquery-1.12.0.min.js"></script>
-			<link rel="stylesheet"	href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
-			<link rel="stylesheet"	href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap-theme.min.css">
-			<script	src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
+		<link href="stylesheet/bootstrap.css" type="text/css" rel="stylesheet">
+		<script src="http://code.jquery.com/jquery-1.12.0.min.js"></script>
+		<link rel="stylesheet"	href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
+		<link rel="stylesheet"	href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap-theme.min.css">
+		<script	src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
+		<link href="//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.min.css" rel="stylesheet">
 	<!-- Bootstrap core JavaScript end-->
 </head>
 <body>
@@ -24,15 +26,13 @@
 	<nav class="navbar navbar-default navbar-fixed-top">
 		<div class="container-fluid" style="">
 			<div class="navbar-header">
-				<!--<a href="/"><img src="http://i.imgur.com/XqSDoFN.png" width="190px" height="50px" alt="logo" class="img-rounded"></a>-->
-				<!--<a href="/"><div class="logoimage"></div></a>-->
-				<a href="/"><img src="app/assets/images/Voluntal-logo2.png" class="logoimage img-rounded"></a>
 				<button type="button" class="navbar-toggle" data-toggle="collapse"data-target="#myNavbar">
 					<span class="sr-only">Toggle navigation</span> 
 					<span class="icon-bar"></span> 
 					<span class="icon-bar"></span> 
 					<span class="icon-bar"></span>
 				</button>
+				<a href="/"><div class=logoimage></div></a>
 			</div>
 			<div class="navbar-collapse collapse" id="myNavbar" style="">
 				<ul class="nav navbar-nav navbar-left">
@@ -55,213 +55,183 @@
 	</nav>
 <!--Vouluntal 네비게이션 바 end -->
 
-<!-- Voluntal 만들기 start -->
-	<div class="container">
-		<hr><hr><h2 align="center">Voluntal 등록</h2>
-	</div>
-	<hr class="featurette-divider">
-	<form action="/voluntal/register_process" method="post" class="form-horizontal" enctype="multipart/form-data">
-		<fieldset>
-			<!--제목-->
-			<div class="form-group">
-				<label for="inputEmail" class="col-md-3 control-label">제목</label>
-				<div class="col-md-8">
-					<input type="text" class="form-control" name="title" placeholder="title">
-				</div>
-				<div class="col-md-1">
-				</div>
+<!-- Voluntal 등록하기 start -->
+	<br><br>
+	<div class="contentbackground">
+		<div class="contentinsidebackground container">
+			<div class="row">
+				<h2 align="center" style="color:#FF7648"><strong>Voluntal을 등록해보세요!</strong></h2>
 			</div>
-			
-			<!--카테고리 (구분)-->
-			<div class="form-group">
-				<label class="col-md-3 control-label">구분</label>
-				<div class="col-md-4 radio">
-						<label>
-							<input type="radio" name="category" value="Voluntal" checked="">Voluntal</label>
+			<hr width="100%" style="border: solid 1px #FF7648;">
+			<div class="row">
+				<div class="col-md-4">
+					<h3 style="color:#FF7648"><strong>기본정보 입력 (필수)</strong></h3>
 				</div>
-				<div class="col-md-4 radio">
-						<label>
-							<input type="radio" name="category" value="Talent">Talent</label>
-				</div>
-				<div class="col-md-1">
-				</div>
+				<div class="col-md-8"></div>
 			</div>
-			
-			<!--사람수 -->
-			<div class="form-group">
-				<label for="select" class="col-md-3 control-label">인원</label>
-				<div class="col-md-8">
-					<select class="form-control" name="num_people">
-						<option value="1">1</option>
-						<option value="2">2</option>
-						<option value="3">3</option>
-						<option value="4">4</option>
-						<option value="5">5</option>
-					</select>
-				</div>
-				<div class="col-md-1">
-				</div>
-			</div>
-			
-			<!--호스트 정보-->
-			<div class="form-group">
-				<label for="host_info" class="col-md-3 control-label">정보</label>
-				<div class="col-md-8">
-					<textarea type="text" class="form-control" name="host_info" placeholder="정보 입력하세요"></textarea>
-				</div>
-				<div class="col-md-1">
-				</div>
-			</div>
-			
-			<!-- 볼룬탈 정보-->
-			<div class="form-group">
-				<label for="host_info" class="col-md-3 control-label">소개</label>
-				<div class="col-md-8">
-					<textarea type="text" class="form-control" name="vol_info" placeholder="Voluntal을 소개하는글을 입력하세요"></textarea>
-				</div>
-				<div class="col-md-1">
-				</div>
-			</div>    
-			
-			<!--일정-->
-			<div class-"form-group">
-				<label for="host_info" class="col-md-3 control-label">일정</label>
-				<div class="col-md-8">
-					<div class="col-md-4">
+			<form action="/voluntal/register_process" method="post" class="form-horizontal" enctype="multipart/form-data">
+				
+				<!-- 제목 -->
+				<div class="row">
+					<label class="col-md-2 control-label">Voluntal 제목</label>
+					<div class="col-md-10">
+						<input type="text" class="form-control" name="title" placeholder="이해하기 쉽게 간결하게 적어주세요!">
+					</div>
+				</div><br>
+				
+				<!--카테고리 (구분)-->
+				<div class="row">
+					<label class="col-md-2 control-label">Voluntal 구분</label>
+					<div class="col-md-5 radio">
+							<label><input type="radio" name="category" value="Voluntal" checked=""><strong>Volunteer(봉사활동)</strong></label>
+					</div>
+					<div class="col-md-5 radio">
+							<label><input type="radio" name="category" value="Talent"><strong>Talent(재능기부)</strong></label>
+					</div>
+				</div><br>
+				
+				<!--사람수 -->
+				<div class="row">
+					<label for="select" class="col-md-2 control-label">Voluntal 인원</label>
+					<div class="col-md-10">
+						<select class="form-control" name="num_people">
+							<option value="1">1</option>
+							<option value="2">2</option>
+							<option value="3">3</option>
+							<option value="4">4</option>
+							<option value="5">5</option>
+						</select>
+					</div>
+				</div><br>
+				
+				<!--호스트 정보-->
+				<div class="row">
+					<label for="host_info" class="col-md-2 control-label">호스트 정보</label>
+					<div class="col-md-10">
+						<textarea type="text" class="form-control" name="host_info" rows="8" placeholder="이력, 경력, 노하우 등 자신을 알릴 수 있는 정보를 적어주세요!"></textarea>
+					</div>
+				</div><br>
+				
+				<!-- 볼룬탈 정보-->
+				<div class="row">
+					<label for="host_info" class="col-md-2 control-label">Voluntal 소개</label>
+					<div class="col-md-10">
+						<textarea type="text" class="form-control" name="vol_info" rows="8" placeholder="자신의 Voluntal을 소개해 주세요!"></textarea>
+					</div>
+				</div><br>
+				
+				<!--일정-->
+				<div class-"row">
+					<label for="host_info" class="col-md-2 control-label">시작날짜와 종료날짜</label>
+					<div class="col-md-5">
 						<input type="date" class="form-control" name="start_time">
 					</div>
-					<div class="col-md-4">
+					<div class="col-md-5">
 						<input type="date" class="form-control" name="end_time">
 					</div>
+				</div><br><br><br>
+				
+				<!--장소-->
+				 <div class="row">
+					<label for="inputEmail" class="col-md-2 control-label">Voluntal 장소</label>
+					<div class="col-md-10">
+						<input type="text" class="form-control" name="place" placeholder="위치를 자세하게 적어주시면 지도에 반영됩니다!">
+					</div>
+				</div><br>
+				
+				<!--동영상URL-->
+				 <div class="row">
+					<label for="inputVideo" class="col-md-2 control-label">동영상 주소</label>
+					<div class="col-md-10">
+						<input type="text" class="form-control" name="video" placeholder="Voluntal과 관련된 동영상 URL을 입력해주세요 ex) https://www.youtube.com/embed/PXOOBQrqS5w">
+				
+
+					
+<a name="aa" href='javascript:void(0)' onclick=this.nextSibling.style.display=(this.nextSibling.style.display=='none')?'block':'none';>[URL 가져오는 방법]</a><DIV style='display:none'>
+<%= image_tag('ok.jpg')%><A onclick=this.parentNode.style.display='none'; href="#aa">[닫기]</A></DIV>
+						</div><br>
+
+				</div><br>
+				
+				<!--커버 사진-->
+				<div class="row">
+					<div class="col-md-4">
+						<h3 style="color:#FF7648"><strong>커버 사진 업로드 (필수)</strong></h3>
+					</div>
+					<div class="col-md-8"></div>
 				</div>
-				<div class="col-md-1">
+				<div class="row">
+					<div class="col-md-6">
+						<p>커버 사진으로는 크기가 900x500이상인 고화질 사진이 필요합니다.<br>
+						자신의 Voluntal을 가장 잘 보여줄 수 있는 사진으로 신중하게 선택 해주세요!</p>
+					</div>
+					<div class="col-md-6">
+						<div class="filebox bt-cover_pic">
+							<label for="ex_file2"> <span class="glyphicon glyphicon-picture"> </span>  커버 사진 등록하기 </label>
+							<input type="file" id="ex_file2" name="cover_pic">
+						</div>
+					</div>
+				</div><br>
+				
+				<!--추가 사진 업로드-->
+				<div class="row">
+					<div class="col-md-4">
+						<h3 style="color:#FF7648"><strong>추가 사진 업로드 (선택)</strong></h3>
+					</div>
+					<div class="col-md-8"></div>
 				</div>
+				<div class="row">
+					<div class="col-md-5">
+						<p>Voluntal을 자세히 보여줄수 있는 사진들을 선택해주세요<br>
+						올려주신 사진 순서대로 보여지게 됩니다.</p>
+					</div>
+					<div class="col-md-2">
+						<div class="filebox bt-cover_pic">
+							<label for="ex_file2"> <span class="glyphicon glyphicon-picture"> </span> 추가사진1 등록</label>
+							<input type="file" id="ex_file2" name="pic1">
+						</div>
+					</div>
+					<div class="col-md-2">
+						<div class="filebox bt-cover_pic">
+							<label for="ex_file2"> <span class="glyphicon glyphicon-picture"> </span> 추가사진2 등록</label>
+							<input type="file" id="ex_file2" name="pic2">
+						</div>
+					</div>
+					<div class="col-md-2">
+						<div class="filebox bt-cover_pic">	
+							<label for="ex_file2"> <span class="glyphicon glyphicon-picture"> </span> 추가사진3 등록</label>
+							<input type="file" id="ex_file2" name="pic3">
+						</div>
+					</div>
+					<div class="col-md-1"></div>
+				</div><br><br><br>
+				
+				<!--만들기 / 취소 -->
+				<div class="row" align="center">
+					<button type="submit" class="btn btn-md submit_button"> <span class="glyphicons glyphicons-ok-circle"></span>만들기 </button>
+					<a href="/" class="btn btn-md btn-default"> 취소 </a>
+				</div>
+				
+			</form>
+		</div>
+	</div>
+<!-- Voluntal 등록하기 end -->	
+
+<!-- Voulutal 푸터 start -->
+	<footer class="footer" style="background-color:#FFAB80">
+		<div class="container">
+			<br>
+			<div class="col-md-9">
+				<p class="text-muted">&copy; Voluntal and WB.YJ  All rights reserved.</p>
 			</div>
-			
-			<!--장소-->
-			 <div class="form-group">
-				<label for="inputEmail" class="col-md-3 control-label">장소</label>
-				<div class="col-md-8">
-					<input type="text" class="form-control" name="place" placeholder="장소">
-				</div>
-				<div class="col-md-1">
-				</div>
+			<div class="col-md-3">
+				<p class="text-muted">Join Us on      
+					<a href="http://facebook.com/woongbini">   WB's  <i class="icon-large icon-facebook"></i></a> / 
+					<a href="https://goo.gl/BFzCQY">  YJ's  <i class="icon-large icon-facebook"></i> </a>
+				</p>
 			</div>
-			
-			<!--커버 사진-->
-			<div class="form-group">
-				<label for="inputEmail" class="col-md-3 control-label">커버 사진</label>
-				<div class="col-md-8">
-					<input type="file" class="form-control" name="cover_pic" placeholder="장소">
-				</div>
-				<div class="col-md-1">
-				</div>
-			</div>
-			
-			<!--사진1-->
-			<div class="form-group">
-				<label for="inputEmail" class="col-md-3 control-label">사진1</label>
-				<div class="col-md-8">
-					<input type="file" class="form-control" name="pic1" placeholder="장소">
-				</div>
-				<div class="col-md-1">
-				</div>
-			</div>
-			
-			<!--사진2-->
-			<div class="form-group">
-				<label for="inputEmail" class="col-md-3 control-label">사진2</label>
-				<div class="col-md-8">
-					<input type="file" class="form-control" name="pic2" placeholder="장소">
-				</div>
-				<div class="col-md-1">
-				</div>
-			</div>
-			
-			<!--사진3-->
-			<div class="form-group">
-				<label for="inputEmail" class="col-md-3 control-label">사진3</label>
-				<div class="col-md-8">
-					<input type="file" class="form-control" name="pic3" placeholder="장소">
-				</div>
-				<div class="col-md-1">
-				</div>
-			</div>
-			
-			<div class="form-group">
-				<div class="col-md-10 col-md-offset-2">
-					<button type="reset" class="btn btn-default">Cancel</button>
-					<button type="submit" class="btn btn-primary">Submit</button>
-				</div>
-			</div>
-		</fieldset>
-	</form>
-<!-- create coluntal end -->
+		</div>
+	</footer>
+<!-- Voulutal 푸터 end -->
 
 </body>
-<!-- 
-<div class="form-group">
-				<label for="inputPassword" class="col-lg-2 control-label">Password</label>
-				<div class="col-lg-10">
-					<input type="password" class="form-control" id="inputPassword" placeholder="Password">
-					<div class="checkbox">
-						<label>
-							<input type="checkbox"> Checkbox
-						</label>
-					</div>
-				</div>
-			</div>
-			
-			<div class="form-group">
-				<label for="textArea" class="col-lg-2 control-label">Textarea</label>
-				<div class="col-lg-10">
-					<textarea class="form-control" rows="3" id="textArea"></textarea>
-					<span class="help-block">A longer block of help text that breaks onto a new line and may extend beyond one line.</span>
-				</div>
-			</div>
-			
-			<div class="form-group">
-				<label class="col-lg-2 control-label">Radios</label>
-				<div class="col-lg-10">
-					<div class="radio">
-						<label>
-							<input type="radio" name="optionsRadios" id="optionsRadios1" value="option1" checked="">
-							Option one is this
-						</label>
-					</div>
-					<div class="radio">
-						<label>
-							<input type="radio" name="optionsRadios" id="optionsRadios2" value="option2">
-							Option two can be something else
-						</label>
-					</div>
-				</div>
-			</div>
-			
-			<div class="form-group">
-				<label for="select" class="col-lg-2 control-label">Selects</label>
-				<div class="col-lg-10">
-					<select class="form-control" id="select">
-						<option>1</option>
-						<option>2</option>
-						<option>3</option>
-						<option>4</option>
-						<option>5</option>
-					</select>
-					<br>
-					<select multiple="" class="form-control">
-						<option>1</option>
-						<option>2</option>
-						<option>3</option>
-						<option>4</option>
-						<option>5</option>
-					</select>
-				</div>
-			</div>
-			<div class="form-group">
-				<div class="col-lg-10 col-lg-offset-2">
-					<button type="reset" class="btn btn-default">Cancel</button>
-					<button type="submit" class="btn btn-primary">Submit</button>
-				</div>
-			</div>
--->
