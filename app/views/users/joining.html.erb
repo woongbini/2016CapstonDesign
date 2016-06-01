@@ -110,9 +110,10 @@
 						<p>참여한 Voluntal이 없습니다! 지금 참여해 주세요!</p>
 					<% else %>
 						<% @posts_vol.reverse.each do |post| %>
-							<a href="/voluntal/show/<%= post.id %>"><%= post.title %></a>	<br>
+							<a href="/voluntal/show/<%= post.po_id %>"><%= post.title %></a>	<br>
 						<% end %>
 					<% end %>
+					
 				</div>
 				<div class="row">
 				

@@ -2,7 +2,7 @@ Testapp::Application.routes.draw do
 	root "mainpage#mainpage"                  #mainpage 보여줌
 	get "voluntal/register"                   #Voluntal 등록 창으로 넘어감
 	post "voluntal/register_process"          #voluntal 등록 처리
-	get "voluntal/show/:id" =>'voluntal#show' #단일 게시글 보기 처리
+	get "voluntal/show/:po_id" =>'voluntal#show' #단일 게시글 보기 처리
 	get "users/signup"                        #회원가입 페이지로 이동
 	post "users/signup_complete"              #회원가입 처리
 	get "users/login"                         #로그인 페이지로 이동

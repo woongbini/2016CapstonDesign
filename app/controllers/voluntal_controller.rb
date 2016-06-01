@@ -43,19 +43,19 @@ class VoluntalController < ApplicationController
 	end
 
 	def show
-		@posts = Post.where("is_host = ?",  true).find(params[:id])
+		@posts = Post.where("is_host = ?",  true).find(params[:po_id])
 		#@posts_vol = Post.where("category = ? AND is_host = ?", "Voluntal", true)
 		@cnt_posts = Post.where("is_host = ? AND po_id = ?", false, params[:id]).count
 	end
   
 	def join_process
 		# 1. 호스트가 아니어야 한다. 
-		if ( Post.where("po_id", params[:po_id]) == params[:po_id] && Post.where("is_host", true) == true) 
+		if ( Post.where("po_id = ? AND is_host = ? AND user_id = ?", params[:po_id], true, session[:user_id]).exists?) 
 			flash[:alert] = "호스트는 참여할수 없습니다."
 			redirect_to "/users/mypage"
 		else
 			# 2. 참여했으면 안된다. 
-			if ( Post.where("po_id", params[:po_id]) == params[:po_id] && Post.where("is_host", false) == false )
+			if ( Post.where("po_id = ? AND is_host = ?", params[:po_id], false).exists?)
 				flash[:alert] = "이미 참여했습니다."
 				redirect_to "/users/mypage"
 			else
@@ -73,7 +73,7 @@ class VoluntalController < ApplicationController
 				post.place = params[:place]
 				if post.save
 					flash[:alert] = "참여되었습니다 "
-					redirect_to "/voluntal/show/mypage"
+					redirect_to "/users/joining"
 				else
 					flash[:alert] = post.errors.values.flatten.join(' ')
 					redirect_to :back
