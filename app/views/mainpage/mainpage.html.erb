@@ -48,8 +48,8 @@
 				</ul>
 				<ul class="nav navbar-nav navbar-right">
 					<% if session[:user_id].nil? %>
-						<li><a href="#signup" id="testclick1"><span class="glyphicon glyphicon-user"></span><strong class="toolbarcolor">Sign Up </strong></a></li>
-						<li><a href="#login"  id="testclick2"><span class="glyphicon glyphicon-log-in"></span><strong class="toolbarcolor">Login </strong></a></li>
+						<li><a href="#signup" id="testclick1"><i class="icon-plus-sign"></i><strong class="toolbarcolor"> Sign Up </strong></a></li>
+						<li><a href="#login"  id="testclick2"><span class="glyphicon glyphicon-log-in"></span><strong class="toolbarcolor"> Login </strong></a></li>
 					<% else %>
 						<li><a href="/users/mypage"><span class="glyphicon glyphicon-user"></span> <strong class="toolbarcolor">My Page</strong></a></li>
 						<li><a href="/users/logout_complete"><span class="glyphicon glyphicon-log-out"></span> <strong class="toolbarcolor">Log Out</strong></a></li>
@@ -76,6 +76,11 @@
 				<div class="firstslide">
 					<div class="container">
 						<div class="carousel-caption">
+							<div class="basicfont">
+								당신의 재능을 다른사람들과 나누고 싶나요?<br>
+								봉사활동자를 모집하고 싶으신가요?<br>
+								Voluntal은 더 쉽게 다가설수있도록 도와드립니다.
+							</div>
 						</div>
 					</div>
 				</div>
@@ -98,6 +103,11 @@
 				<div class="thirdslide">
 					<div class="container">
 						<div class="carousel-caption">
+							<div class="basicfont">
+								Voluntal이란?<br> 
+								봉사:Volunteer 재능:Talent 의 합성어로<br>
+								봉사와 재능기부를 동시에 제공해주는 공간입니다 
+							</div>
 						</div>
 					</div>
 				</div>
@@ -121,8 +131,8 @@
 	<hr class="featurette-divider" id="section2"><br>
 	<div class="container">
 		<div class="middletoolbar container" align="center">
-			<h2>Volunteer</h2>
-			<h4>따뜻한 마음을 나누고 싶으신가요?</h4>
+			<h2 style="color:white">Volunteer</h2>
+			<h4 style="color:white">따뜻한 마음을 나누고 싶으신가요?</h4>
 		</div>
 	</div>
 	<br><hr class="featurette-divider">
@@ -132,6 +142,7 @@
 		<div class="container">
 			<div class="container marketing">
 				<div class="row">
+<<<<<<< HEAD
 				<!-- 포스트 반복하여 처리 -->
 				<% @posts_vol.reverse.each do |post| %>
 					<div class="col-md-4">
@@ -152,6 +163,28 @@
 					</div>
 				<% end %>
 				<!-- 포스트 반복하여 처리 -->
+=======
+            <!-- 포스트 반복하여 처리 -->
+            <% @posts_vol.reverse.each do |post| %>
+               <div class="col-md-4">
+                  <a href="/voluntal/show/<%= post.po_id %>">
+                     <div class="contentmiddlefont">
+                        <img src="<%= post.cover_pic_url(:main) %>" >
+                     </div> 
+                     <div class="row">
+                        <div class="col-md-4 col-xs-4">
+                           <img class="img-circle"   src="<%= post.user.profile_pic_url(:thumb) %>" alt="Generic placeholder image" width="100" height="100">
+                        </div>
+                        <div class="col-md-8 col-xs-8">
+                           <h3><%= post.title %></h3>
+                           <h5><%= post.start_time %>~<%=post.end_time%><br><%= post.place %></h5>
+                        </div><br>
+                     </div>
+                  </a>
+               </div>
+            <% end %>
+            <!-- 포스트 반복하여 처리 -->
+>>>>>>> c6946e5a0e2518fdcf6dbda767e9c9ee9605f549
 				</div>
 			</div>
 		</div>
@@ -162,8 +195,8 @@
 	<br>
 	<div class="container">
 		<div class="middletoolbar container" align="center">
-			<h2>Talent</h2>
-			<h4>무언가를 가르치거나 배우고 싶으신가요?</h4>
+			<h2 style="color:white">Talent</h2>
+			<h4 style="color:white">무언가를 가르치거나 배우고 싶으신가요?</h4>
 		</div>
 	</div>
 	<br>
@@ -175,24 +208,24 @@
 			<div class="container marketing">
 				<div class="row">
 				<!-- 포스트 반복하여 처리 -->
-					<% @posts_tal.reverse.each do |post| %>
-						<div class="col-md-4">
-							<a href="/voluntal/show/<%= post.po_id %>">
-								<div class="contentmiddlefont">
-									<img src="<%= post.cover_pic_url(:main) %>" >
-								</div> <br>
-								<div class="row">
-									<div class="col-md-4">
-										<img class="img-circle"	src="<%= post.user.profile_pic_url(:thumb) %>" alt="Generic placeholder image" width="100" height="100">
-									</div>
-									<div class="col-md-8">
-										<h3><%= post.title %></h3>
-										<h5><%= post.start_time %><br><%= post.place %></h5>
-									</div>
-								</div><br>
-							</a>
-						</div>
-					<% end %>
+            <% @posts_tal.reverse.each do |post| %>
+               <div class="col-md-4">
+                  <a href="/voluntal/show/<%= post.po_id %>">
+                     <div class="contentmiddlefont">
+                        <img src="<%= post.cover_pic_url(:main) %>" >
+                     </div> 
+                     <div class="row">
+                        <div class="col-md-4 col-xs-4">
+                           <img class="img-circle"   src="<%= post.user.profile_pic_url(:thumb) %>" alt="Generic placeholder image" width="100" height="100">
+                        </div>
+                        <div class="col-md-8 col-xs-8">
+                           <h3><%= post.title %></h3>
+                           <h5><%= post.start_time %><br><%= post.place %></h5>
+                        </div>
+                     </div>
+                  </a>
+               </div>
+            <% end %>
 				<!-- 포스트 반복하여 처리 -->
 				</div>
 			</div>
@@ -210,14 +243,8 @@
 		</div>
 	</div>
 	<br>
-	<hr class="featurette-divider">
-
 <!-- Voluntal 만들기 start -->
 	<div class="CreateVoluntal" align="center">
-		<h3>당신의 재능을 다른사람들에게 공유하고 싶나요?</h3>
-		<h3>봉사활동자를 모집하고 싶으신가요?</h3>
-		<h3>Voluntal은 당신에게 조금더 쉽게 다가설수있도록 도와주고 있습니다</h3>
-		<br>
 		<div class="howbox">
 			<p>어떤식으로 진행되나요?</p>
 		</div>
@@ -230,11 +257,7 @@
 			<p>5. Guest들과 함께 즐거운 Activity 활동을 진행한다.</p>
 			<p>6. Guest들의 피드백을 받고 더 좋은 Voluntal을 개설한다.</p>
 		</div>
-		<%= image_tag('Activity.JPG')%><br> <br>
-		<div class="howbox">
-			<p>준비가 되셨나요?</p>
-		</div>
-		<br>
+		<%= image_tag('Activity.JPG')%><br><br>
 		<div align="center">
 			<a href="/voluntal/register">
 				<button class="btn btn-lg submit_button"><i class="icon-pencil"></i>  Voluntal 만들기</button>
