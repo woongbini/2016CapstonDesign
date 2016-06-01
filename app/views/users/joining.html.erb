@@ -19,12 +19,6 @@
 		<script	src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
 		<link href="//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.min.css" rel="stylesheet">
 	<!-- Bootstrap core JavaScript end-->
-	
-	<style type="text/css">
-
-		
-	</style>
-	
 </head>
 <body style="background-color:#ffb380">
 <!--Vouluntal 네비게이션 바 start -->
@@ -97,7 +91,7 @@
 			<div class="col-md-9 sidebar2">
 				<div class="row">
 					<div class="col-md-12">
-					<h1 style ="color : #FF7648"><%= @user_info.nickname %>  의 Guest Voluntal </h1>
+					<h1 style ="color : #FF7648"><%= @user_info.nickname %>의 Guest Voluntal </h1>
 					</div>
 				</div>
 				<div class="row">
@@ -110,7 +104,9 @@
 						<p>참여한 Voluntal이 없습니다! 지금 참여해 주세요!</p>
 					<% else %>
 						<% @posts_vol.reverse.each do |post| %>
-							<a href="/voluntal/show/<%= post.po_id %>"><%= post.title %></a>	<br>
+							<div class="col-md-8 ">
+								<a href="/voluntal/show/<%= post.id %>"><%= post.title %></a>	<br>
+							</div>
 						<% end %>
 					<% end %>
 					
