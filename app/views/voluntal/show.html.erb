@@ -208,12 +208,16 @@
     		<div class="col-md-5">
     			<div>
     				<div class="tag">
-    	  <p>호스트 정보 : <%= @posts.host_info %></p>
-          <h5>사람수 : <%= @posts.num_people %></h4>
-          <p>볼룬탈  정보 : <%= @posts.vol_info %></p>
-          <p>시작 일정 : <%= @posts.start_time %></p>
-          <p>정료 일정 : <%= @posts.end_time %></p>
-          <p>장소 : <%= @posts.place %></p>
+			    	  	<p>호스트 정보 : <%= @posts.host_info %></p>
+			          <h5>사람수 : <%= @posts.num_people %></h4>
+			          <p>볼룬탈  정보 : <%= @posts.vol_info %></p>
+			          <p>시작 일정 : <%= @posts.start_time %></p>
+			          <p>정료 일정 : <%= @posts.end_time %></p>
+			          <p>장소 : <%= @posts.place %></p>
+			          <h3>추가 사진</h3>
+			          <img src="<%= @posts.pic1_url(:main) %>">
+			          <img src="<%= @posts.pic2_url(:main) %>">
+			          <img src="<%= @posts.pic3_url(:main) %>">
     				</div>
     			</div>
     		</div>
@@ -228,20 +232,12 @@
      					<h3>Voluntal 문의 </h3><br>	
        				</div>
        				<div>
-
        					<textarea class="content_question" placeholder="궁굼하신 점을 Host에게 물어보세요" style></textarea>
-       				
        					<button class="question_button" onclick=";"style>작성완료</button>
        				</div>
      			</div>
-     			
      		</div>
-     		
-     		
-     		
      	</div>
-     	
-     	
      </div>
 </div>
 
