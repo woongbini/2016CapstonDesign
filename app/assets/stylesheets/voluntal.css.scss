@@ -1,3 +1,373 @@
-// Place all the styles related to the voluntal controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
+.basicfont{
+ font-family: '맑은 고딕', 'Malgun Gothic', verdana;
+ font-size : 3rem;
+ font-weight : 1px;
+ color : #CFE9D3v;
+ 
+}
+.CreateVoluntal{
+    background-color : #FFFFFF;
+    font-family: '맑은 고딕', 'Malgun Gothic', verdana;
+    img{max-width:100%;}
+}
+
+.howbox{
+    background-color : #FF7648;
+    font-size : 25px;
+    width:300px;
+    height:40px;
+    padding:px;
+    border-radius :10px;
+}
+
+.voluntalflow{
+ //background-color : #FF7648;
+    color : #FF7648;
+    font-size : 20px;
+    img{max-width:100%;}
+}
+
+.logoimage{
+    width:190px;
+    height:50px;
+      background-image:url(Voluntal-logo2.png);
+    background-position:center;
+    background-size:cover;
+    max-width:100%;
+    max-height:100%;
+    img{max-width:100%;} 
+}
+
+.headbox{
+    width:1663px;
+    height:50px;
+    font-family: '맑은 고딕', 'Malgun Gothic', verdana;
+    color : #FF7648;
+    font-size : 14px;
+    font-weight : bold;
+    background-color:#FFFFFF;
+}
+
+.middletoolbar{
+   width:1170px;
+   height:90px;
+   background-color:#FF7648;
+   border-radius :10px;
+    max-width:100%;
+    max-height:100%;
+    img{max-width:100%;}
+}
+
+.imagebox{
+    width:320px;
+    height:180px;
+}
+
+
+.volunteerelement1{
+    width:320px;
+    height:180px;
+    //background-position:center;
+    background-size:cover;
+    img{max-width:100%;}
+      background-image:url("http://res.cloudinary.com/dszrkgsd0/image/upload/v1463639055/_black_hnfq0v.jpg");
+}
+
+.volunteerelement2{
+    width:320px;
+    height:180px;
+    //background-position:center;
+    background-size:cover;
+    img{max-width:100%;}
+      background-image:url("http://res.cloudinary.com/dszrkgsd0/image/upload/v1463639055/_mento_ge6v1s.jpg");
+}
+
+.volunteerelement3{
+    width:320px;
+    height:180px;
+    //background-position:center;
+    background-size:cover;
+    img{max-width:100%;}
+      background-image:url("http://res.cloudinary.com/dszrkgsd0/image/upload/v1463639055/_faint_ohdqfi.jpg");
+}
+
+.volunteerelement4{
+    width:320px;
+    height:180px;
+    //background-position:center;
+    background-size:cover;
+    img{max-width:100%;}
+      background-image:url("http://res.cloudinary.com/dszrkgsd0/image/upload/v1463639055/_volunteer_zmzwnz.jpg");
+}
+
+.volunteerelement5{
+    width:320px;
+    height:180px;
+    //background-position:center;
+    background-size:cover;
+    img{max-width:100%;}
+      background-image:url("http://res.cloudinary.com/dszrkgsd0/image/upload/v1463639055/_foot_czovl9.jpg");
+}
+
+.volunteerelement6{
+    width:320px;
+    height:180px;
+    //background-position:center;
+    background-size:cover;
+    img{max-width:100%;}
+      background-image:url("http://res.cloudinary.com/dszrkgsd0/image/upload/v1463639055/_food_uernux.jpg");
+}
+
+
+.talentelement1{
+    width:320px;
+    height:180px;
+    //background-position:center;
+    background-size:cover;
+    img{max-width:100%;}
+      background-image:url("http://res.cloudinary.com/dszrkgsd0/image/upload/v1463639002/_flower_kv0ktz.jpg");
+}
+
+.talentelement2{
+    width:320px;
+    height:180px;
+    //background-position:center;
+    background-size:cover;
+    img{max-width:100%;}    
+    background-image:url("http://res.cloudinary.com/dszrkgsd0/image/upload/v1463637233/skate_ce5oln.jpg");
+}
+
+.talentelement3{
+    width:320px;
+    height:180px;
+    //background-position:center;
+    background-size:cover;
+    img{max-width:100%;}
+    background-image:url("http://res.cloudinary.com/dszrkgsd0/image/upload/v1463639002/_gitar_ekvhik.jpg");
+}
+
+.talentelement4{
+    width:320px;
+    height:180px;
+    //background-position:center;
+    background-size:cover;
+    img{max-width:100%;}
+      background-image:url("http://res.cloudinary.com/dszrkgsd0/image/upload/v1463639003/_swim_zhtgcn.jpg");
+}
+.talentelement5{
+    width:320px;
+    height:180px;
+    //background-position:center;
+    background-size:cover;
+    img{max-width:100%; }
+    background-image:url("http://res.cloudinary.com/dszrkgsd0/image/upload/v1463639002/_earth_g48aq4.jpg");
+}
+.talentelement6{
+    width:320px;
+    height:180px;
+    //background-position:center;
+    background-size:cover;
+    img{max-width:100%;}
+    background-image:url("http://res.cloudinary.com/dszrkgsd0/image/upload/v1463639002/_bracelet_j8gomz.jpg");
+}
+
+
+.smallimage{
+ //    background-image:url(test.jpg);
+ height:150px;
+ width:150px;
+ background-size: cover;
+ display: block;
+ border-radius: 100px;
+ -webkit-border-radius: 100px;
+ -moz-border-radius: 100px;
+     img{max-width:100%;}
+}
+
+.firstslide{
+    background-position: center;
+    background-size: cover;
+  //  background-image:url(springblooms.jpg);
+  background-image:url("http://res.cloudinary.com/dszrkgsd0/image/upload/v1463637231/springblooms_xol4vi.jpg");
+    width:1663px;
+    height:650px;
+        max-width:100%;
+    max-height:100%;
+    img{max-width:100%;}
+}
+
+.secondslide{
+    background-image:url("http://res.cloudinary.com/dszrkgsd0/image/upload/v1463637231/youngcouplewide_awq4fk.jpg");
+    background-position: center;
+    background-size: cover;
+    width:1663px;
+    height:650px;
+    max-width:100%;
+    max-height:100%;
+}
+
+.thirdslide{
+    background-image:url("http://res.cloudinary.com/dszrkgsd0/image/upload/v1463637233/skate_ce5oln.jpg");
+    background-position: center;
+    background-size: cover;
+    width:1663px;
+    height:650px;
+    max-width:100%;
+    max-height:100%;
+    img{max-width:100%;}    
+}
+
+
+.login{
+ //background-color : #FF7648;
+    text-align : center;
+    border-radius :10px;
+    color : #FF7648;
+    font-size : 20px;
+    img{max-width:100%;}
+}
+
+.loginbox{
+ //background-color : #FF7648;
+    width:250px;
+    height:25px;
+    max-width:100%;
+    max-height:100%;
+    img{max-width:100%;}    
+}
+
+.contentfirst{
+    background-position: center;
+    background-size: cover;
+  //  background-image:url(springblooms.jpg);
+  background-image:url("http://res.cloudinary.com/dszrkgsd0/image/upload/v1463637231/springblooms_xol4vi.jpg");
+    width:1663px;
+    height:500px;
+    max-width:100%;
+    max-height:100%;
+    img{max-width:100%;}
+}
+
+.contentheadfont{
+ //background-color : #FF7648;
+    color : #525252;
+    font-size : 50px;
+    img{max-width:100%;}
+}
+
+
+.contentmiddlefont{
+ //background-color : #FF7648;
+    color : #959595;
+    font-size : 22px;
+    img{max-width:100%;}
+}
+
+.contentfont{
+ //background-color : #FF7648;
+    color : #FF7648;
+    font-size : 22px;
+    img{max-width:100%;}
+}
+
+
+.contentbackground{
+    font-family: '맑은 고딕', 'Malgun Gothic', verdana;
+    padding : 30px 20px;
+    color:black;
+    background-color : #FFAB80;
+    display: block;
+    width:100%;
+    height:auto;
+    max-width:100%;
+    max-height:100%;
+    img{max-width:100%;}
+}
+
+.contentinsidebackground{
+    //margin-top:20%;
+    background-color : #FFFFFF;
+    border-radius :20px;
+    display: block; 
+    margin: 0 auto;
+    padding : 20px;
+    display: block;
+    width:180%;
+    height:auto;
+    max-width:100%;
+    max-height:100%;
+    img{max-width:100%;}
+}
+
+.map{
+    max-width:100%;
+    max-height:100%;
+}
+
+
+.content_question{
+    width:100%;
+    height:100%;
+    border:0;
+    background-color : #e3e3e3;
+    
+}
+
+.question_button{
+    float : right;
+    font-size:12px;
+    color : #FF7648;
+    border : 1px solid;
+    background : none;
+}
+
+
+.question_facebook{
+    float : right;
+    font-size:12px;
+    color : #F637FF;
+    border : 1px solid;
+    background : none;
+}
+
+.submit_button{
+    font-size : 16px;
+    font-weight : 600;
+    padding : 13px 0;
+    background : #FF7648;
+    border-color : #FF7648;
+    color :#fff;
+    border-radius :10px;
+}
+
+.signup_box{
+    font-family: '맑은 고딕', 'Malgun Gothic', verdana;
+    padding : 30px 20px;
+    color:black;
+    background-color : #FFAB80;
+    display: block;
+    width:50%;
+    height:auto;
+    max-width:100%;
+    max-height:100%;
+    img{max-width:100%;}
+}
+
+
+
+.star_rating{font-size:0; letter-spacing:-4px;}
+.star_rating a{
+    font-size :22px;
+    letter-spacing:0;
+    display:inline-block;
+    margin-left:5px;
+    color:#ccc;
+    text-decoration:none;
+}
+.star_rating a:first-child {margin-left:0;}
+.star_rating a.on {color:#ffc600};
+
+
+
+.graph_comm .txt_graph {font-family:tahoma;color:#666}
+.graph_comm .num_g {color:#d4443b}

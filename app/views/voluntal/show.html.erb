@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+	<meta name="description" content="">
+	<meta name="author" content="">
+	<link rel="icon" href="../../favicon.ico">
+	<title>샤싣</title>
+	<!-- YJ CSS file-->
+		<link rel="stylesheet" href="stylesheets/voluntal.css">
+		 <script src="javascripts/colorbox.js"></script>
+	<!-- Bootstrap core JavaScript start-->
+		<!--<link href="assets/stylesheet/bootstrap.css" type="text/css" rel="stylesheet">-->
+		<script src="http://code.jquery.com/jquery-1.12.0.min.js"></script>
+		<link rel="stylesheet"	href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
+		<link rel="stylesheet"	href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap-theme.min.css">
+		<script	src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
+	<!-- Bootstrap core JavaScript end-->
+	
+	<style type="text/css">
+
+		
+	</style>
+	
+</head>
+<body>
+<!--Vouluntal 네비게이션 바 start -->
+	<nav class="navbar navbar-default navbar-fixed-top">
+		<div class="container-fluid" style="">
+			<div class="navbar-header">
+				<!--<a href="/"><img src="http://i.imgur.com/XqSDoFN.png" width="190px" height="50px" alt="logo" class="img-rounded"></a>-->
+				<a href="/"><div class="logoimage"></div></a>
+				<button type="button" class="navbar-toggle" data-toggle="collapse"
+					data-target="#myNavbar">
+					<span class="sr-only">Toggle navigation</span> <span
+						class="icon-bar"></span> <span class="icon-bar"></span> <span
+						class="icon-bar"></span>
+				</button>
+			</div>
+			<div class="navbar-collapse collapse" id="myNavbar" style="">
+				<ul class="nav navbar-nav navbar-left">
+					<!--<li class="active"><a href="#section1" class="scroll"><strong>Voluntal이란?</strong></a></li>
+					<li><a href="#section2" class="scroll"><strong>Volunteer</strong></a></li>
+					<li><a href="#section3" class="scroll"><strong>Talent</strong></a></li>
+					<li><a href="#section4" class="scroll"><strong>Voluntal만들기</strong></a></li>-->
+				</ul>
+				<ul class="nav navbar-nav navbar-right">
+					<% if session[:user_id].nil? %>
+						<li><a href="/users/signup"><span class="glyphicon glyphicon-user"></span> <strong>Sign Up </strong></a></li>
+						<li><a href="/users/login"><span class="glyphicon glyphicon-log-in"></span> <strong>Login </strong></a></li>
+					<% else %>
+						<li><a href="/users/mypage"><span class="glyphicon glyphicon-user"></span> <strong>My Page</strong></a></li>
+						<li><a href="/users/logout_complete"><span class="glyphicon glyphicon-log-out"></span> <strong>Log Out</strong></a></li>
+					<% end %>
+				</ul>
+			</div>
+		</div>
+	</nav>
+<!--Vouluntal 네비게이션 바 end -->
+
+<!-- 게시글 정보 보여주기-->
+	<br><br>
+	<div>
+		<img src="<%= @posts.cover_pic_url(:show_vol) %>" width="100%">
+	</div>
+
+	<div class="CreateVoluntal" "col-md-4" align="center">
+		<div class="contentheadfont"><%= @posts.title %></div><br>
+		<div class="contentmiddlefont">_<%= @posts.user.nickname %>_/<%= @posts.vol_info %>
+		<p class="star_rating">
+			<a href="#" class="on">★</a>
+			<a href="#" class="on">★</a>
+			<a href="#" class="on">★</a>
+			<a href="#" >★</a>
+			<a href="#" >★</a>
+		</p>
+		<hr width="50%" style="border: solid 1px #FF7648;">
+			<div class="graph_comm">
+    			<span class="txt_graph">신청수 : <span class="num_g"><%= @cnt_posts %></span>/<%= @posts.num_people %></span>
+			</div>
+		</div>
+	</div>
+	<br>
+	
+	<div class="contentbackground">
+		<div class="contentinsidebackground container">
+			
+			<div class="row">
+				<div class="col-sm-6">
+					<div class ="row">
+						<div class ="col-xs-4">
+							<img class="img-circle" src="<%= @posts.user.profile_pic_url(:thumb) %>">
+							<div style='text-align:center'>
+							<h4><%= @posts.user.nickname %></h4>	
+							</div>
+						</div>
+					<div class="embed-responsive embed-responsive-16by9">
+  					<iframe class="embed-responsive-item" src="https://www.youtube.com/embed/PXOOBQrqS5w"frameborder=”0″ allowfullscreen></iframe>
+						</div>
+						<div class ="col-xs-12">
+							<p><h3>호스트 정보 </h3>
+    						<p><h4><%= @posts.host_info %></h4></p>
+						</div>
+					</div>
+				
+				</div>
+				<div class="col-sm-5 ">
+				<div class="map" id="map" style=" border-radius :10px; width:500px;height:350px;"></div>
+<script type="text/javascript" src="//apis.daum.net/maps/maps3.js?apikey=7eecbd6046d2525ebc71a64b0ec26da4&libraries=services"></script>
+<script>
+// 마커를 클릭하면 장소명을 표출할 인포윈도우 입니다
+var infowindow = new daum.maps.InfoWindow({zIndex:1});
+
+var mapContainer = document.getElementById('map'), // 지도를 표시할 div 
+    mapOption = {
+        center: new daum.maps.LatLng(37.566826, 126.9786567), // 지도의 중심좌표
+        level: 3 // 지도의 확대 레벨
+    };  
+
+// 지도를 생성합니다    
+var map = new daum.maps.Map(mapContainer, mapOption); 
+
+// 장소 검색 객체를 생성합니다
+var ps = new daum.maps.services.Places(); 
+
+// 키워드로 장소를 검색합니다
+ps.keywordSearch('<%= @posts.place %>', placesSearchCB); 
+
+// 키워드 검색 완료 시 호출되는 콜백함수 입니다
+function placesSearchCB (status, data, pagination) {
+    if (status === daum.maps.services.Status.OK) {
+
+        // 검색된 장소 위치를 기준으로 지도 범위를 재설정하기위해
+        // LatLngBounds 객체에 좌표를 추가합니다
+        var bounds = new daum.maps.LatLngBounds();
+
+        for (var i=0; i<data.places.length; i++) {
+            displayMarker(data.places[i]);    
+            bounds.extend(new daum.maps.LatLng(data.places[i].latitude, data.places[i].longitude));
+        }       
+
+        // 검색된 장소 위치를 기준으로 지도 범위를 재설정합니다
+        map.setBounds(bounds);
+    } 
+}
+
+// 지도에 마커를 표시하는 함수입니다
+function displayMarker(place) {
+    
+    // 마커를 생성하고 지도에 표시합니다
+    var marker = new daum.maps.Marker({
+        map: map,
+        position: new daum.maps.LatLng(place.latitude, place.longitude) 
+    });
+
+    // 마커에 클릭이벤트를 등록합니다
+    daum.maps.event.addListener(marker, 'click', function() {
+        // 마커를 클릭하면 장소명이 인포윈도우에 표출됩니다
+        infowindow.setContent('<div style="padding:5px;font-size:12px;">' + place.title + '</div>');
+        infowindow.open(map, marker);
+    });
+}
+</script>
+				<div>
+					<p><h3>장소 : <%= @posts.place %></h3></p>
+				</div>
+				<div>
+					<form action="/voluntal/join_process" method="post" class="form-horizontal">
+						<input type="hidden" name="title" value="<%= @posts.title %>">
+			 			<input type="hidden" name="po_id" value="<%= @posts.po_id %>">
+			 			<input type="hidden" name="category" value="<%= @posts.category %>">
+			 			<input type="hidden" name="num_people" value="<%= @posts.num_people %>">
+			 			<input type="hidden" name="host_info" value="<%= @posts.host_info %>">
+			 			<input type="hidden" name="vol_info" value="<%= @posts.vol_info %>">
+			 			<input type="hidden" name="start_time" value="<%= @posts.start_time %>">
+			 			<input type="hidden" name="end_time" value="<%= @posts.end_time %>">
+			 			<input type="hidden" name="place" value="<%= @posts.place %>">
+						<button type="submit" class="btn btn-block btn-lg submit_button">참여하기</button>
+					</form>
+					</div><br>
+					<div class ="row">
+						<div class ="col-xs-6">
+							<button type="submit" class="question_facebook btn-block btn-lg">공유하기</button>
+						</div>
+						<div class ="col-xs-6">
+							<button type="submit" class="question_button btn-block btn-lg">Wish List</button>
+						</div>
+					</div>
+				
+				</div>	
+			</div>
+			<br>
+<hr width="100%" style="border: solid 1px #FF7648;">
+    	<div style="row">
+    		<div class="col-md-12">
+    			<div>
+
+    				<p><h3>볼룬탈  정보 </h3><br>
+    				<img src="<%= @posts.cover_pic_url(:main) %>">
+    				<p><h4><%= @posts.vol_info %></h4></p>
+    				<p><h3>시작 일정 </h3><br>
+    				<p><h4><%= @posts.start_time %></h4></p>
+    				<p><h3>종료 일정 </h3><br>
+    				<p><h4><%= @posts.end_time %></h4></p>
+    	<hr width="100%" style="border: solid 1px #FF7648;">
+    			</div>
+    			
+    		</div>
+    		
+    		<div class="col-md-5">
+    			<div>
+    				<div class="tag">
+    	  <p>호스트 정보 : <%= @posts.host_info %></p>
+          <h5>사람수 : <%= @posts.num_people %></h4>
+          <p>볼룬탈  정보 : <%= @posts.vol_info %></p>
+          <p>시작 일정 : <%= @posts.start_time %></p>
+          <p>정료 일정 : <%= @posts.end_time %></p>
+          <p>장소 : <%= @posts.place %></p>
+    				</div>
+    			</div>
+    		</div>
+    		
+ 	
+     	</div>
+     	
+     	<div style="row">
+     		<div class="col-md-12">
+     			<div class="col-md-5">
+     				<div>
+     					<h3>Voluntal 문의 </h3><br>	
+       				</div>
+       				<div>
+
+       					<textarea class="content_question" placeholder="궁굼하신 점을 Host에게 물어보세요" style></textarea>
+       				
+       					<button class="question_button" onclick=";"style>작성완료</button>
+       				</div>
+     			</div>
+     			
+     		</div>
+     		
+     		
+     		
+     	</div>
+     	
+     	
+     </div>
+     <div>
+</div>
+
+
+</body>

@@ -8,193 +8,107 @@
 	<meta name="description" content="">
 	<meta name="author" content="">
 	<link rel="icon" href="../../favicon.ico">
-	<title>Voluntal :: main</title>
-<<<<<<< HEAD
-	<!-- Bootstrap core JavaScript===============-->
-	<link href="assets/stylesheet/bootstrap.css" type="text/css" rel="stylesheet">
-	<script src="http://code.jquery.com/jquery-1.12.0.min.js"></script>
-	<link rel="stylesheet"	href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
-	<!--	<link rel="stylesheet"	href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap-theme.min.css">-->
-	<!--<script type="text/javascript"	src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>-->
-	<!--<script type="text/javascript" src="js/jquery-ui.min.js"></script>-->
-	<!---->
-	<!--<script src="http://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>-->
-	<!--<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">-->
-	<!--<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/latest/css/bootstrap.min.css">-->
-	<!--<script src="//code.jquery.com/jquery.min.js"></script>-->
-	<!--<script src="//maxcdn.bootstrapcdn.com/bootstrap/latest/js/bootstrap.min.js"></script>-->
-
-
-	<--!login popup JS-->
-	
-	<script type=text/javascript>
-	function function()
-	{
-		
-	}
-	</script>
-
-
-
-
-</head>
-
-<body>
-<!--	
-<div class="row">
-    <div class="col-xs-12 col-sm-6 col-md-8"></div>
-  <div class="col-xs-6 col-md-4"></div>
-</div>
--->
-	<nav class="navbar navbar-default navbar-fixed-top" style="background-color:rgba(82,82,82,0);">
-		<div class="container-fluid">
-	<!--Vouluntal 네비게이션 바 start -->
-	<nav class="navbar navbar-default navbar-fixed-top">
-		<div class="container-fluid"style="">
-		    <div class="navbar-header">
-		  <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
-              <!--  <span class="sr-only">Toggle navigation</span>-->
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-		         </button>
-			    <a href="mainpage/mainpage"><img src="http://i.imgur.com/lLUOX2C.jpg?1" alt="logo" class="img-rounded"></a>
-				 <!--   <a class="navbar-brand navbar-center" href="#" style="">http://i.imgur.com/1SyjJAu.jpg?1</a>-->
-=======
+	<link rel="shortcut icon" href="/favicon.ico">
+	<title><%= controller.page_title %>::Main</title>
+	<!-- YJ CSS file-->
+		<link rel="stylesheet" href="stylesheets/voluntal.css">
+		<link type="text/css" rel="stylesheet" href="stylesheets/colorbox.css"/>
+		<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+		<script src="http://code.jquery.com/jquery-latest.min.js"></script>
+	<!--WB CSS file -->
+		<link type="text/css" rel="stylesheet" href="stylesheets/style_lightbox.css"/>
+		<script type="text/javascript" src="javascripts/tinybox_lightbox.js"></script>
 	<!-- Bootstrap core JavaScript start-->
-		<!--<link href="assets/stylesheet/bootstrap.css" type="text/css" rel="stylesheet">-->
+		<link href="stylesheet/bootstrap.css" type="text/css" rel="stylesheet">
 		<script src="http://code.jquery.com/jquery-1.12.0.min.js"></script>
 		<link rel="stylesheet"	href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
-		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap-theme.min.css">
-		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
+		<link rel="stylesheet"	href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap-theme.min.css">
+		<script	src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
 	<!-- Bootstrap core JavaScript end-->
 </head>
 
-<body  data-spy="scroll" data-target=".navbar" data-offset="50" >
-<!--Vouluntal 네비게이션 바 start -->
-	<nav class="navbar navbar-default navbar-fixed-top" >
+<body data-spy="scroll" data-target=".navbar" data-offset="50">
+	<!--Vouluntal 네비게이션 바 start -->
+	<nav class="navbar navbar-default navbar-fixed-top">
 		<div class="container-fluid" style="">
-		    <div class="navbar-header">
-			    <a href="/"><img src="http://i.imgur.com/lLUOX2C.jpg?1" alt="logo" class="img-rounded"></a>
-			    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
-              		<span class="sr-only">Toggle navigation</span>
-	                <span class="icon-bar"></span>
-	                <span class="icon-bar"></span>
-	                <span class="icon-bar"></span>
-		        </button>
+			<div class="navbar-header">
+				<!--<a href="/"><img src="http://i.imgur.com/XqSDoFN.png" width="190px" height="50px" alt="logo" class="img-rounded"></a>-->
+				<a href="/"><div class=logoimage> </div></a>
+				<button type="button" class="navbar-toggle" data-toggle="collapse"data-target="#myNavbar">
+					<span class="sr-only">Toggle navigation</span> 
+					<span class="icon-bar"></span> 
+					<span class="icon-bar"></span> 
+					<span class="icon-bar"></span>
+				</button>
 			</div>
-			<div class="navbar-collapse collapse" id="myNavbar" style="" >
+			<div class="navbar-collapse collapse" id="myNavbar" style="">
 				<ul class="nav navbar-nav navbar-left">
 					<li class="active"><a href="#section1" class="scroll"><strong>Voluntal이란?</strong></a></li>
 					<li><a href="#section2" class="scroll"><strong>Volunteer</strong></a></li>
 					<li><a href="#section3" class="scroll"><strong>Talent</strong></a></li>
-					<li><a href="#section4" class="scroll"><strong>Voluntal 만들기</strong></a></li>
+					<li><a href="#section4" class="scroll"><strong>Voluntal만들기</strong></a></li>
 				</ul>
 				<ul class="nav navbar-nav navbar-right">
-				    <li><a href="/addmember/addmember"><span class="glyphicon glyphicon-user"></span><strong> Sign Up</strong> </a></li>
-				    <li><a href="/login/login"><span class="glyphicon glyphicon-log-in"></span><strong>  Login</strong></a></li>
+					<% if session[:user_id].nil? %>
+						<li><a href="#signup" id="testclick1"><span class="glyphicon glyphicon-user"></span> <strong>Sign Up </strong></a></li>
+						<li><a href="#login"  id="testclick2"><span class="glyphicon glyphicon-log-in"></span> <strong>Login </strong></a></li>
+					<% else %>
+						<li><a href="/users/mypage"><span class="glyphicon glyphicon-user"></span> <strong>My Page</strong></a></li>
+						<li><a href="/users/logout_complete"><span class="glyphicon glyphicon-log-out"></span> <strong>Log Out</strong></a></li>
+					<% end %>
 				</ul>
-			<ul class="nav navbar-nav navbar-right">
-			    <li><a href="#" onClick="window.open('/addmember/addmember','_blank','toolbar=no,location=no,directories=no,status=no,menubar=no,scrollbars=no,resizeable=no,width=400,height=400,top=10,left=10')" >
-			    	<span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
-			    <li><a href="#"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
-
-			    <!--
-				<li><button type="button" style="width: 122px; height: 45px"
-						class="btn btn-info">로그인</button></li>
-				<li><button type="button" style="width: 122px; height: 45px"
-						class="btn btn-danger">
-						<a href="/addmember/creatmember">회원가입</a>
-					</button></li>	-->
-			</ul>
 			</div>
-    	</div>
+		</div>
 	</nav>
 <!--Vouluntal 네비게이션 바 end -->
 
-
-	<!-- Carousel ================================================== -->
-	<div id="myCarousel" class="carousel slide" data-ride="carousel" data-interval="" data-pause="false">
-		<!-- Indicators -->
 <!-- Voluntal 캐러셀 start-->
-	<div class="carousel slide" data-ride="carousel" data-interval="2000" >
+	<div id="myCarousel" class="carousel slide" data-ride="carousel"
+		data-interval="2500" data-pause="false">
 		<!-- Indicators start -->
 		<ol class="carousel-indicators">
 			<li data-target="#myCarousel" data-slide-to="0" class="active"></li>
 			<li data-target="#myCarousel" data-slide-to="1"></li>
 			<li data-target="#myCarousel" data-slide-to="2"></li>
 		</ol>
-		<!--Wrapper for slides-->
-		<div class="carousel-inner" role="listbox" align="center">
-<div class="item active">
-          <img class="first-slide" src="http://i.imgur.com/2NCfnAV.jpg?1" alt="First slide" border="3px" width="" height="" align="center">
-          <div class="container">
-            <div class="carousel-caption">
-            </div>
-          </div>
-        </div>
-
-       <div class="item">
-          <img class="second-slide" src="http://i.imgur.com/2NCfnAV.jpg?1" alt="Second slide">
-          <div class="container">
-            <div class="carousel-caption">
-              <h1>외국에서도</h1>
-              <p>외국에서도 우리의 김치는 널리 알려퍼지고 있습니다.</p>
-              <p><a class="btn btn-primary" href="#" role="button">Learn more</a></p>
-            </div>
-          </div>
-        </div>
-
-        <div class="item">
-          <img class="third-slide" src="http://i.imgur.com/2NCfnAV.jpg?1" alt="Third slide">
-          <div class="container">
-            <div class="carousel-caption">
-              <h1>핫도그 먹구싶엉...</h1>
-              <p>두유 라이크 핫덬?</p>
-              <p><a class="btn btn-primary" href="#" role="button"><span class="glyphicon glyphicon-thumbs-up"/> Like!</a></p>
-            </div>
-          </div>
-        </div>
-      </div>
 		<!-- Indicators end -->
 		<!--Wrapper for slides start -->
-		<div class="carousel-inner" role="listbox" align="center" id="section1">
+		<div class="carousel-inner" role="listbox" align="center"
+			id="section1">
 			<div class="item active">
-				<img class="first-slide" src="http://i.imgur.com/YQEYTt8.jpg" alt="First slide" border="3px" width="" height="" align="center">
-				<div class="container">
-					<div class="carousel-caption">
-						<h1>날아라 슈퍼보드!</h1>
-						<p>우리도 할 수 있습니다. <code>file://</code> 지금 당장 시작하세요.</p>
-						<p><a class="btn btn-primary" href="#" role="button">회원가입</a></p>
+				<div class="firstslide">
+					<div class="container">
+						<div class="carousel-caption">
+						</div>
 					</div>
 				</div>
 			</div>
-			
+
 			<div class="item">
-				<img class="second-slide" src="http://i.imgur.com/riUsuhl.jpg" alt="Second slide">
-				<div class="container">
-					<div class="carousel-caption">
-						<h1>외국에서도</h1>
-						<p>외국에서도 우리의 김치는 널리 알려퍼지고 있습니다.</p>
-						<p><a class="btn btn-primary" href="#" role="button">Learn more</a></p>
+				<div class="secondslide">
+					<div class="container">
+						<div class="carousel-caption">
+							<div class="basicfont">
+								사랑하는 사람과 함께할수 있는 일을 찾고 있나요?<br>
+								Vouluntal은 당신에게 최고의 만족을 선사합니다.
+							</div>
+						</div>
 					</div>
 				</div>
 			</div>
-			
+
 			<div class="item">
-				<img class="third-slide" src="http://i.imgur.com/yRRiMY3.jpg" alt="Third slide">
-				<div class="container">
-					<div class="carousel-caption">
-						<h1>핫도그 먹구싶엉...</h1>
-						<p>두유 라이크 핫덬?</p>
-						<p><a class="btn btn-primary" href="#" role="button"><span class="glyphicon glyphicon-thumbs-up"/> Like!</a></p>
+				<div class="thirdslide">
+					<div class="container">
+						<div class="carousel-caption">
+						</div>
 					</div>
 				</div>
 			</div>
 		</div>
-		<!--Wrapper for slides end-->
+	<!--Wrapper for slides end-->
 
-		<!--- 좌우 화살표 버튼 start -->
+	<!--- 좌우 화살표 버튼 -->
 		<a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev"> 
 			<span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span> 
 			<span class="sr-only">Previous</span>
@@ -203,298 +117,191 @@
 			<span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
 			<span class="sr-only">Next</span>
 		</a>
-		<!--- 좌우 화살표 버튼 end -->
-	</div>	
+	<!--- 좌우 화살표 버튼 end -->
+	</div>
 <!-- Voluntal 캐러셀 end-->
 
-<hr class="featurette-divider" id="section2" ><br>
-<div class="container">
-    <div class="container" align="center">
-        <h2>Voluntal</h2>
-        <h4>봉사을 나누어 드립니다</h4>
-    </div>
-</div>
-<br><hr class="featurette-divider" >
-
-<!-- Voluteer 랩퍼 start-->
-	<nav class="navbar navbar-wrapper container-fluid" >
-		<div class="container">
-			<div class="container marketing">
-<<<<<<< HEAD
-				<!-- Three columns of text below the carousel -->
-				<div class="row"  style="background-size: 100% 100%;">
-					<div class="col-lg-4"style="width: 150px  height: 150px; background:url('http://i.imgur.com/u4rmS5I.jpg?1')" >
-						<a href =" ">
-							<img class="img-circle"src="http://i.imgur.com/KnndNZY.jpg"alt="Generic placeholder image"width="100" height="100">
-								<font color="white" face="맑은고딕">
-
-									<h3>2016 6.4,서울시 창신동</h3>
-									<h2>사랑하는 사람과 함께 <br> 벽화 그리기~</h2></font>
-						</a>
-					</div>
-					
-					<!-- /.col-lg-4 -->
-<div class="col-lg-4"style="width: 150px  height: 150px; background:url('http://i.imgur.com/S8MEQ1i.jpg')" >
-						<img class="img-circle"src="http://i.imgur.com/8tnBZoz.jpg"alt="Generic placeholder image"width="100" height="100">
-							<font color="white" face="맑은고딕">
-								<h3>2016 6.4,경기도 남양주시</h3>
-								<h2>사랑을 나눠요~ <br>연탄나르기</h2></font>
-					</div>
-					
-					<!-- /.col-lg-4 -->
-					<div class="col-lg-4"style="width: 150px  height: 150px; background:url('http://i.imgur.com/ffqEUwz.jpg?1')" >
-						<img class="img-circle"src="http://i.imgur.com/reWEjrz.jpg"alt="Generic placeholder image"width="100" height="100">
-							<font color="white" face="맑은고딕">
-								<h3>2016.5.24~..,서울 뚝섬</h3>
-								<h2>시원한 바람을 가르며 <br>스케이트!</h2></font>
-						
-					</div>	<!-- /.col-lg-4 -->
-				
-				
-					<div class="col-lg-4"style="width: 150px  height: 150px; background:url('http://i.imgur.com/rzapDhi.jpg')" >
-						<a href =" ">
-							<img class="img-circle"src="http://i.imgur.com/tZSf1oh.jpg"alt="Generic placeholder image"width="100" height="100">
-								<font color="white" face="맑은고딕">
-									<h3>2016 6.4,서울시 창신동</h3>
-									<h2></h2></font>
-						</a>
-					</div>
-					
-					<div class="col-lg-4"style="width: 150px  height: 150px; background:url('http://i.imgur.com/TsvtJAz.jpg')" >
-						<a href =" ">
-							<img class="img-circle"src="http://i.imgur.com/UH0DXux.jpg"alt="Generic placeholder image"width="100" height="100">
-								<font color="white" face="맑은고딕">
-									<h3>2016 6.4,인천시 부평구</h3>
-									<h2>벽화 그리기~</h2></font>
-						</a>
-					</div>
-					
-					<div class="col-lg-4"style="width: 150px  height: 150px; background:url('http://i.imgur.com/u4rmS5I.jpg?1')" >
-						<a href =" ">
-							<img class="img-circle"src="http://i.imgur.com/UH0DXux.jpg"alt="Generic placeholder image"width="100" height="100">
-								<font color="white" face="맑은고딕">
-									<h3>2016 6.4,서울시 창신동</h3>
-									<h2>벽화 그리기~</h2></font>
-						</a>
-					</div>
-					
-				</div><!-- /.row -->
-			<hr>
-=======
-				<!-- Three columns of text start -->
-				<div class="row"  >
-					<div class="col-md-4"style="border:20px 10px 20px 10px; width: 150px height: 150px; background:url('http://i.imgur.com/94Gukbz.jpg')" >
-						<img class="img-circle"src="http://i.imgur.com/UH0DXux.jpg"alt="Generic placeholder image"width="140" height="140">
-						<font color="white" face="맑은고딕">
-							<h4>사람하는 사람과 함께 즐기는 재밌고 유익한 물감 심리치료</h4>
-							<h3>다양한 물감을 이용한 심리치료</h3>
-						</font>
-						<p>	<a class="btn btn-default" href="#" role="button"> 자세히 보기&raquo;</a> </p>
-					</div><!-- /.col-md-4 -->
-					
-					<div class="col-md-4"style="border:0px 1px 0px 1px; width: 150px  height: 150px; background:url('http://i.imgur.com/dCKv7Btb.jpg')" >
-						<img class="img-circle"src="http://i.imgur.com/UH0DXux.jpg"alt="Generic placeholder image"width="140" height="140">
-						<font color="white" face="맑은고딕">
-							<h4>사람하는 사람과 함께 즐기는 재밌고 유익한 물감 심리치료</h4>
-							<h3>다양한 물감을 이용한 심리치료</h3>
-						</font>
-						<p> <a class="btn btn-default" href="#" role="button"> 자세히 보기&raquo;</a> </p>
-					</div><!-- /.col-md-4 -->
-	
-					<div class="col-md-4"style="border:0px 1px 0px 1px; width: 150px  height: 150px; background:url('http://i.imgur.com/0QO3pUQ.jpg')" >
-						<img class="img-circle"src="http://i.imgur.com/bnQ8Xbh.jpg"alt="Generic placeholder image"width="140" height="140">
-						<font color="white" face="맑은고딕">
-							<h4>사람하는 사람과 함께 즐기는 재밌고 유익한 물감 심리치료</h4>
-							<h3>다양한 물감을 이용한 심리치료</h3>
-						</font>
-						<p><a class="btn btn-default" href="#" role="button"> 자세히 보기&raquo;</a></p>
-					</div>	<!-- /.col-md-4 -->
-				</div><!-- row end -->
-				<!-- Three columns of text end-->
-				<!-- Three columns of text start -->
-				<div class="row">
-					<div class="col-md-4"style="width: 150px  height: 150px; background:url('http://i.imgur.com/94Gukbz.jpg')" >
-						<img class="img-circle"src="http://i.imgur.com/UH0DXux.jpg"alt="Generic placeholder image"width="140" height="140">
-						<font color="white" face="맑은고딕">
-							<h4>사람하는 사람과 함께 즐기는 재밌고 유익한 물감 심리치료</h4>
-							<h3>다양한 물감을 이용한 심리치료</h3>
-						</font>
-						<p>	<a class="btn btn-default" href="#" role="button"> 자세히 보기&raquo;</a> </p>
-					</div><!-- /.col-md-4 -->
-					
-					<div class="col-md-4"style="width: 150px  height: 150px; background:url('http://i.imgur.com/dCKv7Btb.jpg')" >
-						<img class="img-circle"src="http://i.imgur.com/UH0DXux.jpg"alt="Generic placeholder image"width="140" height="140">
-						<font color="white" face="맑은고딕">
-							<h4>사람하는 사람과 함께 즐기는 재밌고 유익한 물감 심리치료</h4>
-							<h3>다양한 물감을 이용한 심리치료</h3>
-						</font>
-						<p> <a class="btn btn-default" href="#" role="button"> 자세히 보기&raquo;</a> </p>
-					</div><!-- /.col-md-4 -->
-						
-					<div class="col-md-4"style="width: 150px   height: 150px; background:url('http://i.imgur.com/0QO3pUQ.jpg')" >
-						<img class="img-circle"src="http://i.imgur.com/bnQ8Xbh.jpg"alt="Generic placeholder image"width="140" height="140">
-						<font color="white" face="맑은고딕">
-							<h4>사람하는 사람과 함께 즐기는 재밌고 유익한 물감 심리치료</h4>
-							<h3>다양한 물감을 이용한 심리치료</h3>
-						</font>
-						<p><a class="btn btn-default" href="#" role="button"> 자세히 보기&raquo;</a></p>
-					</div>	<!-- /.col-md-4 -->
-				</div><!-- row end -->
-				<!-- Three columns of text end-->
-			</div>
-		</div>
-	</nav>
-<!-- Voluteer 랩퍼 end-->
->>>>>>> 0d31380ffb64281371320d9daed3b663acb9f4fe
-
-<hr class="featurette-divider" id="section3" ><br>
-<div class="container">
-    <div class="container" align="center">
-        <h2>Talent</h2>
-        <h4>재능을 나누어 드립니다</h4>
-    </div>
-</div>
-<br><hr class="featurette-divider" >
-	
-<!-- Talent 랩퍼 start-->
-	<nav class="navbar navbar-wrapper container-fluid" >
-		<div class="container">
-			<div class="container marketing">
-				<!-- Three columns of text start -->
-				<div class="row">
-					<div class="col-md-4" style="width: 150px  height: 150px; background:url('http://i.imgur.com/94Gukbz.jpg')">
-						<img class="img-circle"src="http://i.imgur.com/UH0DXux.jpg"alt="Generic placeholder image"width="140" height="140">
-						<font color="white" face="맑은고딕">
-							<h4>사람하는 사람과 함께 즐기는 재밌고 유익한 물감 심리치료</h4>
-							<h3>다양한 물감을 이용한 심리치료</h3>
-						</font>
-						<p>	<a class="btn btn-default" href="#" role="button"> 자세히 보기&raquo;</a> </p>
-					</div><!-- /.col-md-4 -->
-					
-					<div class="col-md-4"style="width: 150px  height: 150px; background:url('http://i.imgur.com/dCKv7Btb.jpg')" >
-						<img class="img-circle"src="http://i.imgur.com/UH0DXux.jpg"alt="Generic placeholder image"width="140" height="140">
-						<font color="white" face="맑은고딕">
-							<h4>사람하는 사람과 함께 즐기는 재밌고 유익한 물감 심리치료</h4>
-							<h3>다양한 물감을 이용한 심리치료</h3>
-						</font>
-						<p> <a class="btn btn-default" href="#" role="button"> 자세히 보기&raquo;</a> </p>
-					</div><!-- /.col-md-4 -->
-						
-					<div class="col-md-4"style="width: 150px  height: 150px; background:url('http://i.imgur.com/0QO3pUQ.jpg')" >
-						<img class="img-circle"src="http://i.imgur.com/bnQ8Xbh.jpg"alt="Generic placeholder image"width="140" height="140">
-						<font color="white" face="맑은고딕">
-							<h4>사람하는 사람과 함께 즐기는 재밌고 유익한 물감 심리치료</h4>
-							<h3>다양한 물감을 이용한 심리치료</h3>
-						</font>
-						<p><a class="btn btn-default" href="#" role="button"> 자세히 보기&raquo;</a></p>
-					</div>	<!-- /.col-md-4 -->
-				</div><!-- row end -->
-				<!-- Three columns of text end-->
-				<!-- Three columns of text start -->
-				<div class="row">
-					<div class="col-md-4"style="width: 150px  height: 150px; background:url('http://i.imgur.com/94Gukbz.jpg')" >
-						<img class="img-circle"src="http://i.imgur.com/UH0DXux.jpg"alt="Generic placeholder image"width="140" height="140">
-						<font color="white" face="맑은고딕">
-							<h4>사람하는 사람과 함께 즐기는 재밌고 유익한 물감 심리치료</h4>
-							<h3>다양한 물감을 이용한 심리치료</h3>
-						</font>
-						<p>	<a class="btn btn-default" href="#" role="button"> 자세히 보기&raquo;</a> </p>
-					</div><!-- /.col-md-4 -->
-					
-					<div class="col-md-4"style="width: 150px  height: 150px; background:url('http://i.imgur.com/dCKv7Btb.jpg')" >
-						<img class="img-circle"src="http://i.imgur.com/UH0DXux.jpg"alt="Generic placeholder image"width="140" height="140">
-						<font color="white" face="맑은고딕">
-							<h4>사람하는 사람과 함께 즐기는 재밌고 유익한 물감 심리치료</h4>
-							<h3>다양한 물감을 이용한 심리치료</h3>
-						</font>
-						<p> <a class="btn btn-default" href="#" role="button"> 자세히 보기&raquo;</a> </p>
-					</div><!-- /.col-md-4 -->
-						
-					<div class="col-md-4"style="width: 150px  height: 150px; background:url('http://i.imgur.com/0QO3pUQ.jpg')" >
-						<img class="img-circle"src="http://i.imgur.com/bnQ8Xbh.jpg"alt="Generic placeholder image"width="140" height="140">
-						<font color="white" face="맑은고딕">
-							<h4>사람하는 사람과 함께 즐기는 재밌고 유익한 물감 심리치료</h4>
-							<h3>다양한 물감을 이용한 심리치료</h3>
-						</font>
-						<p><a class="btn btn-default" href="#" role="button"> 자세히 보기&raquo;</a></p>
-					</div>	<!-- /.col-md-4 -->
-				</div><!-- row end -->
-				<!-- Three columns of text end-->
-			</div>
-		</div>
-	</nav>
-<!-- Talent 랩퍼 start-->
-
-<hr class="featurette-divider" id="section4" ><br>
-<div class="container">
-    <div class="container" align="center">
-        <h2>Voluntal 만들기</h2>
-        <h4>Voluntal과 함께 시작하시겠습니까?</h4>
-    </div>
-</div>
-<br><hr class="featurette-divider" >
-
-<!-- Voluntal 만들기 start -->
+	<hr class="featurette-divider" id="section2"><br>
 	<div class="container">
-		스크롤<br>
-		스크롤<br>
-		스크롤<br>
-		스크롤<br>
-		스크롤<br>
-		스크롤<br>
-		스크롤<br>
-		스크롤<br>
-		스크롤<br>
-		스크롤<br>
-		스크롤<br>
-		스크롤<br>
-		스크롤<br>
-		스크롤<br>
-		스크롤<br>
-		스크롤<br>
-		스크롤<br>
-		스크롤<br>
-		스크롤<br>
-		스크롤<br>
-		스크롤<br>
-		스크롤<br>
-		스크롤<br>
-		스크롤<br>
-		<div align="center">
-			<a href="/voluntal/register" ><button class="btn btn-lg btn-danger" >Voluntal 만들기</button></a>
+		<div class="middletoolbar container" align="center">
+			<h2>Volunteer</h2>
+			<h4>따뜻한 마음을 나누고 싶으신가요?</h4>
 		</div>
 	</div>
+	<br><hr class="featurette-divider">
+	
+<!-- Volutal 글 보여주기 start-->
+	<nav class="navbar navbar-wrapper container-fluid">
+		<div class="container">
+			<div class="container marketing">
+				<div class="row">
+				<!-- 포스트 반복하여 처리 -->
+				<% @posts_vol.reverse.each do |post| %>
+					<div class="col-md-4">
+						<a href="/voluntal/show/<%= post.id %>">
+						<div>
+							<img src="<%= post.cover_pic_url(:main) %>">
+						</div> <br>
+						<div class="row">
+							<div class="col-md-4">
+								<img class="img-circle" src="<%= post.user.profile_pic_url(:thumb) %>"alt="Generic placeholder image" width="100" height="100">
+							</div>
+							<div class="col-md-8 ">
+								<h3><%= post.title %></h3>
+								<h5><%= post.start_time %><br><%= post.place %></h5>
+							</div>
+						</div><br>
+						</a>
+					</div>
+				<% end %>
+				<!-- 포스트 반복하여 처리 -->
+				</div>
+			</div>
+		</div>
+	</nav>
+<!-- Volutal 글 보여주기 end-->
 
+	<hr class="featurette-divider" id="section3">
+	<br>
+	<div class="container">
+		<div class="middletoolbar container" align="center">
+			<h2>Talent</h2>
+			<h4>새로운 무언가를 가르치거나 배우고 싶으신가요?</h4>
+		</div>
+	</div>
+	<br>
+	<hr class="featurette-divider">
+
+<!-- Talent 글 보여주기 start-->
+	<nav class="navbar navbar-wrapper container-fluid">
+		<div class="container">
+			<div class="container marketing">
+				<div class="row">
+				<!-- 포스트 반복하여 처리 -->
+					<% @posts_tal.reverse.each do |post| %>
+						<div class="col-md-4">
+							<a href="/voluntal/show/<%= post.id %>">
+								<div class="contentmiddlefont">
+									<img src="<%= post.cover_pic_url(:main) %>">
+								</div> <br>
+								<div class="row">
+									<div class="col-xs-4">
+										<img class="img-circle"	src="<%= post.user.profile_pic_url(:thumb) %>" alt="Generic placeholder image" width="100" height="100">
+									</div></a>	
+									<div class="col-xs-8">
+									<h3><%= post.title %></h3>
+									<h5><%= post.start_time %><br><%= post.place %></h5>
+									</div>
+								</div><br>
+						</div>
+					<% end %>
+				<!-- 포스트 반복하여 처리 -->
+				</div>
+			</div>
+		</div>
+	</nav>
+<!-- Talent 글 보여주기 start-->
+
+	<hr class="featurette-divider" id="section4">
+	<br>
+	<div class="container">
+		<div class="CreateVoluntal" align="center">
+			<%= image_tag('Voluntal-logo2.png')%>
+			<h2>Voluntal 만들기</h2>
+			<h3>Voluntal과 함께 시작하시겠습니까?</h3>
+		</div>
+	</div>
+	<br>
+	<hr class="featurette-divider">
+
+<!-- Voluntal 만들기 start -->
+	<div class="CreateVoluntal" align="center">
+		<h3>당신의 재능을 다른사람들에게 공유하고 싶나요?</h3>
+		<h3>봉사활동자를 모집하고 싶으신가요?</h3>
+		<h3>Voluntal은 당신에게 조금더 쉽게 다가설수있도록 도와주고 있습니다</h3>
+		<br>
+		<div class="howbox">
+			<p>어떤식으로 진행되나요?</p>
+		</div>
+		<br>
+		<div class="voluntalflow" >
+			<p>1. Voluntal 만들기를 클릭하여 Host 와 Voluntal 정보를 입력한다.</p>
+			<p>2. Voluntal 운영자가 Voluntal을 개설한다.</p>
+			<p>3. Guest들의 질문에 대답해주며 Activity 준비한다.</p>
+			<p>4. Activity 활동 전날 Guest들의 명단을 받는다.</p>
+			<p>5. Guest들과 함께 즐거운 Activity 활동을 진행한다.</p>
+			<p>6. Guest들의 피드백을 받고 더 좋은 Voluntal을 개설한다.</p>
+		</div>
+		<%= image_tag('Activity.JPG')%><br> <br>
+		<div class="howbox">
+			<p>준비가 되셨나요?</p>
+		</div>
+		<br>
+		<div align="center">
+			<a href="/voluntal/register">
+				<button class="btn btn-lg submit_button">Voluntal 만들기</button>
+			</a>
+		</div>
+		<br>
+	</div>
 <!-- Voluntal 만들기 end -->
 
 <!-- Voulutal 푸터 start -->
-    <footer class="footer">
+	<footer class="footer">
 		<div class="container">
 			<div class="col-md-10">
 				<p class="text-muted">&copy; WB. and YJ. All rights reserved.</p>
 			</div>
 			<div class="col-md-2">
-				<p><a href="http://facebook.com/woongbini">WB<span class="social social-facebook"></span></a></p>
-				<p><a href="https://goo.gl/BFzCQY">YJ<span class="social social-facebook"></span></a></p>
+				<p>
+					<a href="http://facebook.com/woongbini">WB<span
+						class="social social-facebook"></span></a>
+				</p>
+				<p>
+					<a href="https://goo.gl/BFzCQY">YJ<span
+						class="social social-facebook"></span></a>
+				</p>
 			</div>
 		</div>
-    </footer>
+	</footer>
 <!-- Voulutal 푸터 end -->
 
+	<!--
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+	<script src="../../dist/js/bootstrap.min.js"></script>
+	<script src="../../assets/js/vendor/holder.js"></script>
+	-->
 
-				<!--<script	src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
-				<script src="../../dist/js/bootstrap.min.js"></script>
-				<script src="../../assets/js/vendor/holder.js"></script>-->
-				
 <!-- jquery스크롤 coding start -->
 	<script>
-	  jQuery(document).ready(function($) {
-	          $(".scroll").click(function(event){
-	                  event.preventDefault();
-	                  $('html,body').animate({scrollTop:$(this.hash).offset().top}, 500);
-	          });
-	  });
+		jQuery(document).ready(function($) {
+			$(".scroll").click(function(event) {
+				event.preventDefault();
+				$('html,body').animate({
+					scrollTop : $(this.hash).offset().top
+				}, 500);
+			});
+		});
 	</script>
 <!-- jquery스크롤 coding end -->
+	
+<!-- 로그인박스 넣기 start -->
+	<script type="text/javascript">
+		T$('testclick1').onclick = function() {
+				$(document).ready(function() {
+					TINY.box.show("/users/signup", 1, 400, 500, 0.5)
+				});
+		};
+		T$('testclick2').onclick = function() {
+				$(document).ready(function() {
+					TINY.box.show("/users/login", 1, 300, 350, 0.5)
+				});
+		};
+		function showbox() {
+			TINY2.box.show('show_map.jsp', 1, 900, 600, 1);
+		};
+		
+	</script>
+<!-- 로그인박스 넣기 end -->	
 </body>
 </html>
