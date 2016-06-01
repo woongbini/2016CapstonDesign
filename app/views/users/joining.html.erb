@@ -100,8 +100,10 @@
 					</div>
 				</div>
 				<div class="row">
-					<% if @posts_vol.nil? %>
-						<p>참여한 Voluntal이 없습니다! 지금 참여해 주세요!</p>
+					<% if @posts_vol.exists? %>
+						<div class="col-md-8">
+							<p>참여한 Voluntal이 없습니다! 지금 참여해 주세요!</p>
+						</div>
 					<% else %>
 						<% @posts_vol.reverse.each do |post| %>
 							<div class="col-md-8 ">
