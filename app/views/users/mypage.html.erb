@@ -65,12 +65,12 @@
 <!-- 개인정보 보여주기 start-->
 	<div class="container" >
 		<div class="row" >
-			<div class="col-md-3">
-				<div class="sidebar">
+			<div class="col-md-3" >
+				<div class="sidebar" >
 					<div class ="area-profile">
 						<p><img src="<%= @user_info.profile_pic_url(:thumb) %>" width="100px" class="img-circle"></p>
 					</div>
-					<div class="list-side-menu">
+					<div class="list-side-menu" >
 						<h2><%= @user_info.nickname %></h2>
 					</div><br>
 					<a href="/users/mypage" >
@@ -89,6 +89,7 @@
 						</div>
 					</a>
 				</div>
+<<<<<<< HEAD
 			</div>
 			<div class="col-md-9">
 				<div class ="sidebar2">
@@ -147,10 +148,79 @@
 		</div>
 	</div>
 </div>	
+=======
+			</div><!--md-3 end-->
+			<div class="col-md-9 sidebar2">
+				<div class="row">
+					<div class="col-md-3">
+						<h1 style ="color : #FF7648"> <%= @user_info.nickname %> </h1> 
+					</div>
+					<div class="col-md-3 Modified_button">
+						<a href="/users/edit">개인정보 변경하기</a></h1> 
+					</div>
+					<div class="col-md-3"></div>
+				</div>
+				
+				<div class="row">
+					<div class="col-md-3">				
+						<h3>연락 정보</h3>
+					</div>
+					<div class="col-md-6"></div>
+				</div>
+				
+				<div class="row">
+					<div class="col-md-3">
+						<label><i class="icon-envelope"></i> 등록 된 이메일</label>
+					</div>
+					<div class="col-md-6 contact-value">
+						<%= @user_info.email %>
+					</div>
+				</div>
+				
+				<div class="row">
+					<div class="col-md-3">
+						<label><i class="icon-phone"></i> 등록 된 전화번호</label>
+					</div>
+					<div class="col-md-6 contact-value">
+						<%= @user_info.phone %>
+					</div>
+				</div>
+				
+				<div class="row">
+					<div class="col-md-3">
+						<label><i class="icon-calendar"></i> 가입한 날짜</label>
+					</div>
+					<div class="col-md-6 contact-value">
+						<%= @user_info.created_at %>
+					</div>
+				</div>
+				
+				<div class="row">
+					<div class="col-md-3">
+						<h3>계정 정보 </h3>
+					</div>
+					<div class="col-md-6"></div>
+				</div>
+				
+				<div class="row">
+					<div class="col-md-3">
+						<label>페이스북 계정 여부</label>
+					</div>
+					<div class="col-md-6 contact-value">
+						일반 로그인 사용중
+					</div>
+				</div>
+				
+			</div><!--md-9 end-->
+		</div><!--row end -->
+	</div><!--container end -->
+	
+>>>>>>> b4fd47191a022f27b10a9be86057d9f5a4f9059f
 
 <!-- 개인정보 보여주기 end-->	
 
 <!-- Voulutal 푸터 start -->
+	<br><br><br><br><br><br><br>
 	<footer class="footer" style="background-color:#FFAB80 ">
 		<div class="container">
 			<br>

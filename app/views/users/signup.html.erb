@@ -7,7 +7,6 @@
 	<!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
 	<meta name="description" content="">
 	<meta name="author" content="">
-	<link rel="icon" href="../../favicon.ico">
 	<title><% content_for :title, "Voluntal::Join" %></title>
 	<!-- YJ CSS file-->
 		<link rel="stylesheet" href="stylesheets/voluntal.css">
@@ -33,16 +32,16 @@
 		<p><strong style="color:#ff751a">Voluntal</strong>은 재능과 봉사활동을 나눠가는 서비스입니다.</p>
 		<form action="/users/signup_complete" method="post" enctype="multipart/form-data" class="form-horizontal">
 			<div class="row">
-				<div class="col-md-1"></div>
-				<div class="form-group col-md-10">
+				<div class="col-md-3"></div>
+				<div class=" col-md-6">
 					<input type="text" name="email" placeholder="Email" class="form-control input-sm">	
 				</div>
-				<div class="col-md-1"></div>
+				<div class="col-md-3"></div>
 			</div><br>
 			
 			<div class="row">
 				<div class="col-md-3"></div>
-				<div class="form-group col-md-6">
+				<div class=" col-md-6">
 					<input type="password" name="password" placeholder="Password" class="form-control input-sm" >
 				</div>
 				<div class="col-md-3"></div>
@@ -50,7 +49,7 @@
 			
 			<div class="row ">
 				<div class="col-md-3"></div>
-				<div class="form-group col-md-6">
+				<div class=" col-md-6">
 					<input type="password" name="re_password" placeholder="Confirm Password" class="form-control input-sm">
 				</div>
 				<div class="col-md-3"></div>
@@ -58,7 +57,7 @@
 			
 			<div class="row">
 				<div class="col-md-3"></div>
-				<div class="form-group col-md-6">
+				<div class=" col-md-6">
 					<input type="text" name="phone" placeholder="Phone" class="form-control input-sm">
 				</div>
 				<div class="col-md-3"></div>
@@ -66,25 +65,26 @@
 			
 			<div class="row">
 				<div class="col-md-3"></div>
-				<div class="form-group col-md-6">
+				<div class="col-md-6">
 					<input type="text" name="nickname" placeholder="Nickname" class="form-control input-sm">
 				</div>
 				<div class="col-md-3"></div>
 			</div><br>
 			
 			<div class="row">
-				<div class="col-md-1"></div>
-				<div class="form-group col-md-6">
-					<label class="control-label" for="inputSmall">Profile Photo</label>
-					<input type="file" class="btn btn-default" name="profile_pic" placeholder="Profile Photo" class="form-control input-sm">
+				<div class="col-md-3"></div>
+				<div class="col-md-6">
+					<div class="filebox bt-profile_pic">
+						<label for="ex_file0" align="left"> Profile Photo </label>
+						<input type="file" id="ex_file0" name="profile_pic">
+					</div>
 				</div>
-				<div class="col-md-5"></div>
+				<div class="col-md-3"></div>
 			</div><br>
 			
 			<div class="row">
-				<div class="col-md-6 col-md-offset-2">
-					<button type="submit" class="btn submit_button">가입하기</button>
-				</div>
+				<button type="submit" class="btn submit_button btn-xs">가입하기</button>
+				<a href="/" class="btn cancel_button btn-xs">취소</a>
 			</div>
 			
 		</form>	

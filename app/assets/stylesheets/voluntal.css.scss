@@ -353,6 +353,16 @@
     border-radius :10px;
 }
 
+.cancel_button{
+    font-size : 16px;
+    font-weight : 600;
+    padding : 13px 0;
+    background : #b3b3b3;
+    border-color : #000000;
+    color :#ffffff;
+    border-radius :10px;
+}
+
 .signup_box{
     font-family: '맑은 고딕', 'Malgun Gothic', verdana;
     padding : 30px 20px;
@@ -416,6 +426,12 @@
     color: #ffffff;
     background-color : #FF7648;
     border-color : #FF7648;
+}
+.filebox.bt-profile_pic label {
+    width : 170px;
+    height : 30px;
+    color: #cccccc;
+    border-color : #cccccc;
 }
 
 
