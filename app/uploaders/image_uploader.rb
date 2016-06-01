@@ -17,15 +17,15 @@ class ImageUploader < CarrierWave::Uploader::Base
   end
 
   version :thumb do
-    process :resize_to_limit => [150, 150]
+    process :resize_to_limit => [300, 300]
   end
   
   version :main do
-    process :resize_to_limit => [320,180]
+    process :resize_to_limit => [597, 447]
   end
   
   version :show_vol do
-    process :resize_to_limit => [1663,650]
+    process :resize_to_limit => [1194, 895]
   end
   
   # Provide a default URL as a default if there hasn't been a file uploaded:

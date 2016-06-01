@@ -135,7 +135,7 @@
 				<!-- 포스트 반복하여 처리 -->
 				<% @posts_vol.reverse.each do |post| %>
 					<div class="col-md-4">
-						<a href="/voluntal/show/<%= post.id %>">
+						<a href="/voluntal/show/<%= post.po_id %>">
 							<div class="contentmiddlefont">
 								<img src="<%= post.cover_pic_url(:main) %>" >
 							</div> 
@@ -177,7 +177,7 @@
 				<!-- 포스트 반복하여 처리 -->
 					<% @posts_tal.reverse.each do |post| %>
 						<div class="col-md-4">
-							<a href="/voluntal/show/<%= post.id %>">
+							<a href="/voluntal/show/<%= post.po_id %>">
 								<div class="contentmiddlefont">
 									<img src="<%= post.cover_pic_url(:main) %>" >
 								</div> <br>
