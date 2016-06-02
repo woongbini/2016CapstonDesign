@@ -142,28 +142,7 @@
 		<div class="container">
 			<div class="container marketing">
 				<div class="row">
-<<<<<<< HEAD
-				<!-- 포스트 반복하여 처리 -->
-				<% @posts_vol.reverse.each do |post| %>
-					<div class="col-md-4">
-						<a href="/voluntal/show/<%= post.po_id %>">
-							<div class="contentmiddlefont">
-								<img src="<%= post.cover_pic_url(:main) %>" >
-							</div> 
-							<div class="row">
-								<div class="col-md-4 col-xs-4">
-									<img class="img-circle"	src="<%= post.user.profile_pic_url(:thumb) %>" alt="Generic placeholder image" width="100" height="100">
-								</div>
-								<div class="col-md-8 col-xs-8">
-									<h3><%= post.title %></h3>
-									<h5><%= post.start_time %><br><%= post.place %></h5>
-								</div>
-							</div>
-						</a>
-					</div>
-				<% end %>
-				<!-- 포스트 반복하여 처리 -->
-=======
+	
             <!-- 포스트 반복하여 처리 -->
             <% @posts_vol.reverse.each do |post| %>
                <div class="col-md-4">
@@ -184,7 +163,7 @@
                </div>
             <% end %>
             <!-- 포스트 반복하여 처리 -->
->>>>>>> c6946e5a0e2518fdcf6dbda767e9c9ee9605f549
+
 				</div>
 			</div>
 		</div>
